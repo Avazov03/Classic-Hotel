@@ -1,0 +1,21 @@
+# OS / editor
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Logs / temp
+*.log
+*_extract_preview.txt
+
+# HTTrack leftovers (if recreated)
+hts-cache/
+hts-log.txt
+cookies.txt
+backblue.gif
+fade.gif
+
+# Broken absolute-URL mirror artifacts
+elbergo.webflow.io/_https_/
