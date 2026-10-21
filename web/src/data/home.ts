@@ -22,7 +22,8 @@ export const homeAbout = {
     `${CDN}/69313766db72be49e3b25c9d_image%208-Picsart-AiImageEnhancer%201.webp`,
     `${CDN}/69313766c80bb7026ddf9a8f_febrian-zakaria-gwV9eklemSg-unsplash-Picsart-AiImageEnhancer%201.webp`,
   ],
-};
+} as const;
+
 
 export const featuredRooms = [
   {

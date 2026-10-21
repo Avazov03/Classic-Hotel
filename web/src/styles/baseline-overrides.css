@@ -71,10 +71,9 @@ html.is-home .rt-nav-logo-v2 {
   display: none !important;
 }
 
-/* Sticky scroll chapters without IX2 create huge empty black/white voids */
+/* Sticky scroll chapters without IX2 create huge empty voids (not home About — that is React) */
 .rt-value,
 .rt-feature-v7,
-.rt-about-v1,
 .rt-service-v1,
 .rt-experience {
   height: auto !important;
@@ -82,12 +81,16 @@ html.is-home .rt-nav-logo-v2 {
 
 .rt-value-sticky,
 .rt-feature-v7-sticky,
-.rt-about-v1-sticky,
-[class*="-sticky"].rt-overflow-hidden {
+[class*="-sticky"].rt-overflow-hidden:not(.rt-about-v1-sticky) {
   position: relative !important;
   top: auto !important;
   height: auto !important;
   min-height: 0 !important;
+}
+
+/* Hide leftover static About markup if any old bundle still injects it */
+section.rt-about-v1 {
+  display: none !important;
 }
 
 /* Inner page hero should not stick forever over content */
