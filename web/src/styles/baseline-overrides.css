@@ -122,101 +122,180 @@ html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
 }
 
 /*
- * Home logos: let Webflow IX2 swap white/dark on scroll.
- * Only force the light (white) logo at the very top before IX2 paints,
- * and never use !important so IX2 scroll states can win.
+ * Home glass: faqat .rt-navbar-v1 da fon — .rt-nav-inner-block transparent.
+ * Ikkalasida glass bo‘lsa o‘rtada “qaymoq chiziq” (double stack) chiqadi.
  */
-html.is-home:not(.w-mod-ix) .rt-nav-logo-v1 {
-  opacity: 1;
+html.is-home .rt-navbar-v1,
+html.is-inner .rt-navbar-v1 {
+  transition:
+    background-color 1s ease,
+    backdrop-filter 1s ease,
+    -webkit-backdrop-filter 1s ease,
+    border-color 1s ease,
+    box-shadow 1s ease;
 }
 
-html.is-home:not(.w-mod-ix) .rt-nav-logo-v2 {
-  opacity: 0;
+html.is-home .rt-nav-inner-block,
+html.is-inner .rt-nav-inner-block {
+  transition: background-color 0.85s ease;
 }
 
-/* Non-hero inner pages: always solid white chrome + dark logo */
-html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
-  .rt-navbar-v1 {
-  background-color: var(--_colors---white, #fff) !important;
+html.is-home .rt-navbar-shadow-v1 {
+  transition: opacity 1s ease, background-color 1s ease, box-shadow 1s ease;
 }
 
-html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
-  .rt-navbar-shadow-v1 {
-  opacity: 1 !important;
-  background-color: var(--_colors---white, #fff);
-}
-
-html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
-  .rt-nav-logo-v1 {
+/* Home: always dark logo */
+html.is-home .rt-nav-logo-v1 {
   opacity: 0 !important;
 }
 
-html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
-  .rt-nav-logo-v2 {
+html.is-home .rt-nav-logo-v2 {
   opacity: 1 !important;
 }
 
-/*
- * Hero inner pages (rooms, about, etc.):
- * Original CMS PAGE_SCROLL (a-310) drives Navbar v2; we share Navbar v1 chrome.
- * Home uses IX2 a-311 for white bar + .rt-navbar-shadow-v1 opacity — room pages
- * never get that, so `is-hero-top` / `is-nav-solid` mirror it in CSS.
- */
-html.is-inner.is-hero-top .rt-navbar-v1 {
-  background-color: transparent !important;
-}
-
-html.is-inner.is-hero-top .rt-navbar-shadow-v1 {
-  opacity: 0 !important;
-  background-color: transparent;
-}
-
-html.is-inner.is-hero-top .rt-nav-logo-v1 {
-  opacity: 1 !important;
-}
-
-html.is-inner.is-hero-top .rt-nav-logo-v2 {
-  opacity: 0 !important;
-}
-
-html.is-inner.is-hero-top .rt-navbar-v1-bar-line {
-  background-color: var(--_colors---white, #fff);
-}
-
-html.is-inner.is-hero-top .rt-navbar-v1-menu-wrapper .rt-button-text,
-html.is-inner.is-hero-top .rt-navbar-v1-menu-wrapper .rt-hover-color-change,
-html.is-inner.is-hero-top .rt-navbar-v1-button-wrapper .rt-text-white,
-html.is-inner.is-hero-top .rt-navbar-v1 a.rt-text-white {
-  color: var(--_colors---white, #fff) !important;
-}
-
-/* Scrolled past hero: solid white bar + shadow (a-311 keyframe 2) */
-html.is-inner.is-nav-solid .rt-navbar-v1 {
-  background-color: var(--_colors---white, #fff) !important;
-}
-
-html.is-inner.is-nav-solid .rt-navbar-shadow-v1 {
-  opacity: 1 !important;
-  background-color: var(--_colors---white, #fff);
-}
-
-html.is-inner.is-nav-solid .rt-nav-logo-v1 {
-  opacity: 0 !important;
-}
-
-html.is-inner.is-nav-solid .rt-nav-logo-v2 {
-  opacity: 1 !important;
-}
-
-html.is-inner.is-nav-solid .rt-navbar-v1-bar-line {
+html.is-home .rt-navbar-v1-bar-line {
   background-color: var(--_colors---dark-blue, #00253f);
 }
 
-html.is-inner.is-nav-solid .rt-navbar-v1-menu-wrapper .rt-button-text,
-html.is-inner.is-nav-solid .rt-navbar-v1-menu-wrapper .rt-hover-color-change,
-html.is-inner.is-nav-solid .rt-navbar-v1-button-wrapper .rt-text-white,
-html.is-inner.is-nav-solid .rt-navbar-v1 a.rt-text-white {
+html.is-home .rt-navbar-v1-menu-wrapper .rt-button-text,
+html.is-home .rt-navbar-v1-menu-wrapper .rt-hover-color-change,
+html.is-home .rt-navbar-v1-button-wrapper .rt-text-white,
+html.is-home .rt-navbar-v1 a.rt-text-white {
   color: var(--_colors---dark-blue, #00253f) !important;
+}
+
+/*
+ * Apple-style tiniq shisha (bitta qavat):
+ * saturate(180%) blur(20px) — macOS/iOS vibrancy usuli.
+ */
+html.is-home.is-hero-top .rt-navbar-v1,
+html.is-home.is-hero-top .rt-navbar-v1[style] {
+  background-color: rgba(255, 255, 255, 0.55) !important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px) !important;
+  backdrop-filter: saturate(180%) blur(20px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+}
+
+html.is-home.is-hero-top .rt-nav-inner-block {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+html.is-home.is-hero-top .rt-navbar-shadow-v1 {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  pointer-events: none !important;
+}
+
+/* About chiqgach: ~1s da asl oq */
+html.is-home.is-nav-solid .rt-navbar-v1,
+html.is-home.is-nav-solid .rt-navbar-v1[style] {
+  background-color: #ffffff !important;
+  -webkit-backdrop-filter: saturate(100%) blur(0px) !important;
+  backdrop-filter: saturate(100%) blur(0px) !important;
+  border-bottom-color: transparent;
+  box-shadow: none;
+}
+
+html.is-home.is-nav-solid .rt-nav-inner-block {
+  background-color: transparent !important;
+}
+
+html.is-home.is-nav-solid .rt-navbar-shadow-v1 {
+  opacity: 1 !important;
+  visibility: visible !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 15px #0003;
+}
+
+/*
+ * Shared chrome: Navbar v1 + dark logo/menu on every inner page.
+ * Over hero: frosted glass until hero scrolls past the header, then ease to solid.
+ */
+
+html.is-inner .rt-navbar-shadow-v1 {
+  transition:
+    opacity 0.55s ease,
+    background-color 0.55s ease;
+}
+
+html.is-inner .rt-nav-logo-v1 {
+  opacity: 0 !important;
+}
+
+html.is-inner .rt-nav-logo-v2 {
+  opacity: 1 !important;
+}
+
+html.is-inner .rt-navbar-v1-bar-line {
+  background-color: var(--_colors---dark-blue, #00253f);
+}
+
+html.is-inner .rt-navbar-v1-menu-wrapper .rt-button-text,
+html.is-inner .rt-navbar-v1-menu-wrapper .rt-hover-color-change,
+html.is-inner .rt-navbar-v1-button-wrapper .rt-text-white,
+html.is-inner .rt-navbar-v1 a.rt-text-white {
+  color: var(--_colors---dark-blue, #00253f) !important;
+}
+
+/* Inner hero: glass faqat navbar-v1 — inner-block transparent (chiziq yo‘q) */
+html.is-inner:has(.rt-room-details-hero) .rt-navbar-v1,
+html.is-inner:has(.rt-inner-hero) .rt-navbar-v1,
+html.is-inner.is-hero-top .rt-navbar-v1 {
+  background-color: rgba(255, 255, 255, 0.55) !important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px) !important;
+  backdrop-filter: saturate(180%) blur(20px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+html.is-inner:has(.rt-room-details-hero) .rt-nav-inner-block,
+html.is-inner:has(.rt-inner-hero) .rt-nav-inner-block,
+html.is-inner.is-hero-top .rt-nav-inner-block {
+  background-color: transparent !important;
+}
+
+html.is-inner.is-hero-top .rt-navbar-shadow-v1,
+html.is-inner:not(.is-nav-solid) .rt-navbar-shadow-v1 {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+html.is-inner.is-nav-solid .rt-navbar-v1 {
+  background-color: #ffffff !important;
+  -webkit-backdrop-filter: saturate(100%) blur(0px) !important;
+  backdrop-filter: saturate(100%) blur(0px) !important;
+  border-bottom-color: transparent;
+}
+
+html.is-inner.is-nav-solid .rt-nav-inner-block {
+  background-color: transparent !important;
+}
+
+html.is-inner.is-nav-solid .rt-navbar-shadow-v1,
+html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
+  .rt-navbar-shadow-v1 {
+  opacity: 1 !important;
+  visibility: visible !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 15px #0003;
+}
+
+/* Non-hero inner: solid white bar */
+html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
+  .rt-navbar-v1 {
+  background-color: #ffffff !important;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
+  .rt-nav-inner-block {
+  background-color: transparent !important;
 }
 
 /*
@@ -451,4 +530,55 @@ main [style*="opacity:0"]:not([data-w-id]):not(.rt-about-v1 *):not(
   right: 0.75rem;
   top: 50%;
   transform: translateY(-50%);
+}
+
+/*
+ * Asl Elbergo header: logo layout ≈39×178, nav ≈79px (20+39+20).
+ * Logo vizual kattaligi — transform; layout qutisi asl 39px (header o‘smaydi).
+ */
+.rt-nav-logo {
+  width: 11.125rem !important; /* 178px — asl logo eni */
+  max-width: 11.125rem !important;
+  height: 2.4375rem !important; /* 39px — asl logo balandligi */
+  max-height: 2.4375rem !important;
+  overflow: visible !important;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.rt-nav-logo img,
+.rt-nav-logo-v1,
+.rt-nav-logo-v2 {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 2.4375rem !important;
+  display: block;
+  object-fit: contain;
+  object-position: left center;
+  /* vizual ~1.7× asl (≈66px) — header layout 39px qoladi */
+  transform: scale(1.7);
+  transform-origin: left center;
+}
+
+.rt-footer-logo-gap img {
+  width: 11.125rem;
+  height: auto;
+  max-height: 2.4375rem;
+  transform: scale(1.35);
+  transform-origin: left center;
+}
+
+@media screen and (max-width: 767px) {
+  .rt-nav-logo {
+    width: 9.2rem !important;
+    height: 2.25rem !important;
+    max-height: 2.25rem !important;
+  }
+
+  .rt-nav-logo img,
+  .rt-nav-logo-v1,
+  .rt-nav-logo-v2 {
+    max-height: 2.25rem !important;
+    transform: scale(1.45);
+  }
 }

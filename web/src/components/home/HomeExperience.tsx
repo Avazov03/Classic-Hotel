@@ -30,7 +30,7 @@ export function HomeExperience() {
             <figure key={src}>
               <Image
                 src={src}
-                alt={i === 0 ? "Guest arrival lounge" : "Hotel corridor"}
+                alt={i === 0 ? "Mehmonlar lounge" : "Mehmonxona koridori"}
                 width={720}
                 height={500}
                 sizes="(max-width: 900px) 100vw, 45vw"

@@ -38,12 +38,38 @@ export function RouteChrome() {
     const root = document.documentElement;
 
     const syncHeroTop = () => {
-      const hasHero = Boolean(
-        document.querySelector(".rt-room-details-hero, .rt-inner-hero"),
+      const chrome = document.querySelector(".rt-top-main-box");
+      const chromeBottom =
+        chrome?.getBoundingClientRect().bottom ?? HERO_TOP_PX;
+
+      // Home: hero sticky — element bottom ishonchsiz.
+      // Oq About paneli chrome ostiga yetganda hero “tugagan” deb hisoblaymiz.
+      if (root.classList.contains("is-home")) {
+        const about = document.querySelector(".rt-about-v1");
+        const hero = document.querySelector(".rt-hero-v1");
+        if (!hero) {
+          root.classList.remove("is-hero-top", "is-nav-solid");
+          return;
+        }
+        const overHero = about
+          ? about.getBoundingClientRect().top > chromeBottom + 8
+          : window.scrollY < HERO_TOP_PX;
+        root.classList.toggle("is-hero-top", overHero);
+        root.classList.toggle("is-nav-solid", !overHero);
+        return;
+      }
+
+      const hero = document.querySelector(
+        ".rt-room-details-hero, .rt-inner-hero",
       );
-      const atTop = !hasHero || window.scrollY < HERO_TOP_PX;
-      root.classList.toggle("is-hero-top", hasHero && atTop);
-      root.classList.toggle("is-nav-solid", hasHero && !atTop);
+      if (!hero) {
+        root.classList.remove("is-hero-top", "is-nav-solid");
+        return;
+      }
+      const heroBottom = hero.getBoundingClientRect().bottom;
+      const overHero = heroBottom > chromeBottom + 4;
+      root.classList.toggle("is-hero-top", overHero);
+      root.classList.toggle("is-nav-solid", !overHero);
     };
 
     syncHeroTop();

@@ -4,10 +4,10 @@ import { html } from "@/baseline/html/amenities";
 import { pageIntros } from "@/data/pages";
 
 export const metadata: Metadata = {
-  title: "Amenities",
+  title: "Qulayliklar",
   description: pageIntros.amenities.metaDescription,
 };
 
-export default function AmenitiesPage() {
+export default function QulayliklarPage() {
   return <BaselineHtml html={html} />;
 }

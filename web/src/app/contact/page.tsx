@@ -4,10 +4,10 @@ import { html } from "@/baseline/html/contact";
 import { pageIntros } from "@/data/pages";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Aloqa",
   description: pageIntros.contact.metaDescription,
 };
 
-export default function ContactPage() {
+export default function AloqaPage() {
   return <BaselineHtml html={html} />;
 }

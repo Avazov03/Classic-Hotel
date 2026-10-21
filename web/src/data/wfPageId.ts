@@ -3,7 +3,7 @@ import wfPageIds from "@/data/wf-page-ids.json";
 /** Home One — default site landing. */
 export const WF_PAGE_HOME = wfPageIds["home-one.html"];
 
-/** CMS Room template (all room detail pages share this). */
+/** CMS Room template (all xona tafsiloti pages share this). */
 export const WF_PAGE_ROOM = wfPageIds["room/sea-view-room.html"];
 
 /** CMS Blog post template. */

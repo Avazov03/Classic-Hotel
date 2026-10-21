@@ -1,0 +1,33 @@
+---
+description: Har bir o‘zgarishdan keyin GitHub commit/push so‘rash va tasdiqlash
+alwaysApply: true
+---
+
+# Git commit & push odatı
+
+Loyiha GitHub: `https://github.com/Avazov03/Classic-Hotel.git` (branch: `feature/nextjs-migration` yoki joriy branch).
+
+## Qoida
+
+1. Foydalanuvchi prompti kod/fayllarni o‘zgartirsa (style, content, config, yangi fayl) — ish tugagach **commit va push qilaymi?** deb so‘ra.
+2. Foydalanuvchi ha deb yozsa (yoki "commit", "push", "ha") — faqat shunda:
+   - `git status` / `git diff` / recent log
+   - mantiqiy commit message (nima uchun)
+   - `git add` → `git commit` → `git push -u origin HEAD` (agar tracking yo‘q bo‘lsa)
+3. Commit **va** push ikkalasi ham muvaffaqiyatli bo‘lgach, chatda aniq tasdiqla:
+
+```
+✅ Commit qilindi
+✅ GitHub ga push qilindi
+```
+
+(Commit hash va branch nomini qo‘shish mumkin.)
+
+4. Faqat commit so‘ralsa — push qilma; faqat push — yangi commit yasama.
+5. Hech qachon avtomatik commit/push qilma — doim so‘rab ol.
+6. `.env`, credentials, secrets — commit qilma.
+7. Katta/ko‘p o‘zgarishlarda bitta aniq message yoki foydalanuvchi xohlasa bir necha mantiqiy commit.
+
+## Til
+
+Foydalanuvchi o‘zbekcha (lotin) yozsa — so‘rov va tasdiqni o‘zbekcha qil.

@@ -7,13 +7,13 @@ export function HomeTestimonials() {
     <section className={styles.section} aria-labelledby="testimonials-heading">
       <div className="container">
         <div className={styles.head}>
-          <div className={styles.rating}>(4.9) Testimonials</div>
+          <div className={styles.rating}>(4.9) Sharhlar</div>
           <h2 id="testimonials-heading">
-            Experience the difference through their eyes
+            Farqni ularning ko‘zi bilan ko‘ring
           </h2>
           <p>
-            Genuine feedback on our world-class hospitality from guests who felt
-            the care in every detail.
+            Har bir detalda g‘amxo‘rlikni his qilgan mehmonlardan chinakam
+            fikrlar — jahon darajasidagi mehmondo‘stlik haqida.
           </p>
         </div>
 

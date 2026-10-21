@@ -9,13 +9,13 @@ export function HomeGallery() {
       <div className="container">
         <div className={styles.head}>
           <div>
-            <h2 id="gallery-heading">Our Gallery</h2>
+            <h2 id="gallery-heading">Galereyamiz</h2>
             <p className={styles.sub}>
-              A visual journey through our finest moments and experiences
+              Eng yaxshi lahzalar va tajribalarimizning vizual sayohati
             </p>
           </div>
           <Link className={styles.more} href="/rooms">
-            Explore more
+            Ko‘proq ko‘rish
           </Link>
         </div>
 

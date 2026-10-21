@@ -55,14 +55,14 @@ export function BaselineInteractions() {
     let lbIndex = 0;
     let lbItems: LbItem[] = [];
 
-    function closeMenu() {
+    function closeMenyu() {
       root.classList.remove("rt-menu-open");
       document
         .querySelectorAll(".rt-mega-menu-wrapper")
         .forEach((el) => el.classList.remove("rt-is-open"));
     }
 
-    function toggleMenu() {
+    function toggleMenyu() {
       const open = root.classList.toggle("rt-menu-open");
       document.querySelectorAll(".rt-mega-menu-wrapper").forEach((el) => {
         el.classList.toggle("rt-is-open", open);
@@ -92,9 +92,9 @@ export function BaselineInteractions() {
       lbRoot.className = "elbergo-lightbox";
       lbRoot.innerHTML = `
         <div class="elbergo-lightbox__backdrop" data-lb-close></div>
-        <button type="button" class="elbergo-lightbox__close" data-lb-close aria-label="Close">×</button>
-        <button type="button" class="elbergo-lightbox__prev" data-lb-prev aria-label="Previous">‹</button>
-        <button type="button" class="elbergo-lightbox__next" data-lb-next aria-label="Next">›</button>
+        <button type="button" class="elbergo-lightbox__close" data-lb-close aria-label="Yopish">×</button>
+        <button type="button" class="elbergo-lightbox__prev" data-lb-prev aria-label="Oldingi">‹</button>
+        <button type="button" class="elbergo-lightbox__next" data-lb-next aria-label="Keyingi">›</button>
         <img class="elbergo-lightbox__img" alt="" />
       `;
       document.body.appendChild(lbRoot);
@@ -155,7 +155,7 @@ export function BaselineInteractions() {
       );
       if (menuBtn) {
         e.preventDefault();
-        toggleMenu();
+        toggleMenyu();
         return;
       }
 
@@ -190,10 +190,10 @@ export function BaselineInteractions() {
 
       // Slider arrows fallback
       const nextArrow = target.closest(
-        ".w-slider-arrow-right, [aria-label='next slide']",
+        ".w-slider-arrow-right, [aria-label='Keyingi']",
       );
       const prevArrow = target.closest(
-        ".w-slider-arrow-left, [aria-label='previous slide']",
+        ".w-slider-arrow-left, [aria-label='Oldingi']",
       );
       if (nextArrow || prevArrow) {
         const slider = (nextArrow || prevArrow)!.closest(".w-slider");
@@ -204,7 +204,7 @@ export function BaselineInteractions() {
 
       const link = target.closest("a");
       if (link && root.classList.contains("rt-menu-open")) {
-        closeMenu();
+        closeMenyu();
       }
     }
 
@@ -232,13 +232,14 @@ export function BaselineInteractions() {
       });
     });
 
-    async function onSubmit(e: Event) {
+    async function onFormSubmit(e: Event) {
       const form = e.target as HTMLFormElement | null;
       if (!form || form.tagName !== "FORM") return;
       if (!form.closest("main")) return;
       const hasContactFields =
         form.querySelector('[name="Contact-V1-email"], [name="email"]') ||
-        form.getAttribute("data-name")?.toLowerCase().includes("contact");
+        form.getAttribute("data-name")?.toLowerCase().includes("contact") ||
+        form.getAttribute("data-name")?.toLowerCase().includes("aloqa");
       if (!hasContactFields) return;
 
       e.preventDefault();
@@ -247,7 +248,7 @@ export function BaselineInteractions() {
         'input[type="submit"], button[type="submit"]',
       ) as HTMLInputElement | HTMLButtonElement | null;
       const prev = submitBtn && "value" in submitBtn ? submitBtn.value : null;
-      if (submitBtn && "value" in submitBtn) submitBtn.value = "Please wait...";
+      if (submitBtn && "value" in submitBtn) submitBtn.value = "Kuting...";
       try {
         const res = await fetch("/api/contact", {
           method: "POST",
@@ -255,11 +256,11 @@ export function BaselineInteractions() {
           body: JSON.stringify(data),
         });
         const json = (await res.json()) as { ok?: boolean; error?: string };
-        if (!res.ok || !json.ok) throw new Error(json.error || "Failed");
+        if (!res.ok || !json.ok) throw new Error(json.error || "Xato");
         form.reset();
-        alert("Thank you — your message was received.");
+        alert("Rahmat — xabaringiz qabul qilindi.");
       } catch (err) {
-        alert(err instanceof Error ? err.message : "Something went wrong.");
+        alert(err instanceof Error ? err.message : "Xatolik yuz berdi.");
       } finally {
         if (submitBtn && "value" in submitBtn && prev) submitBtn.value = prev;
       }
@@ -267,11 +268,11 @@ export function BaselineInteractions() {
 
     document.addEventListener("click", onClick);
     document.addEventListener("keydown", onKey);
-    document.addEventListener("submit", onSubmit, true);
+    document.addEventListener("submit", onFormSubmit, true);
     return () => {
       document.removeEventListener("click", onClick);
       document.removeEventListener("keydown", onKey);
-      document.removeEventListener("submit", onSubmit, true);
+      document.removeEventListener("submit", onFormSubmit, true);
       closeLightbox();
       lbRoot?.remove();
       lbRoot = null;

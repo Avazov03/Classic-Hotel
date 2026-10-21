@@ -27,70 +27,70 @@ export type RoomDetail = {
 };
 
 const sharedOverview =
-  "Experience comfort and elegance at our hotel, offering modern rooms, personalized service, and premium amenities. From fine dining to relaxing lounges, every detail is designed to ensure a memorable and enjoyable stay.";
+  "Zamonaviy xonalar, shaxsiy xizmat va premium qulayliklarga ega mehmonxonamizda qulaylik va nafislikni his eting. Har bir detal unutilmas dam olish uchun o‘ylab topilgan.";
 
-const sharedAmenities = [
-  "24/7 Rooms service",
-  "Complimentary breakfast",
-  "Free Wi - Fi",
-  "In room safe",
-  "1 Bathroom",
+const sharedQulayliklar = [
+  "24/7 xona xizmati",
+  "Bepul nonushta",
+  "Bepul Wi-Fi",
+  "Xonada seyf",
+  "1 hammom",
   "Minibar",
-  "Coffee kit",
-  "Room cleaning",
+  "Qahva to‘plami",
+  "Xona tozalash",
 ];
 
 const sharedSpecs = {
   rating: 4.8,
-  reviewLabel: "Based on 100 reviewers",
+  reviewLabel: "100 ta sharh asosida",
   comfort: 4.7,
   facilities: 4.9,
-  checkIn: "10:00 am",
-  checkOut: "12:00 pm",
+  checkIn: "10:00",
+  checkOut: "12:00",
 } satisfies Omit<RoomSpecs, "pricePerNight">;
 
 /** Cards on the /rooms listing page */
 export const roomsListing = [
   {
     slug: "standard-room",
-    name: "Standard Room",
+    name: "Standart xona",
     blurb:
-      "Our Standard Room provides a cozy, well-appointed space with essential comforts, soft bedding, and a peaceful setting—perfect for guests seeking a simple, relaxing, and budget-friendly stay",
+      "Standart xonamiz zarur qulayliklar, yumshoq to‘shak va tinch muhitga ega — oddiy, dam olishga qulay va byudjetga mos joy izlovchilar uchun ideal",
     highlights: [
-      "Kids friendly",
-      "Pets friendly",
-      "Heated pool",
-      "Daily breakfast",
-      "Daily housekeeping",
+      "Bolalar uchun qulay",
+      "Hayvonlar uchun qulay",
+      "Isitiladigan basseyn",
+      "Kundalik nonushta",
+      "Kundalik tozalash",
     ],
     price: "$180",
     image: `${CDN}/694e597d59f693d74fc55932_image%20434-Picsart-AiImageEnhancer%201.webp`,
   },
   {
     slug: "executive-suite",
-    name: "Executive Suite",
+    name: "Ijrochi lyuks",
     blurb:
-      "Experience elevated comfort in our Executive Suite, featuring spacious interiors, premium amenities, and a refined atmosphere for a luxurious stay",
+      "Keng interyer, premium qulayliklar va hashamatli dam olish uchun nafis muhitga ega Ijrochi lyuksimizda yuqori darajadagi qulaylikni his eting",
     highlights: [
-      "Kids friendly",
-      "Pets friendly",
-      "Airport pickup & drop",
-      "Daily breakfast",
-      "Daily housekeeping",
+      "Bolalar uchun qulay",
+      "Hayvonlar uchun qulay",
+      "Aeroport kutib olish va kuzatib qo‘yish",
+      "Kundalik nonushta",
+      "Kundalik tozalash",
     ],
     price: "$220",
     image: `${CDN}/694e59b978f8bc2c0529036a_image%20435-Picsart-AiImageEnhancer%201.webp`,
   },
   {
     slug: "sea-view-room",
-    name: "Sea View Room",
-    blurb: "Indulge in luxurious rooms with panoramic sea views",
+    name: "Dengiz manzarali xona",
+    blurb: "Panoramik dengiz manzarali hashamatli xonalardan bahramand bo‘ling",
     highlights: [
-      "Kids friendly",
-      "Pets friendly",
-      "Heated pool",
-      "Daily breakfast",
-      "Daily housekeeping",
+      "Bolalar uchun qulay",
+      "Hayvonlar uchun qulay",
+      "Isitiladigan basseyn",
+      "Kundalik nonushta",
+      "Kundalik tozalash",
     ],
     price: "$300",
     image: `${CDN}/694e59b966e523eacd429043_image%20436-Picsart-AiImageEnhancer%201.webp`,
@@ -100,7 +100,7 @@ export const roomsListing = [
 export const roomDetails: RoomDetail[] = [
   {
     slug: "standard-room",
-    name: "Standard Room",
+    name: "Standart xona",
     blurb: roomsListing[0].blurb,
     highlights: [...roomsListing[0].highlights],
     price: "$180",
@@ -121,11 +121,11 @@ export const roomDetails: RoomDetail[] = [
     ],
     overview: sharedOverview,
     specs: { ...sharedSpecs, pricePerNight: "$180" },
-    amenities: sharedAmenities,
+    amenities: sharedQulayliklar,
   },
   {
     slug: "sea-view-room",
-    name: "Sea View Room",
+    name: "Dengiz manzarali xona",
     blurb: roomsListing[2].blurb,
     highlights: [...roomsListing[2].highlights],
     price: "$300",
@@ -146,11 +146,11 @@ export const roomDetails: RoomDetail[] = [
     ],
     overview: sharedOverview,
     specs: { ...sharedSpecs, pricePerNight: "$300" },
-    amenities: sharedAmenities,
+    amenities: sharedQulayliklar,
   },
   {
     slug: "executive-suite",
-    name: "Executive Suite",
+    name: "Ijrochi lyuks",
     blurb: roomsListing[1].blurb,
     highlights: [...roomsListing[1].highlights],
     price: "$220",
@@ -171,7 +171,7 @@ export const roomDetails: RoomDetail[] = [
     ],
     overview: sharedOverview,
     specs: { ...sharedSpecs, pricePerNight: "$220" },
-    amenities: sharedAmenities,
+    amenities: sharedQulayliklar,
   },
 ];
 

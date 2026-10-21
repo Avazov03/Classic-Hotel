@@ -4,7 +4,7 @@ import styles from "./HomeHero.module.css";
 
 export function HomeHero() {
   return (
-    <section className={styles.hero} aria-label="Hero">
+    <section className={styles.hero} aria-label="Bosh banner">
       <div className={styles.media}>
         <video
           autoPlay

@@ -12,156 +12,156 @@ export type PageIntro = {
 
 export const pageIntros = {
   about: {
-    eyebrow: "Years of experience",
-    title: "Welcome to Your Perfect Stay",
+    eyebrow: "Yillar tajribasi",
+    title: "Mukammal dam olishga xush kelibsiz",
     subtitle:
-      "Your comfort is our mission and every moment is crafted to make you feel truly at home",
+      "Sizning qulayligingiz — bizning maqsadimiz; har bir lahza uydek his qilishingiz uchun yaratiladi",
     intro:
-      "Classic Hotel is built on comfort, care and trust, offering thoughtfully designed stays with genuine hospitality and a commitment to guest satisfaction.",
+      "Classic Apartment qulaylik, g‘amxo‘rlik va ishonchga asoslangan — chinakam mehmondo‘stlik va mehmon mamnuniyati bilan o‘ylab ishlangan yashashlarni taklif etadi.",
     image: `${CDN}/69452c5ad14c210fde417f7d_6e8b8f07617e02360fd36671319429eb_about-banner-image.webp`,
     metaDescription:
-      "Classic Hotel is built on comfort, care and trust, offering thoughtfully designed stays with genuine hospitality and a commitment to guest satisfaction.",
+      "Classic Apartment — qulaylik, g‘amxo‘rlik va chinakam mehmondo‘stlik bilan yaratilgan dam olish.",
   },
   rooms: {
-    title: "Our Rooms",
-    subtitle: "Sleep in Pure Comfort",
+    title: "Xonalarimiz",
+    subtitle: "Sof qulaylikda uxlang",
     intro:
-      "Explore Classic Hotel rooms designed for comfort and style, featuring modern interiors, cozy bedding and essential amenities for a restful stay.",
+      "Zamonaviy interyer, yumshoq to‘shak va dam olish uchun zarur qulayliklarga ega Classic Apartment xonalarini kashf eting.",
     image: `${CDN}/694e312f0951a14b785ffd15_e568dbb1f01f309400cbfb4d237ffe6a_room-page-banner-image.webp`,
     metaDescription:
-      "Explore Classic Hotel rooms designed for comfort and style, featuring modern interiors, cozy bedding and essential amenities for a restful stay.",
+      "Classic Apartment xonalari — qulaylik va uslub uchun zamonaviy interyerlar.",
   },
   amenities: {
-    eyebrow: "About Amenities",
-    title: "Exceptional Amenities for Every Guest",
+    eyebrow: "Qulayliklar haqida",
+    title: "Har bir mehmon uchun a’lo qulayliklar",
     intro:
-      "Luxury at its peak Enjoy world class spas and exquisite dining. Discover amenities designed for comfort, featuring modern facilities, thoughtful services and convenient features for a relaxed hotel stay.",
+      "Hashamat cho‘qqisida — jahon darajasidagi SPA va ajoyib ovqatlanish. Zamonaviy imkoniyatlar va o‘ylab topilgan xizmatlar bilan tinch dam olish uchun qulayliklar.",
     image: `${CDN}/69527b3a5274ffb6de3d0349_image%20447-Picsart-AiImageEnhancer%201%20(1).webp`,
     metaDescription:
-      "Discover Classic Hotel amenities designed for comfort, featuring modern facilities, thoughtful services and convenient features for a relaxed hotel stay.",
+      "Classic Apartment qulayliklari — SPA, ovqatlanish va zamonaviy xizmatlar.",
   },
   banquet: {
-    title: "Elegant Banquet Spaces",
+    title: "Nafis banket maydonlari",
     intro:
-      "Host memorable events at Classic Hotel Banquet with elegant spaces, modern facilities and attentive service perfect for weddings and gatherings.",
+      "To‘y, yig‘ilish va tadbirlar uchun nafis maydonlar, zamonaviy imkoniyatlar va e’tiborli xizmat — Classic Apartment banketida.",
     image: `${CDN}/6954dfb0643940014e8d7c27_image%20453-Picsart-AiImageEnhancer%201%20(1).webp`,
     metaDescription:
-      "Host memorable events at Classic Hotel Banquet with elegant spaces, modern facilities and attentive service perfect for weddings and gatherings.",
+      "Classic Apartment banket maydonlari — to‘y va korporativ tadbirlar uchun.",
   },
   spa: {
-    title: "Rejuvenate Your Mind Body and Soul",
+    title: "Tana, ruh va ongni yangilang",
     subtitle:
-      "Crafting wellness experiences that restore balance and inner calm",
+      "Muvozanat va ichki osoyishtalikni tiklaydigan sog‘lomlashtirish tajribalari",
     intro:
-      "Unwind at the Classic Hotel Spa with soothing treatments, calming spaces and expert care designed to refresh your body and restore inner balance.",
+      "Classic Apartment SPAda tinchlantiruvchi muolajalar, osoyishta muhit va mutaxassis g‘amxo‘rlik bilan dam oling.",
     image: `${CDN}/6953b6cbe9d3fb1df0e77f56_5a6f785dfa85045b71d807cfaff4a76a_spa-banner-image.webp`,
     metaDescription:
-      "Unwind at the Classic Hotel Spa with soothing treatments, calming spaces and expert care designed to refresh your body and restore inner balance.",
+      "Classic Apartment SPA — tinchlantiruvchi muolajalar va osuda muhit.",
   },
   restaurant: {
-    eyebrow: "About the service",
-    title: "Delicious Food Served with Style",
+    eyebrow: "Xizmat haqida",
+    title: "Uslub bilan taqdim etilgan mazali taomlar",
     intro:
-      "A refined dining experience shaped by exceptional flavor and taste. Dine at Classic Hotel Restaurant offering flavorful cuisine, fresh ingredients and a warm ambience for relaxed and enjoyable dining experiences.",
+      "Ajoyib ta’m va nafislik uyg‘unlashgan ovqatlanish. Classic Apartment restoranida yangi mahsulotlar, mazali oshxona va iliq muhit.",
     image: `${CDN}/6954e9698b2e3670bc6d4911_image%20490-Picsart-AiImageEnhancer%20(1)%201%20(1).webp`,
     metaDescription:
-      "Dine at Classic Hotel Restaurant offering flavorful cuisine, fresh ingredients and a warm ambience for relaxed and enjoyable dining experiences.",
+      "Classic Apartment restorani — mazali taomlar va iliq atmosfera.",
   },
   blog: {
-    title: "Explore Our Blogs",
+    title: "Bloglarimizni o‘qing",
     intro:
-      "Explore the Classic Hotel Blog for travel tips, hotel insights and hospitality stories designed to inspire better stays and memorable experiences.",
+      "Sayohat maslahatlari, mehmonxona yangiliklari va mehmondo‘stlik hikoyalari — Classic Apartment blogida.",
     image: `${CDN}/695645e0708c845e290a1f9e_image%20508-Picsart-AiImageEnhancer%201%20(1).webp`,
     metaDescription:
-      "Explore the Classic Hotel Blog for travel tips, hotel insights and hospitality stories designed to inspire better stays and memorable experiences.",
+      "Classic Apartment blog — sayohat va mehmondo‘stlik haqida foydali maqolalar.",
   },
   contact: {
-    eyebrow: "Contact",
-    title: "Start the Conversation",
-    subtitle: "Contact Us",
+    eyebrow: "Aloqa",
+    title: "Suhbatni boshlang",
+    subtitle: "Biz bilan bog‘laning",
     intro:
-      "Have questions or need assistance? Contact our team for prompt support with bookings, amenities, dining, or special requests.",
+      "Savolingiz bormi? Bron, qulayliklar, ovqatlanish yoki maxsus so‘rovlar bo‘yicha jamoamiz tez yordam beradi.",
     image: `${CDN}/6954b29b8505845a7463cc60_image%20506-Picsart-AiImageEnhancer%201%20(1).webp`,
     metaDescription:
-      "Contact Classic Hotel to connect with our team for reservations, services or general questions. We’re here to assist you with ease.",
+      "Classic Apartment bilan bog‘laning — bron va xizmatlar bo‘yicha savollaringiz uchun.",
   },
 } satisfies Record<string, PageIntro>;
 
 export const aboutFeatures = [
   {
-    title: "Thoughtful hospitality",
-    body: "Every stay is shaped by attentive service, calm spaces, and details that help guests feel genuinely welcome from arrival to departure.",
+    title: "E’tiborli mehmondo‘stlik",
+    body: "Har bir yashash — e’tiborli xizmat, tinch muhit va mehmonni kelganidan ketgunicha chinakam kutib oladigan detallar bilan shakllanadi.",
   },
   {
-    title: "Designed for comfort",
-    body: "Rooms, lounges, and shared spaces balance refined design with practical comfort so business and leisure travelers feel at ease.",
+    title: "Qulaylik uchun yaratilgan",
+    body: "Xonalar, lounge va umumiy joylar nafis dizayn bilan amaliy qulaylikni uyg‘unlashtiradi — biznes va dam olish mehmonlari uchun.",
   },
   {
-    title: "Locally rooted",
-    body: "From dining to recommendations, we connect guests with the character of the city while keeping the hotel experience effortless.",
+    title: "Mahalliy ildizlar",
+    body: "Ovqatlanishdan tavsiyalargacha — shahar ruhini his qildiramiz, mehmonxona tajribasini esa oson saqlaymiz.",
   },
 ];
 
 export const amenityItems = [
   {
-    title: "Wellness & Spa",
-    body: "Calming treatments and quiet spaces designed to restore energy after travel or a full day in the city.",
+    title: "Wellness va SPA",
+    body: "Sayohat yoki shahar kuni oxirida kuchni tiklash uchun tinchlantiruvchi muolajalar va osoyishta joylar.",
   },
   {
-    title: "Fitness studio",
-    body: "Modern equipment and flexible hours so guests can keep their routine without leaving the hotel.",
+    title: "Fitnes studio",
+    body: "Zamonaviy jihozlar va moslashuvchan soatlar — mehmonxonadan chiqmasdan mashq qiling.",
   },
   {
-    title: "Pool & terrace",
-    body: "A place to unwind outdoors with poolside seating and an easy transition between rest and leisure.",
+    title: "Basseyn va teras",
+    body: "Ochiq havoda dam olish: basseyn yonidagi o‘rindiqlar va osuda o‘tish.",
   },
   {
-    title: "Concierge support",
-    body: "Help with bookings, transfers, dining reservations, and special requests whenever you need it.",
+    title: "Konsyerj yordami",
+    body: "Bron, transfer, restoran band qilish va maxsus so‘rovlar — kerak bo‘lganda yordam.",
   },
   {
-    title: "Business ready",
-    body: "High-speed Wi-Fi, meeting-friendly corners, and quiet work spaces for productive stays.",
+    title: "Biznes uchun tayyor",
+    body: "Tezkor Wi-Fi, uchrashuvga qulay burchaklar va samarali ish uchun tinch joylar.",
   },
   {
-    title: "Family friendly",
-    body: "Flexible room setups and thoughtful extras that make traveling with children smoother.",
+    title: "Oilaviy qulay",
+    body: "Bolalar bilan sayohatni osonlashtiradigan moslashuvchan xona variantlari va qo‘shimchalar.",
   },
 ];
 
 export const banquetHighlights = [
-  "Weddings and receptions",
-  "Corporate meetings",
-  "Private celebrations",
-  "Workshops and retreats",
-  "Modern AV support",
-  "Custom catering menus",
+  "To‘y va ziyofatlar",
+  "Korporativ uchrashuvlar",
+  "Shaxsiy bayramlar",
+  "Seminar va retreatlar",
+  "Zamonaviy AV qo‘llab-quvvatlash",
+  "Moslashtirilgan katering menyulari",
 ];
 
 export const spaTreatments = [
   {
-    title: "Signature massage",
-    body: "A restorative full-body treatment focused on easing tension and deepening relaxation.",
+    title: "Imzoli massaj",
+    body: "Zo‘riqishni kamaytirish va chuqur dam olishga qaratilgan to‘liq tana muolajasi.",
   },
   {
-    title: "Facial rituals",
-    body: "Skin-renewing facials crafted to refresh, hydrate, and leave you glowing after travel.",
+    title: "Yuz rituallari",
+    body: "Sayohatdan keyin yangilanish, namlanish va porlash uchun yuz muolajalari.",
   },
   {
-    title: "Couple wellness",
-    body: "Shared spa moments designed for connection, calm, and unhurried time together.",
+    title: "Juftlik wellness",
+    body: "Birgalikda tinchlanish va bog‘lanish uchun yaratilgan SPA lahzalari.",
   },
   {
-    title: "Body therapies",
-    body: "Scrubs and wraps that revive tired muscles and restore a sense of lightness.",
+    title: "Tana terapiyalari",
+    body: "Charchagan mushaklarni jonlantiradigan skrab va o‘ramalar.",
   },
 ];
 
 export const restaurantHighlights = [
-  "Seasonal menus",
-  "Fresh local ingredients",
-  "Signature fine dining",
-  "Breakfast included options",
-  "Private dining rooms",
-  "Cocktail lounge",
+  "Mavsumiy menyular",
+  "Yangi mahalliy mahsulotlar",
+  "Imzoli fine dining",
+  "Nonushta kiritilgan variantlar",
+  "Shaxsiy ovqatlanish xonalari",
+  "Kokteyl lounge",
 ];

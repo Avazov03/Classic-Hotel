@@ -4,7 +4,7 @@ import styles from "./HomeStats.module.css";
 
 export function HomeStats() {
   return (
-    <section className={styles.section} aria-label="Hotel highlights">
+    <section className={styles.section} aria-label="Mehmonxona afzalliklari">
       <div className="container">
         <p className={styles.intro}>{homeStats.intro}</p>
 
@@ -22,7 +22,7 @@ export function HomeStats() {
             <figure key={src}>
               <Image
                 src={src}
-                alt={`Hotel amenity ${i + 1}`}
+                alt={`Qulaylik ${i + 1}`}
                 width={480}
                 height={360}
                 sizes="(max-width: 700px) 50vw, 25vw"

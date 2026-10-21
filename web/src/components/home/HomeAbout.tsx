@@ -35,7 +35,7 @@ export function HomeAbout() {
             <Image
               className={styles.mainImg}
               src={homeAbout.images[0]}
-              alt="Hotel exterior overlooking the water"
+              alt="Mehmonxona tashqi ko‘rinishi"
               width={720}
               height={900}
               sizes="(max-width: 900px) 100vw, 42vw"
@@ -45,7 +45,7 @@ export function HomeAbout() {
             <Image
               className={styles.sideImg}
               src={homeAbout.images[1]}
-              alt="Hotel lounge detail"
+              alt="Lounge tafsiloti"
               width={480}
               height={360}
               sizes="(max-width: 900px) 50vw, 22vw"
@@ -55,7 +55,7 @@ export function HomeAbout() {
             <Image
               className={styles.sideImg}
               src={homeAbout.images[2]}
-              alt="Guest room atmosphere"
+              alt="Mehmon xonasi muhiti"
               width={480}
               height={360}
               sizes="(max-width: 900px) 50vw, 22vw"

@@ -21,7 +21,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const room = getRoomBySlug(slug);
-  if (!room) return { title: "Room" };
+  if (!room) return { title: "Xona" };
   return { title: room.name, description: room.blurb };
 }
 

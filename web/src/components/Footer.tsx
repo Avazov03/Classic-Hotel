@@ -3,10 +3,10 @@ import { brandName, contact, footerTagline, navLinks } from "@/data/site";
 import styles from "./Footer.module.css";
 
 const more = [
-  { href: "/amenities", label: "Amenities" },
+  { href: "/amenities", label: "Qulayliklar" },
   { href: "/spa", label: "SPA" },
-  { href: "/restaurant", label: "Restaurant" },
-  { href: "/contact", label: "Contact" },
+  { href: "/restaurant", label: "Restoran" },
+  { href: "/contact", label: "Aloqa" },
 ];
 
 export function Footer() {
@@ -22,7 +22,7 @@ export function Footer() {
         </div>
 
         <div>
-          <div className={styles.colTitle}>Explore</div>
+          <div className={styles.colTitle}>Kashf eting</div>
           <div className={styles.links}>
             {[...navLinks, ...more].map((item) => (
               <Link key={item.href} href={item.href}>
@@ -33,7 +33,7 @@ export function Footer() {
         </div>
 
         <div>
-          <div className={styles.colTitle}>Contact</div>
+          <div className={styles.colTitle}>Aloqa</div>
           <div className={styles.links}>
             <a href={contact.phoneHref}>{contact.phoneDisplay}</a>
             <a href={`mailto:${contact.email}`}>{contact.email}</a>
@@ -43,7 +43,7 @@ export function Footer() {
       </div>
 
       <div className={styles.bottom}>
-        <div className="container">All rights reserved</div>
+        <div className="container">Barcha huquqlar himoyalangan.</div>
       </div>
     </footer>
   );

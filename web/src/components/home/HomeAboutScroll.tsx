@@ -195,7 +195,7 @@ export function HomeAboutScroll() {
   return (
     <section
       className="rt-about-v1 rt-position-relative"
-      aria-label="About the hotel"
+      aria-label="Biz haqimizda"
       data-react-about="ix2-port"
     >
       <div className="w-layout-blockcontainer rt-container w-container">
