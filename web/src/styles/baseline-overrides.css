@@ -71,7 +71,10 @@ html.is-home .rt-nav-logo-v2 {
   display: none !important;
 }
 
-/* Sticky scroll chapters without IX2 create huge empty voids (not home About — that is React) */
+/*
+ * Sticky scroll chapters without IX2 create huge empty voids.
+ * Keep About sticky intact — IX2 drives rt-about-v1 via webflow.js.
+ */
 .rt-value,
 .rt-feature-v7,
 .rt-service-v1,
@@ -88,11 +91,6 @@ html.is-home .rt-nav-logo-v2 {
   min-height: 0 !important;
 }
 
-/* Hide leftover static About markup if any old bundle still injects it */
-section.rt-about-v1 {
-  display: none !important;
-}
-
 /* Inner page hero should not stick forever over content */
 .rt-inner-hero {
   position: relative !important;
@@ -104,7 +102,12 @@ section.rt-about-v1 {
   transform: none !important;
 }
 
-/* Ensure text forced hidden by leftover transforms is readable */
-[style*="opacity:0"] {
+/*
+ * Without IX2, some sections stay opacity:0 forever.
+ * Scope to non-About / non-data-w-id leaves so IX2 start states still work.
+ */
+main [style*="opacity:0"]:not([data-w-id]):not(.rt-about-v1 *):not(
+    .rt-about-v1
+  ) {
   opacity: 1 !important;
 }

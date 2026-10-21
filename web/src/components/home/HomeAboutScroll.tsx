@@ -11,33 +11,46 @@ const STAGES = homeAbout.titles.map((title, i) => ({
   image: homeAbout.images[i],
 }));
 
+function clamp(n: number, min = 0, max = 1) {
+  return Math.min(max, Math.max(min, n));
+}
+
+/**
+ * Original Webflow behavior: sticky "ABOUT THE HOTEL", then 3 pill images
+ * rise from bottom to top one-by-one as the user scrolls the 250vh track.
+ */
 export function HomeAboutScroll() {
   const trackRef = useRef<HTMLDivElement>(null);
-  const [active, setActive] = useState(0);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) return;
+    if (reduce) {
+      setProgress(1);
+      return;
+    }
 
     let frame = 0;
 
-    function onScroll() {
-      cancelAnimationFrame(frame);
-      frame = requestAnimationFrame(() => {
-        const el = trackRef.current;
-        if (!el) return;
-        const rect = el.getBoundingClientRect();
-        const total = el.offsetHeight - window.innerHeight;
-        if (total <= 0) return;
-        const scrolled = Math.min(Math.max(-rect.top, 0), total);
-        const progress = scrolled / total;
-        // 3 stages across the sticky scroll distance
-        const next = Math.min(2, Math.floor(progress * 3));
-        setActive((prev) => (prev === next ? prev : next));
-      });
+    function update() {
+      const el = trackRef.current;
+      if (!el) return;
+      const rect = el.getBoundingClientRect();
+      const total = el.offsetHeight - window.innerHeight;
+      if (total <= 0) {
+        setProgress(1);
+        return;
+      }
+      const scrolled = clamp(-rect.top / total);
+      setProgress(scrolled);
     }
 
-    onScroll();
+    function onScroll() {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(update);
+    }
+
+    update();
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
     return () => {
@@ -47,45 +60,60 @@ export function HomeAboutScroll() {
     };
   }, []);
 
+  // Sequential rises with a short handoff overlap so the next capsule tip peeks (baseline).
+  const ranges = [
+    { start: 0.0, end: 0.26 },
+    { start: 0.24, end: 0.52 },
+    { start: 0.5, end: 0.78 },
+  ];
+
+  // 140% keeps idle pills fully below the sticky viewport (110% still peeked).
+  const pillY = ranges.map(({ start, end }) => {
+    const t = clamp((progress - start) / (end - start));
+    const eased = 1 - (1 - t) ** 3;
+    return (1 - eased) * 140;
+  });
+
+  // Body + CTA reveal near the end of the third rise
+  const copyReady = progress > 0.72;
+
   return (
     <section className={styles.section} aria-label="About the hotel">
       <div className={styles.track} ref={trackRef}>
         <div className={styles.sticky}>
           <h2 className={styles.eyebrow}>{homeAbout.eyebrow}</h2>
 
-          <div className={styles.pillWrap}>
+          <div className={styles.stack}>
             {STAGES.map((stage, i) => (
               <div
                 key={stage.title}
-                className={`${styles.slide} ${
-                  i === active ? styles.slideActive : styles.slideInactive
-                }`}
+                className={styles.pill}
+                style={{
+                  zIndex: i + 1,
+                  transform: `translate3d(0, ${pillY[i]}%, 0)`,
+                }}
               >
                 <Image
                   src={stage.image}
                   alt={stage.title}
                   fill
-                  sizes="(max-width: 767px) 72vw, 28rem"
+                  sizes="(max-width: 767px) 78vw, 26rem"
                   priority={i === 0}
                 />
+                <div className={styles.caption}>{stage.title}</div>
               </div>
             ))}
-            <div className={styles.caption}>{STAGES[active].title}</div>
           </div>
 
-          <p className={styles.body}>{homeAbout.body}</p>
-
-          <Link className={styles.cta} href={homeAbout.ctaHref}>
-            {homeAbout.cta}
-          </Link>
-
-          <div className={styles.progress} aria-hidden>
-            {STAGES.map((stage, i) => (
-              <span
-                key={stage.title}
-                className={`${styles.dot} ${i === active ? styles.dotActive : ""}`}
-              />
-            ))}
+          <div
+            className={`${styles.copy} ${
+              copyReady ? styles.copyVisible : styles.copyHidden
+            }`}
+          >
+            <p className={styles.body}>{homeAbout.body}</p>
+            <Link className={styles.cta} href={homeAbout.ctaHref}>
+              {homeAbout.cta}
+            </Link>
           </div>
         </div>
       </div>

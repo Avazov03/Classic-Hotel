@@ -31,7 +31,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-wf-domain="classic-hotel">
+    <html
+      lang="en"
+      data-wf-domain="elbergo.webflow.io"
+      data-wf-site="6927ddcc377dce6e20188e35"
+      data-wf-page="692fe6f5d2e79e47913f0926"
+    >
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap"
