@@ -21,8 +21,12 @@ export function RouteChrome() {
     const prev = root.getAttribute("data-wf-page");
     root.setAttribute("data-wf-page", pageId);
 
-    // Soft re-init when navigating between Webflow page scopes
-    if (prev && prev !== pageId) {
+    /*
+     * Always re-bind IX2 on client navigations — shared CMS templates
+     * (/blog/*, /rooms/*) keep the same pageId but swap DOM; other pages
+     * can also leave opacity:0 if IX2 stays bound to detached nodes.
+     */
+    if (prev) {
       refreshWebflowIx2();
     } else {
       window.dispatchEvent(new Event("resize"));
@@ -59,11 +63,15 @@ export function RouteChrome() {
         return;
       }
 
+      // Full-bleed photo heroes only — blog post (.rt-blog-post-hero) is a
+      // white content block, so chrome stays solid with shadow like /contact
+      // after scroll / other non-hero inners.
       const hero = document.querySelector(
         ".rt-room-details-hero, .rt-inner-hero",
       );
       if (!hero) {
-        root.classList.remove("is-hero-top", "is-nav-solid");
+        root.classList.remove("is-hero-top");
+        root.classList.add("is-nav-solid");
         return;
       }
       const heroBottom = hero.getBoundingClientRect().bottom;

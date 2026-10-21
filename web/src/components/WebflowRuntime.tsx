@@ -104,6 +104,34 @@ function kickMediaAndScroll() {
   window.dispatchEvent(new Event("scroll"));
 }
 
+const STUCK_IX2_SKIP =
+  /rt-faq|rt-image-overlay|rt-navbar|rt-nav-logo|rt-dropdown-icon|w-slide|backgroundvideoplaypausebutton|rt-counter-train/i;
+
+let stuckRevealTimer: ReturnType<typeof setTimeout> | null = null;
+
+/**
+ * IX2 while-in-view sometimes never fires (SPA / shared CMS page ids).
+ * After a short grace period, force-show leftover content blocks.
+ */
+export function revealStuckIx2Content(delayMs = 1400) {
+  if (typeof window === "undefined") return;
+  if (stuckRevealTimer) clearTimeout(stuckRevealTimer);
+  stuckRevealTimer = setTimeout(() => {
+    stuckRevealTimer = null;
+    document.querySelectorAll<HTMLElement>("main [data-w-id]").forEach((el) => {
+      const cls = el.className?.toString?.() || "";
+      if (STUCK_IX2_SKIP.test(cls)) return;
+      const op = parseFloat(getComputedStyle(el).opacity);
+      if (op > 0.05) return;
+      const r = el.getBoundingClientRect();
+      if (r.width < 4 || r.height < 8) return;
+      el.style.setProperty("opacity", "1", "important");
+      el.style.setProperty("transform", "none", "important");
+      el.style.setProperty("filter", "none", "important");
+    });
+  }, delayMs);
+}
+
 async function ensureWebflowScripts() {
   installIx2InitCapture();
 
@@ -161,6 +189,7 @@ export function refreshWebflowIx2() {
 
   document.documentElement.classList.add("w-mod-ix");
   kickMediaAndScroll();
+  revealStuckIx2Content();
 }
 
 /**
@@ -178,6 +207,7 @@ export function WebflowRuntime() {
         state.promise = ensureWebflowScripts()
           .then(() => {
             state.done = true;
+            revealStuckIx2Content(1800);
           })
           .catch((err) => {
             console.error("[WebflowRuntime]", err);

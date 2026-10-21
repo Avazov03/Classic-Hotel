@@ -252,12 +252,33 @@ html.is-inner .rt-navbar-shadow-v1 {
   pointer-events: none !important;
 }
 
-/* Home: always dark logo */
+/* Home: default green logo; hero glassda oq (v1 light) */
+html.is-home .rt-nav-logo-v1,
+html.is-home .rt-nav-logo-v2 {
+  transition: opacity 0.55s ease;
+}
+
 html.is-home .rt-nav-logo-v1 {
   opacity: 0 !important;
 }
 
 html.is-home .rt-nav-logo-v2 {
+  opacity: 1 !important;
+}
+
+html.is-home.is-hero-top .rt-nav-logo-v1 {
+  opacity: 1 !important;
+}
+
+html.is-home.is-hero-top .rt-nav-logo-v2 {
+  opacity: 0 !important;
+}
+
+html.is-home.is-nav-solid .rt-nav-logo-v1 {
+  opacity: 0 !important;
+}
+
+html.is-home.is-nav-solid .rt-nav-logo-v2 {
   opacity: 1 !important;
 }
 
@@ -343,11 +364,37 @@ html.is-inner .rt-navbar-shadow-v1 {
     background-color 0.55s ease;
 }
 
+html.is-inner .rt-nav-logo-v1,
+html.is-inner .rt-nav-logo-v2 {
+  transition: opacity 0.55s ease;
+}
+
 html.is-inner .rt-nav-logo-v1 {
   opacity: 0 !important;
 }
 
 html.is-inner .rt-nav-logo-v2 {
+  opacity: 1 !important;
+}
+
+/* Inner hero glass: oq logo */
+html.is-inner.is-hero-top .rt-nav-logo-v1,
+html.is-inner:has(.rt-room-details-hero):not(.is-nav-solid) .rt-nav-logo-v1,
+html.is-inner:has(.rt-inner-hero):not(.is-nav-solid) .rt-nav-logo-v1 {
+  opacity: 1 !important;
+}
+
+html.is-inner.is-hero-top .rt-nav-logo-v2,
+html.is-inner:has(.rt-room-details-hero):not(.is-nav-solid) .rt-nav-logo-v2,
+html.is-inner:has(.rt-inner-hero):not(.is-nav-solid) .rt-nav-logo-v2 {
+  opacity: 0 !important;
+}
+
+html.is-inner.is-nav-solid .rt-nav-logo-v1 {
+  opacity: 0 !important;
+}
+
+html.is-inner.is-nav-solid .rt-nav-logo-v2 {
   opacity: 1 !important;
 }
 
@@ -421,6 +468,12 @@ html.is-inner.is-nav-solid .rt-navbar-v1 {
   border-bottom-color: transparent;
 }
 
+/* Solid chrome: shadow on fixed shell so it always reads under the header */
+html.is-inner.is-nav-solid .rt-top-main-box,
+html.is-home.is-nav-solid .rt-top-main-box {
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.14);
+}
+
 html.is-inner.is-nav-solid .rt-nav-inner-block {
   background-color: transparent !important;
 }
@@ -431,7 +484,8 @@ html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
   opacity: 1 !important;
   visibility: visible !important;
   background-color: #ffffff !important;
-  box-shadow: 0 2px 15px #0003;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.18);
+  z-index: 1;
 }
 
 /* Non-hero inner: solid white bar */
@@ -619,6 +673,44 @@ main [style*="opacity:0"]:not([data-w-id]):not(.rt-about-v1 *):not(
     .rt-about-v1
   ) {
   opacity: 1 !important;
+}
+
+/*
+ * Blog / room CMS: IX2 while-in-view often never fires after client nav /
+ * shared template pageId — content stays invisible (opacity:0).
+ */
+.rt-blog-post-details [style*="opacity:0"],
+.rt-blog-post-details [style*="opacity: 0"],
+.rt-related-post [style*="opacity:0"],
+.rt-related-post [style*="opacity: 0"],
+.rt-blog-v1-card[style*="opacity:0"],
+.rt-blog-v1-card[style*="opacity: 0"],
+.rt-room-overview-v2 [style*="opacity:0"],
+.rt-room-overview-v2 [style*="opacity: 0"],
+.rt-room-overview-v3 [style*="opacity:0"],
+.rt-room-overview-v3 [style*="opacity: 0"],
+.rt-amenities-card-wrapper[style*="opacity:0"],
+.rt-hotel-details-wrapper[style*="opacity:0"],
+.rt-room-overview-card-top-wrapper[style*="opacity:0"],
+.rt-room-overview-card-bottom-wrapper[style*="opacity:0"],
+.rt-room-overview-card-bottom-content[style*="opacity:0"] {
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+/* Wipe overlays: if IX2 stalls mid-animation, clear them off the hero image */
+.rt-blog-post-hero .rt-image-overlay-1,
+.rt-blog-post-hero .rt-image-overlay-2 {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}
+
+/* Author card sticky: fixed chrome ostida qolsin (logo ustiga chiqmasin) */
+.rt-blog-overview-left-wrapper {
+  top: 7.5rem !important;
+  z-index: 1;
 }
 
 /* Lightweight lightbox (Webflow w-lightbox stand-in) */
