@@ -104,9 +104,10 @@ html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero)) main {
   padding-top: 7.5rem;
 }
 
+/* Ichki sahifa (hero yo‘q): oq fon — logo yashili */
 html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
   .rt-navbar-v1-bar-line {
-  background-color: var(--_colors---dark-blue, #00253f);
+  background-color: var(--color-brand, #168d70) !important;
 }
 
 html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
@@ -118,7 +119,7 @@ html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
 html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
   .rt-navbar-v1-button-wrapper
   .rt-text-white {
-  color: var(--_colors---dark-blue, #00253f) !important;
+  color: var(--color-brand, #168d70) !important;
 }
 
 /*
@@ -153,28 +154,41 @@ html.is-home .rt-nav-logo-v2 {
   opacity: 1 !important;
 }
 
-html.is-home .rt-navbar-v1-bar-line {
-  background-color: var(--_colors---dark-blue, #00253f);
+/* Hero ustida: oq (kontrast). Oq headerda: logo yashili. */
+html.is-home.is-hero-top .rt-navbar-v1-bar-line,
+html.is-home.is-hero-top .rt-navbar-v1-menu-bar-wrap .rt-navbar-v1-bar-line {
+  background-color: #ffffff !important;
 }
 
-html.is-home .rt-navbar-v1-menu-wrapper .rt-button-text,
-html.is-home .rt-navbar-v1-menu-wrapper .rt-hover-color-change,
-html.is-home .rt-navbar-v1-button-wrapper .rt-text-white,
-html.is-home .rt-navbar-v1 a.rt-text-white {
-  color: var(--_colors---dark-blue, #00253f) !important;
+html.is-home.is-hero-top .rt-navbar-v1-menu-wrapper .rt-button-text,
+html.is-home.is-hero-top .rt-navbar-v1-menu-wrapper .rt-hover-color-change,
+html.is-home.is-hero-top .rt-navbar-v1-button-wrapper .rt-text-white,
+html.is-home.is-hero-top .rt-navbar-v1 a.rt-text-white {
+  color: #ffffff !important;
+}
+
+html.is-home.is-nav-solid .rt-navbar-v1-bar-line,
+html.is-home.is-nav-solid .rt-navbar-v1-menu-bar-wrap .rt-navbar-v1-bar-line {
+  background-color: var(--color-brand, #168d70) !important;
+}
+
+html.is-home.is-nav-solid .rt-navbar-v1-menu-wrapper .rt-button-text,
+html.is-home.is-nav-solid .rt-navbar-v1-menu-wrapper .rt-hover-color-change,
+html.is-home.is-nav-solid .rt-navbar-v1-button-wrapper .rt-text-white,
+html.is-home.is-nav-solid .rt-navbar-v1 a.rt-text-white {
+  color: var(--color-brand, #168d70) !important;
 }
 
 /*
- * Apple-style tiniq shisha (bitta qavat):
- * saturate(180%) blur(20px) — macOS/iOS vibrancy usuli.
+ * Oyna kabi tiniq shisha: orqa fon aniq ko‘rinadi, blur/hira yo‘q.
  */
 html.is-home.is-hero-top .rt-navbar-v1,
 html.is-home.is-hero-top .rt-navbar-v1[style] {
-  background-color: rgba(255, 255, 255, 0.55) !important;
-  -webkit-backdrop-filter: saturate(180%) blur(20px) !important;
-  backdrop-filter: saturate(180%) blur(20px) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
 }
 
 html.is-home.is-hero-top .rt-nav-inner-block {
@@ -230,25 +244,53 @@ html.is-inner .rt-nav-logo-v2 {
   opacity: 1 !important;
 }
 
-html.is-inner .rt-navbar-v1-bar-line {
-  background-color: var(--_colors---dark-blue, #00253f);
+html.is-inner.is-hero-top .rt-navbar-v1-bar-line,
+html.is-inner.is-hero-top .rt-navbar-v1-menu-bar-wrap .rt-navbar-v1-bar-line,
+html.is-inner:has(.rt-room-details-hero):not(.is-nav-solid) .rt-navbar-v1-bar-line,
+html.is-inner:has(.rt-inner-hero):not(.is-nav-solid) .rt-navbar-v1-bar-line {
+  background-color: #ffffff !important;
 }
 
-html.is-inner .rt-navbar-v1-menu-wrapper .rt-button-text,
-html.is-inner .rt-navbar-v1-menu-wrapper .rt-hover-color-change,
-html.is-inner .rt-navbar-v1-button-wrapper .rt-text-white,
-html.is-inner .rt-navbar-v1 a.rt-text-white {
-  color: var(--_colors---dark-blue, #00253f) !important;
+html.is-inner.is-hero-top .rt-navbar-v1-menu-wrapper .rt-button-text,
+html.is-inner.is-hero-top .rt-navbar-v1-menu-wrapper .rt-hover-color-change,
+html.is-inner.is-hero-top .rt-navbar-v1-button-wrapper .rt-text-white,
+html.is-inner.is-hero-top .rt-navbar-v1 a.rt-text-white,
+html.is-inner:has(.rt-room-details-hero):not(.is-nav-solid)
+  .rt-navbar-v1-menu-wrapper
+  .rt-button-text,
+html.is-inner:has(.rt-inner-hero):not(.is-nav-solid)
+  .rt-navbar-v1-menu-wrapper
+  .rt-button-text,
+html.is-inner:has(.rt-room-details-hero):not(.is-nav-solid)
+  .rt-navbar-v1-button-wrapper
+  .rt-text-white,
+html.is-inner:has(.rt-inner-hero):not(.is-nav-solid)
+  .rt-navbar-v1-button-wrapper
+  .rt-text-white {
+  color: #ffffff !important;
 }
 
-/* Inner hero: glass faqat navbar-v1 — inner-block transparent (chiziq yo‘q) */
+html.is-inner.is-nav-solid .rt-navbar-v1-bar-line,
+html.is-inner.is-nav-solid .rt-navbar-v1-menu-bar-wrap .rt-navbar-v1-bar-line {
+  background-color: var(--color-brand, #168d70) !important;
+}
+
+html.is-inner.is-nav-solid .rt-navbar-v1-menu-wrapper .rt-button-text,
+html.is-inner.is-nav-solid .rt-navbar-v1-menu-wrapper .rt-hover-color-change,
+html.is-inner.is-nav-solid .rt-navbar-v1-button-wrapper .rt-text-white,
+html.is-inner.is-nav-solid .rt-navbar-v1 a.rt-text-white {
+  color: var(--color-brand, #168d70) !important;
+}
+
+/* Inner hero: oyna shaffofligi — blur yo‘q */
 html.is-inner:has(.rt-room-details-hero) .rt-navbar-v1,
 html.is-inner:has(.rt-inner-hero) .rt-navbar-v1,
 html.is-inner.is-hero-top .rt-navbar-v1 {
-  background-color: rgba(255, 255, 255, 0.55) !important;
-  -webkit-backdrop-filter: saturate(180%) blur(20px) !important;
-  backdrop-filter: saturate(180%) blur(20px) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
 }
 
 html.is-inner:has(.rt-room-details-hero) .rt-nav-inner-block,
