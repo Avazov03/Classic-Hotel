@@ -69,6 +69,10 @@ function clean(html) {
     // Keep Webflow lightbox JSON; strip executable scripts only
     .replace(/<script(?![^>]*type=["']application\/json["'])[\s\S]*?<\/script>/gi, "")
     .replace(/\.\.\/cdn\.prod\.website-files\.com/g, "https://cdn.prod.website-files.com")
+    .replace(
+      /url\(_https_\/cdn\.prod\.website-files\.com\/([^)]+?)_poster\.0000000\.html\)/g,
+      "url('https://cdn.prod.website-files.com/$1_poster.0000000.jpg')",
+    )
     .replace(/src="\.\.\/([^"]+)"/g, 'src="https://$1"');
 
   for (const [re, rep] of linkMap) out = out.replace(re, rep);

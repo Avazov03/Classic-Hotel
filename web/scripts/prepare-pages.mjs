@@ -68,6 +68,11 @@ function clean(html) {
     // Keep Webflow lightbox JSON; strip executable scripts only
     .replace(/<script(?![^>]*type=["']application\/json["'])[\s\S]*?<\/script>/gi, "")
     .replace(/\.\.\/cdn\.prod\.website-files\.com/g, "https://cdn.prod.website-files.com")
+    // Scraped HTML mangles video poster urls: url(_https_/cdn...poster.html)
+    .replace(
+      /url\(_https_\/cdn\.prod\.website-files\.com\/([^)]+?)_poster\.0000000\.html\)/g,
+      "url('https://cdn.prod.website-files.com/$1_poster.0000000.jpg')",
+    )
     .replace(/src="\.\.\/([^"]+)"/g, (_, p) => {
       if (p.startsWith("http")) return `src="${p}"`;
       if (p.startsWith("cdn.")) return `src="https://${p}"`;

@@ -24,6 +24,18 @@ html:not(.w-mod-ix) .rt-top-bar-marquee-train {
   animation: rt-marquee 35s linear infinite;
 }
 
+/* Room gallery marquee — CSS fallback when IX2 has not painted a transform yet */
+html.is-inner .rt-gallery-top-marquee-train:not([style*="transform"]),
+html.is-inner .rt-gallery-bottom-marquee:not([style*="transform"]) {
+  display: flex;
+  width: max-content;
+  animation: rt-marquee 40s linear infinite;
+}
+
+html.is-inner .rt-gallery-bottom-marquee:not([style*="transform"]) {
+  animation-direction: reverse;
+}
+
 @keyframes rt-marquee {
   from {
     transform: translateX(0);
@@ -67,34 +79,45 @@ html.is-home .rt-about-v1 {
   background-color: var(--_colors---soft-porcelain-white, #faf7f2);
 }
 
+/* “ABOUT THE HOTEL” sticks a hair under the fixed chrome — nudge 6px down */
+html.is-home .rt-about-v1-sticky {
+  top: calc(12vh + 6px);
+}
+
 /* Rest of home paints above any leftover stacking from the stage */
 html.is-home .home-hero-about-stage + * {
   position: relative;
   z-index: 2;
-  background-color: var(--_colors---soft-porcelain-white, #faf7f2);
-}
-
-html.is-home main > .home-hero-about-stage ~ section,
-html.is-home .home-hero-about-stage + * section {
-  background-color: var(--_colors---soft-porcelain-white, #faf7f2);
 }
 
 .baseline-root {
-  background: var(--_colors---soft-porcelain-white, #faf7f2);
+  /* Match Webflow body — pure white. Porcelain cream made Experience
+     IX2 text panels (bg: --white) look like a trapped white “frame”. */
+  background: var(--_colors---white, #fff);
 }
 
-/* Inner pages: fixed home chrome sits over content without IX2 scroll states */
-html.is-inner main {
+/*
+ * Inner pages without a full-bleed hero: pad for fixed chrome.
+ * Room / inner-hero pages overlay chrome on the hero (matches Webflow).
+ */
+html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero)) main {
   padding-top: 7.5rem;
 }
 
-html.is-inner .rt-navbar-v1-bar-line {
+html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
+  .rt-navbar-v1-bar-line {
   background-color: var(--_colors---dark-blue, #00253f);
 }
 
-html.is-inner .rt-navbar-v1-menu-wrapper .rt-button-text,
-html.is-inner .rt-navbar-v1-menu-wrapper .rt-hover-color-change,
-html.is-inner .rt-navbar-v1-button-wrapper .rt-text-white {
+html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
+  .rt-navbar-v1-menu-wrapper
+  .rt-button-text,
+html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
+  .rt-navbar-v1-menu-wrapper
+  .rt-hover-color-change,
+html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
+  .rt-navbar-v1-button-wrapper
+  .rt-text-white {
   color: var(--_colors---dark-blue, #00253f) !important;
 }
 
@@ -111,13 +134,89 @@ html.is-home:not(.w-mod-ix) .rt-nav-logo-v2 {
   opacity: 0;
 }
 
-/* Inner pages: always dark logo on light chrome */
-html.is-inner .rt-nav-logo-v1 {
+/* Non-hero inner pages: always solid white chrome + dark logo */
+html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
+  .rt-navbar-v1 {
+  background-color: var(--_colors---white, #fff) !important;
+}
+
+html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
+  .rt-navbar-shadow-v1 {
+  opacity: 1 !important;
+  background-color: var(--_colors---white, #fff);
+}
+
+html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
+  .rt-nav-logo-v1 {
   opacity: 0 !important;
 }
 
-html.is-inner .rt-nav-logo-v2 {
+html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
+  .rt-nav-logo-v2 {
   opacity: 1 !important;
+}
+
+/*
+ * Hero inner pages (rooms, about, etc.):
+ * Original CMS PAGE_SCROLL (a-310) drives Navbar v2; we share Navbar v1 chrome.
+ * Home uses IX2 a-311 for white bar + .rt-navbar-shadow-v1 opacity — room pages
+ * never get that, so `is-hero-top` / `is-nav-solid` mirror it in CSS.
+ */
+html.is-inner.is-hero-top .rt-navbar-v1 {
+  background-color: transparent !important;
+}
+
+html.is-inner.is-hero-top .rt-navbar-shadow-v1 {
+  opacity: 0 !important;
+  background-color: transparent;
+}
+
+html.is-inner.is-hero-top .rt-nav-logo-v1 {
+  opacity: 1 !important;
+}
+
+html.is-inner.is-hero-top .rt-nav-logo-v2 {
+  opacity: 0 !important;
+}
+
+html.is-inner.is-hero-top .rt-navbar-v1-bar-line {
+  background-color: var(--_colors---white, #fff);
+}
+
+html.is-inner.is-hero-top .rt-navbar-v1-menu-wrapper .rt-button-text,
+html.is-inner.is-hero-top .rt-navbar-v1-menu-wrapper .rt-hover-color-change,
+html.is-inner.is-hero-top .rt-navbar-v1-button-wrapper .rt-text-white,
+html.is-inner.is-hero-top .rt-navbar-v1 a.rt-text-white {
+  color: var(--_colors---white, #fff) !important;
+}
+
+/* Scrolled past hero: solid white bar + shadow (a-311 keyframe 2) */
+html.is-inner.is-nav-solid .rt-navbar-v1 {
+  background-color: var(--_colors---white, #fff) !important;
+}
+
+html.is-inner.is-nav-solid .rt-navbar-shadow-v1 {
+  opacity: 1 !important;
+  background-color: var(--_colors---white, #fff);
+}
+
+html.is-inner.is-nav-solid .rt-nav-logo-v1 {
+  opacity: 0 !important;
+}
+
+html.is-inner.is-nav-solid .rt-nav-logo-v2 {
+  opacity: 1 !important;
+}
+
+html.is-inner.is-nav-solid .rt-navbar-v1-bar-line {
+  background-color: var(--_colors---dark-blue, #00253f);
+}
+
+html.is-inner.is-nav-solid .rt-navbar-v1-menu-wrapper .rt-button-text,
+html.is-inner.is-nav-solid .rt-navbar-v1-menu-wrapper .rt-hover-color-change,
+html.is-inner.is-nav-solid .rt-navbar-v1-button-wrapper .rt-text-white,
+html.is-inner.is-nav-solid .rt-navbar-v1 a.rt-text-white {
+  color: var(--_colors---dark-blue, #00253f) !important;
 }
 
 /*
@@ -131,17 +230,15 @@ html:not(.w-mod-ix) .rt-image-overlay-2 {
 
 /*
  * Sticky scroll chapters without full IX2 create huge empty voids / pile-ups.
- * Keep hero sticky (inside stage) + About (React) + Featured Rooms (IX2).
- * Neutralize the rest — including experience image sticky (no "-sticky" in name).
+ * Keep: hero stage, About (React), Featured Rooms, dining gallery, Experience.
+ * Neutralize value / feature-v7 / service only.
  */
 .rt-value,
 .rt-feature-v7,
-.rt-service-v1,
-.rt-experience {
+.rt-service-v1 {
   height: auto !important;
 }
 
-.rt-experience-main-height,
 .rt-accomodation-main-height,
 .rt-about-v3-main-height,
 .rt-feature-v4-main-height {
@@ -152,19 +249,127 @@ html:not(.w-mod-ix) .rt-image-overlay-2 {
 .rt-value-sticky,
 .rt-feature-v7-sticky,
 .rt-service-v1-sticky,
-.rt-experience-sticky,
-.rt-experience-sticky-height,
-.rt-experience-image-main-wrapper,
 .rt-service-v1 [class*="-sticky"],
-.rt-experience [class*="-sticky"],
-.rt-experience [class*="sticky"],
-.rt-value [class*="-sticky"],
-.rt-gallery [class*="-sticky"],
-.rt-gallery-sticky {
+.rt-value [class*="-sticky"] {
   position: relative !important;
   top: auto !important;
   height: auto !important;
   min-height: 0 !important;
+}
+
+/*
+ * Dining gallery (home-5): sticky 300vh chapter for IX2 Live Kitchen focus.
+ * Isolate so it cannot paint over Experience after the track ends.
+ */
+html.is-home .rt-gallery {
+  height: 300vh;
+  position: relative;
+  z-index: 2;
+  isolation: isolate;
+  overflow: clip;
+  background-color: var(--_colors---soft-porcelain-white, #faf7f2);
+}
+
+html.is-home .rt-gallery-sticky {
+  position: sticky;
+  top: 0;
+  height: auto;
+  min-height: 0;
+}
+
+html.is-home .rt-gallery-wrapper {
+  height: 100vh;
+}
+
+/* Live Kitchen card is a background video — fill the tile (Webflow z-index:-100 hides it). */
+html.is-home .rt-gallery-image-wrapper .w-background-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0.9375rem;
+  background-color: #1a1a1a;
+}
+
+html.is-home .rt-gallery-image-wrapper .w-background-video > video {
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*
+ * Experience (home-6): restore Webflow sticky DNA.
+ * Right-column text panels (.rt-experience-text-two/three) use bg:white and
+ * absolute inset + overflow clip — that ONLY looks free when the section
+ * background is also white (original body). Cream behind them = visible frame.
+ */
+html.is-home .rt-experience {
+  position: relative;
+  z-index: 3;
+  isolation: isolate;
+  /* Transparent like original — body white shows through; text wipe panels are white */
+  background-color: transparent;
+  margin-top: -1px;
+  padding-top: calc(var(--_gaps---section-gap-v1, 5rem) + 1px);
+}
+
+html.is-home .rt-experience-main-height {
+  height: 200vh !important;
+  min-height: 200vh !important;
+}
+
+html.is-home .rt-experience-sticky-height {
+  position: sticky !important;
+  top: 12vh !important;
+  height: auto !important;
+  min-height: 0 !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  grid-template-columns: unset !important;
+}
+
+html.is-home .rt-experience-image-main-wrapper {
+  position: relative !important;
+  top: auto !important;
+  height: 44rem !important;
+  border-radius: 62.5rem 62.5rem 0.9375rem 0.9375rem;
+  overflow: hidden;
+}
+
+html.is-home .rt-experience-middle-wrapper,
+html.is-home .rt-experience-middle-wrapper-main {
+  position: relative;
+}
+
+/* HTML already has rt-overflow-hidden — don't double-force; keep relative only */
+html.is-home .rt-experience-right-wrapper {
+  position: relative;
+  background-color: transparent;
+}
+
+/*
+ * Restore Webflow wipe: text-two/three MUST have solid white backgrounds so
+ * the rising panel covers the previous copy (blurred Arrival / body text).
+ * Transparent made layers stack and show through — user: “bir-birining ustiga”.
+ * White only looks like a “frame” when the page behind is cream; body is white.
+ */
+html.is-home .rt-experience-text-one {
+  position: relative;
+  z-index: 1;
+}
+
+html.is-home .rt-experience-text-two {
+  z-index: 2;
+  background-color: var(--_colors---white, #fff) !important;
+}
+
+html.is-home .rt-experience-text-three {
+  z-index: 3;
+  background-color: var(--_colors---white, #fff) !important;
 }
 
 /* Inner page hero should not stick forever over content */

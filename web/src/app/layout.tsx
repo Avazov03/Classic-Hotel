@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Instrument_Sans, Instrument_Serif } from "next/font/google";
 import { SiteShell } from "@/components/SiteShell";
+import { getWfPageBootstrapScript, WF_PAGE_HOME } from "@/data/wfPageId";
 import "./globals.css";
 
 const instrumentSans = Instrument_Sans({
@@ -35,9 +36,12 @@ export default function RootLayout({
       lang="en"
       data-wf-domain="elbergo.webflow.io"
       data-wf-site="6927ddcc377dce6e20188e35"
-      data-wf-page="692fe6f5d2e79e47913f0926"
+      data-wf-page={WF_PAGE_HOME}
     >
       <head>
+        <script
+          dangerouslySetInnerHTML={{ __html: getWfPageBootstrapScript() }}
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap"
           rel="stylesheet"

@@ -12,12 +12,28 @@ const WF_SCRIPTS = [
   "/vendor/webflow/webflow.b99141db.c8f655e8bc914122.js",
 ] as const;
 
+type Ix2Config = Record<string, unknown>;
+
 type LoaderState = {
   promise?: Promise<void>;
   done?: boolean;
+  ix2Config?: Ix2Config;
 };
 
 const LOADER_KEY = "__elbergoWebflowLoader";
+
+type WfWindow = Window & {
+  [LOADER_KEY]?: LoaderState;
+  Webflow?: {
+    require: (name: string) => {
+      init?: (config: Ix2Config) => void;
+      destroy?: () => void;
+      store?: { getState?: () => { ixData?: Ix2Config } };
+    };
+    destroy?: () => void;
+    ready?: () => void;
+  };
+};
 
 function loadScript(src: string): Promise<void> {
   return new Promise((resolve, reject) => {
@@ -51,26 +67,112 @@ function loadScript(src: string): Promise<void> {
   });
 }
 
-async function ensureWebflowScripts() {
-  for (const src of WF_SCRIPTS) {
-    await loadScript(src);
+function getLoaderState(): LoaderState {
+  const w = window as WfWindow;
+  return (w[LOADER_KEY] ??= {});
+}
+
+/** Cache IX2 DNA so we can re-init after SPA route changes without wiping it. */
+function installIx2InitCapture() {
+  const w = window as WfWindow;
+  const state = getLoaderState();
+  if (state.ix2Config || !w.Webflow?.require) return;
+
+  try {
+    const ix2 = w.Webflow.require("ix2");
+    if (!ix2?.init) return;
+    const original = ix2.init.bind(ix2);
+    ix2.init = (config: Ix2Config) => {
+      state.ix2Config = config;
+      return original(config);
+    };
+  } catch {
+    /* ix2 module not ready yet */
   }
-  // Do NOT Webflow.destroy() here — it wipes ix2.init({events}) from vendor chunks.
+}
+
+function kickMediaAndScroll() {
+  document
+    .querySelectorAll<HTMLVideoElement>(".w-background-video video")
+    .forEach((video) => {
+      video.muted = true;
+      video.playsInline = true;
+      const play = video.play();
+      if (play && typeof play.catch === "function") play.catch(() => {});
+    });
   window.dispatchEvent(new Event("resize"));
   window.dispatchEvent(new Event("scroll"));
 }
 
+async function ensureWebflowScripts() {
+  installIx2InitCapture();
+
+  for (const src of WF_SCRIPTS) {
+    // Patch again right before the IX2 DNA chunk runs
+    if (src.includes("0bffbd01531adf31")) {
+      installIx2InitCapture();
+    }
+    await loadScript(src);
+    installIx2InitCapture();
+  }
+
+  // Prefer store snapshot if monkey-patch missed the first init
+  const state = getLoaderState();
+  if (!state.ix2Config) {
+    try {
+      const ixData = (window as WfWindow).Webflow?.require("ix2")?.store?.getState
+        ?.()?.ixData;
+      if (ixData) state.ix2Config = ixData as Ix2Config;
+    } catch {
+      /* ignore */
+    }
+  }
+
+  kickMediaAndScroll();
+}
+
+/**
+ * Re-bind IX2 after `data-wf-page` changes (client navigations).
+ * Caches init config so destroy/ready does not lose interaction DNA.
+ */
+export function refreshWebflowIx2() {
+  if (typeof window === "undefined") return;
+  const w = window as WfWindow;
+  const state = getLoaderState();
+  if (!state.done || !w.Webflow) {
+    kickMediaAndScroll();
+    return;
+  }
+
+  const config = state.ix2Config;
+  try {
+    const ix2 = w.Webflow.require("ix2");
+    if (ix2?.destroy) ix2.destroy();
+    else if (w.Webflow.destroy) w.Webflow.destroy();
+
+    if (config && ix2?.init) {
+      ix2.init(config);
+    } else if (w.Webflow.ready) {
+      w.Webflow.ready();
+    }
+  } catch (err) {
+    console.warn("[WebflowRuntime] IX2 refresh failed", err);
+  }
+
+  document.documentElement.classList.add("w-mod-ix");
+  kickMediaAndScroll();
+}
+
 /**
  * Loads the mirrored Webflow + jQuery runtime so IX2 scroll chapters
- * (About pills, etc.) run with the original interaction DNA.
+ * run with the original interaction DNA.
  * Shared promise survives React Strict Mode remounts.
  */
 export function WebflowRuntime() {
   useEffect(() => {
-    const w = window as Window & { [LOADER_KEY]?: LoaderState };
-    const state = (w[LOADER_KEY] ??= {});
+    const state = getLoaderState();
 
-    // Defer past React hydration to avoid DOM mismatch overlays
+    // Defer past React hydration; RouteChrome useLayoutEffect already set page id
     const timer = window.setTimeout(() => {
       if (!state.promise) {
         state.promise = ensureWebflowScripts()
@@ -79,7 +181,7 @@ export function WebflowRuntime() {
           })
           .catch((err) => {
             console.error("[WebflowRuntime]", err);
-            delete w[LOADER_KEY];
+            delete (window as WfWindow)[LOADER_KEY];
           });
       }
     }, 50);
