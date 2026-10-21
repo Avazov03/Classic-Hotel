@@ -57,15 +57,27 @@ export function BaselineInteractions() {
 
     function closeMenyu() {
       root.classList.remove("rt-menu-open");
-      document
-        .querySelectorAll(".rt-mega-menu-wrapper")
-        .forEach((el) => el.classList.remove("rt-is-open"));
+      document.querySelectorAll(".rt-mega-menu-wrapper").forEach((el) => {
+        el.classList.remove("rt-is-open");
+        // IX2 may re-apply off-screen translate; keep closed state consistent
+        (el as HTMLElement).style.removeProperty("transform");
+        (el as HTMLElement).style.display = "none";
+      });
     }
 
     function toggleMenyu() {
       const open = root.classList.toggle("rt-menu-open");
       document.querySelectorAll(".rt-mega-menu-wrapper").forEach((el) => {
+        const node = el as HTMLElement;
         el.classList.toggle("rt-is-open", open);
+        if (open) {
+          // Clear IX2 translateY(100%) so menu is on-screen
+          node.style.setProperty("transform", "none", "important");
+          node.style.setProperty("display", "block", "important");
+        } else {
+          node.style.removeProperty("transform");
+          node.style.display = "none";
+        }
       });
     }
 

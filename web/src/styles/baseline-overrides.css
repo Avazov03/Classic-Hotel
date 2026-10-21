@@ -4,9 +4,18 @@ html.rt-menu-open {
   overflow: hidden;
 }
 
+/*
+ * Mega menu: IX2 leaves translateY(100%) inline — display:block alone
+ * opens it off-screen. Force on-screen when our toggle opens it.
+ */
 .rt-mega-menu-wrapper.rt-is-open,
 html.rt-menu-open .rt-mega-menu-wrapper {
   display: block !important;
+  transform: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 1000 !important;
+  pointer-events: auto !important;
 }
 
 /*
@@ -141,8 +150,11 @@ html.is-inner .rt-nav-inner-block {
   transition: background-color 0.85s ease;
 }
 
-html.is-home .rt-navbar-shadow-v1 {
+html.is-home .rt-navbar-shadow-v1,
+html.is-inner .rt-navbar-shadow-v1 {
   transition: opacity 1s ease, background-color 1s ease, box-shadow 1s ease;
+  /* Decorative overlay — never steal clicks from phone/menu */
+  pointer-events: none !important;
 }
 
 /* Home: always dark logo */
