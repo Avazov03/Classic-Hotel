@@ -1,31 +1,27 @@
-import Link from "next/link";
-import styles from "./page.module.css";
+import { FeaturedRooms } from "@/components/home/FeaturedRooms";
+import { HomeAbout } from "@/components/home/HomeAbout";
+import { HomeBusiness } from "@/components/home/HomeBusiness";
+import { HomeCta } from "@/components/home/HomeCta";
+import { HomeDining } from "@/components/home/HomeDining";
+import { HomeExperience } from "@/components/home/HomeExperience";
+import { HomeGallery } from "@/components/home/HomeGallery";
+import { HomeHero } from "@/components/home/HomeHero";
+import { HomeStats } from "@/components/home/HomeStats";
+import { HomeTestimonials } from "@/components/home/HomeTestimonials";
 
 export default function HomePage() {
   return (
     <>
-      <section className={styles.hero} aria-label="Hero">
-        <div className={`container ${styles.content}`}>
-          <div className={styles.eyebrow}>Indulge in elevated hospitality</div>
-          <h1 className={styles.title}>
-            Your perfect escape for luxury comfort and peace
-          </h1>
-          <Link className={styles.cta} href="/contact">
-            Reserve your stay
-          </Link>
-        </div>
-      </section>
-
-      <section className={styles.note}>
-        <div className="container">
-          <h2>Next.js foundation is live</h2>
-          <p>
-            Design DNA (colors, fonts, marquee, header/footer, hero motion) is
-            preserved. Full Home One parity — rooms, gallery, lightbox — comes
-            next on this branch without touching the static baseline.
-          </p>
-        </div>
-      </section>
+      <HomeHero />
+      <HomeAbout />
+      <FeaturedRooms />
+      <HomeStats />
+      <HomeBusiness />
+      <HomeDining />
+      <HomeExperience />
+      <HomeGallery />
+      <HomeTestimonials />
+      <HomeCta />
     </>
   );
 }
