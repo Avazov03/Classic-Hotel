@@ -1,0 +1,11 @@
+.intro {
+  padding: 3rem 0 1rem;
+}
+
+.text {
+  margin: 0 auto;
+  max-width: 42rem;
+  text-align: center;
+  color: var(--color-dim-gray);
+  font-size: 1.05rem;
+}

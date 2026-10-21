@@ -1,25 +1,42 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { brandName, contact, navLinks } from "@/data/site";
 import styles from "./Header.module.css";
 
-const NAV = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About us" },
-  { href: "/rooms", label: "Rooms" },
-  { href: "/banquet", label: "Banquet" },
-  { href: "/blog", label: "Blog" },
+const extraLinks = [
+  { href: "/amenities", label: "Amenities" },
+  { href: "/spa", label: "SPA" },
+  { href: "/restaurant", label: "Restaurant" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function Header() {
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
     <header className={styles.header}>
       <div className={`container ${styles.inner}`}>
-        <Link href="/" className={styles.brand} aria-label="Classic Hotel home">
+        <Link
+          href="/"
+          className={styles.brand}
+          aria-label={`${brandName} home`}
+          onClick={() => setOpen(false)}
+        >
           <span className={styles.mark} aria-hidden />
-          Classic Hotel
+          {brandName}
         </Link>
 
         <nav className={styles.nav} aria-label="Primary">
-          {NAV.map((item) => (
+          {navLinks.map((item) => (
             <Link key={item.href} href={item.href}>
               {item.label}
             </Link>
@@ -27,19 +44,51 @@ export function Header() {
         </nav>
 
         <div className={styles.actions}>
-          <a className={styles.phone} href="tel:8884567890">
-            (888) 456 7890
+          <a className={styles.phone} href={contact.phoneHref}>
+            {contact.phoneDisplay}
           </a>
           <Link className={styles.book} href="/contact">
             Book now
           </Link>
-          <button className={styles.menuBtn} type="button" aria-label="Open menu">
+          <button
+            className={`${styles.menuBtn} ${open ? styles.menuOpen : ""}`}
+            type="button"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+          >
             <span />
             <span />
             <span />
           </button>
         </div>
       </div>
+
+      {open ? (
+        <div className={styles.drawer} role="dialog" aria-label="Mobile menu">
+          <nav className={styles.drawerNav}>
+            {[...navLinks, ...extraLinks].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+          <a className={styles.drawerPhone} href={contact.phoneHref}>
+            {contact.phoneDisplay}
+          </a>
+          <Link
+            className={styles.drawerBook}
+            href="/contact"
+            onClick={() => setOpen(false)}
+          >
+            Book now
+          </Link>
+        </div>
+      ) : null}
     </header>
   );
 }

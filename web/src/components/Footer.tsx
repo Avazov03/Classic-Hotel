@@ -1,5 +1,13 @@
 import Link from "next/link";
+import { brandName, contact, footerTagline, navLinks } from "@/data/site";
 import styles from "./Footer.module.css";
+
+const more = [
+  { href: "/amenities", label: "Amenities" },
+  { href: "/spa", label: "SPA" },
+  { href: "/restaurant", label: "Restaurant" },
+  { href: "/contact", label: "Contact" },
+];
 
 export function Footer() {
   return (
@@ -8,32 +16,28 @@ export function Footer() {
         <div>
           <div className={styles.brand}>
             <span className={styles.mark} aria-hidden />
-            Classic Hotel
+            {brandName}
           </div>
-          <p className={styles.blurb}>
-            We create unforgettable stay experiences by blending comfort,
-            thoughtful care, and warm, genuine hospitality that makes every
-            guest feel truly valued.
-          </p>
+          <p className={styles.blurb}>{footerTagline}</p>
         </div>
 
         <div>
           <div className={styles.colTitle}>Explore</div>
           <div className={styles.links}>
-            <Link href="/">Home</Link>
-            <Link href="/about">About</Link>
-            <Link href="/rooms">Rooms</Link>
-            <Link href="/blog">Blog</Link>
-            <Link href="/contact">Contact</Link>
+            {[...navLinks, ...more].map((item) => (
+              <Link key={item.href} href={item.href}>
+                {item.label}
+              </Link>
+            ))}
           </div>
         </div>
 
         <div>
           <div className={styles.colTitle}>Contact</div>
           <div className={styles.links}>
-            <a href="tel:8884567890">(888) 456 7890</a>
-            <a href="mailto:info@example.com">info@example.com</a>
-            <span>410 Sandtown, California 94001, USA</span>
+            <a href={contact.phoneHref}>{contact.phoneDisplay}</a>
+            <a href={`mailto:${contact.email}`}>{contact.email}</a>
+            <span>{contact.address}</span>
           </div>
         </div>
       </div>
