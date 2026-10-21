@@ -33,15 +33,16 @@ function pillTransform(y: number, s: number) {
  * until this finishes (matches original sequencing the user described).
  */
 function titleReveal(aboutTop: number, vh: number) {
-  // Start as panel enters; finish around mid-viewport (user screenshot)
-  const start = vh * 0.88;
-  const end = vh * 0.36;
+  // Pastdan silliq chiqish — scroll oralig‘i kengroq, blur kamroq
+  const start = vh * 0.95;
+  const end = vh * 0.28;
   const t = clamp((start - aboutTop) / (start - end || 1));
-  const eased = 1 - (1 - t) * (1 - t) * (1 - t); // slower ease-out
+  // smoothstep for softer rise
+  const eased = t * t * (3 - 2 * t);
   return {
-    opacity: eased,
-    y: (1 - eased) * 36,
-    blur: (1 - eased) * 12,
+    opacity: Math.min(1, eased * 1.05),
+    y: (1 - eased) * 110,
+    blur: (1 - eased) * 3,
     done: eased >= 0.98,
   };
 }
@@ -207,8 +208,8 @@ export function HomeAboutScroll() {
                 className="rt-big-text-one rt-text-beige"
                 style={{
                   opacity: 0,
-                  filter: "blur(12px)",
-                  transform: "translate3d(0, 36px, 0)",
+                  filter: "blur(3px)",
+                  transform: "translate3d(0, 110px, 0)",
                   willChange: "opacity, transform, filter",
                 }}
               >

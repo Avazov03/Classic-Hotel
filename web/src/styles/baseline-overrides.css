@@ -1,5 +1,81 @@
 /* Keep baseline Webflow look; neutralize IX2 states that need webflow.js */
 
+/*
+ * TRIAL (xavfsiz): faqat mist + footer/tugma.
+ * dusty/sandstone/brownish — ASL (About matni buzilmasin).
+ * Asosiy override: public/brand-trial.css (Webflow dan keyin).
+ */
+html,
+body,
+:root {
+  --color-brand: #168d70;
+  --_colors---soft-porcelain-white: #f3f7f5;
+  --color-soft-porcelain: #f3f7f5;
+  --_colors---deep-mocha-brown: #168d70;
+  --color-deep-mocha-brown: #168d70;
+  --_colors---warm-sand-beige: #d0ebe3;
+  --color-warm-sand-beige: #d0ebe3;
+}
+
+.rt-text-overlay-v3 {
+  background-color: #f3f7f5d9;
+}
+
+/* Play chiziq — overflow:hidden ISHLATILMAYDI (tugmani yashiradi) */
+.rt-hero-v1-play-button-line {
+  position: absolute !important;
+  top: 35% !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: 5rem !important;
+  width: 0.0625rem !important;
+  height: 10.375rem !important;
+}
+
+.w-webflow-badge,
+a.w-webflow-badge {
+  display: none !important;
+}
+
+.rt-footer-col-v1,
+.rt-footer-col-v3,
+.rt-footer-section-gap {
+  padding-top: 3.75rem !important;
+}
+
+.rt-footer-wrapper {
+  padding-bottom: 2.25rem !important;
+  padding-top: 0.5rem !important;
+}
+
+.rt-footer .rt-footer-link-block {
+  padding-top: 1.1rem !important;
+  padding-bottom: 1.1rem !important;
+}
+
+.rt-footer .rt-footer-link-block .rt-text-style-h3 {
+  font-size: 1.35rem !important;
+  line-height: 1.35 !important;
+}
+
+/* Biz haqimizda — brand yashil */
+.rt-about-v1 .rt-big-text-one.rt-text-beige {
+  color: #168d70 !important;
+}
+
+/* Stats qaymoq gradient → brand yashil */
+.rt-service-v1-fill-box {
+  background-color: #9ad0c0 !important;
+}
+
+.rt-service-v1-fill-box-two {
+  background-image: linear-gradient(
+    90deg,
+    #a8d9cb 32%,
+    #168d70cc
+  ) !important;
+}
+
 html.rt-menu-open {
   overflow: hidden;
 }
@@ -12,17 +88,29 @@ html.rt-menu-open {
 html.rt-menu-open .rt-mega-menu-wrapper {
   display: block !important;
   transform: none !important;
+  /* IX2 scroll’da top: -Npx qilib menyuni ekrandan tashqariga suradi */
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: auto !important;
+  inset: 0 0 auto 0 !important;
+  height: 100vh !important;
+  width: 100% !important;
   opacity: 1 !important;
   visibility: visible !important;
-  z-index: 1000 !important;
+  z-index: 10000 !important;
   pointer-events: auto !important;
 }
 
 /* Bars/Menyu header ustida qolsin — overlay yopishni bloklamasin */
+html.rt-menu-open .rt-top-main-box {
+  z-index: 10001 !important;
+}
+
 html.rt-menu-open .rt-navbar-v1,
 html.rt-menu-open .rt-nav-inner-block {
   position: relative;
-  z-index: 1002 !important;
+  z-index: 10002 !important;
 }
 
 /*
@@ -92,7 +180,7 @@ html.is-home .rt-about-v1 {
   z-index: 1;
   border-top-left-radius: 60px;
   border-top-right-radius: 60px;
-  background-color: var(--_colors---soft-porcelain-white, #faf7f2);
+  background-color: var(--_colors---soft-porcelain-white, #f3f7f5);
 }
 
 /* “ABOUT THE HOTEL” sticks a hair under the fixed chrome — nudge 6px down */
@@ -407,7 +495,7 @@ html.is-home .rt-gallery {
   z-index: 2;
   isolation: isolate;
   overflow: clip;
-  background-color: var(--_colors---soft-porcelain-white, #faf7f2);
+  background-color: var(--_colors---soft-porcelain-white, #f3f7f5);
 }
 
 html.is-home .rt-gallery-sticky {

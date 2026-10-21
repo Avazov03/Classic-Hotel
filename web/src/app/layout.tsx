@@ -47,6 +47,8 @@ export default function RootLayout({
           rel="stylesheet"
         />
         <link rel="stylesheet" href="/elbergo.shared.css" />
+        {/* After Webflow CSS so trial brand vars actually apply */}
+        <link rel="stylesheet" href="/brand-trial.css" />
       </head>
       <body className={`${instrumentSans.variable} ${instrumentSerif.variable}`}>
         <SiteShell>{children}</SiteShell>

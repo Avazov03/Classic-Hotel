@@ -71,11 +71,23 @@ export function BaselineInteractions() {
         const node = el as HTMLElement;
         el.classList.toggle("rt-is-open", open);
         if (open) {
-          // Clear IX2 translateY(100%) so menu is on-screen
+          // Clear IX2 off-screen translate/top so menu fills the viewport
           node.style.setProperty("transform", "none", "important");
           node.style.setProperty("display", "block", "important");
+          node.style.setProperty("top", "0", "important");
+          node.style.setProperty("left", "0", "important");
+          node.style.setProperty("right", "0", "important");
+          node.style.setProperty("bottom", "auto", "important");
+          node.style.setProperty("inset", "0 0 auto 0", "important");
+          node.style.setProperty("height", "100vh", "important");
         } else {
           node.style.removeProperty("transform");
+          node.style.removeProperty("top");
+          node.style.removeProperty("left");
+          node.style.removeProperty("right");
+          node.style.removeProperty("bottom");
+          node.style.removeProperty("inset");
+          node.style.removeProperty("height");
           node.style.display = "none";
         }
       });
