@@ -1,0 +1,42 @@
+/* Keep baseline Webflow look; only add what IX2 used to do. */
+
+html.rt-menu-open {
+  overflow: hidden;
+}
+
+.rt-mega-menu-wrapper.rt-is-open,
+html.rt-menu-open .rt-mega-menu-wrapper {
+  display: block !important;
+}
+
+/* Marquee (Webflow IX2 normally drives this) */
+.rt-topbar {
+  display: flex;
+  width: max-content;
+  animation: rt-marquee 35s linear infinite;
+}
+
+@keyframes rt-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-33.333%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rt-topbar {
+    animation: none;
+  }
+}
+
+/* Ensure fixed chrome does not get clipped by our old shell */
+.rt-top-main-box {
+  z-index: 1000;
+}
+
+/* Baseline home should not inherit our reinterpreted body padding hacks */
+.baseline-root {
+  background: var(--soft-porcelain-white, #faf7f2);
+}

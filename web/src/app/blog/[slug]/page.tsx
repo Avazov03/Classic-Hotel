@@ -1,11 +1,30 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
+import { BaselineHtml } from "@/components/BaselineHtml";
 import { blogPosts, getBlogPostBySlug } from "@/data/blog";
-import styles from "../../ui.module.css";
 
 type Props = { params: Promise<{ slug: string }> };
+
+const postModules: Record<string, () => Promise<{ html: string }>> = {
+  "creating-memorable-stays-through-genuine-hospitality": () =>
+    import("@/baseline/html/post-creating-memorable-stays-through-genuine-hospitality"),
+  "making-every-business-event-smooth-and-memorable": () =>
+    import("@/baseline/html/post-making-every-business-event-smooth-and-memorable"),
+  "indulge-in-luxurious-rooms-with-panoramic-sea-views": () =>
+    import("@/baseline/html/post-indulge-in-luxurious-rooms-with-panoramic-sea-views"),
+  "a-taste-journey-through-our-hotels-finest-culinary-creations": () =>
+    import("@/baseline/html/post-a-taste-journey-through-our-hotels-finest-culinary-creations"),
+  "open-the-door-to-roomy-living-made-for-whatever-you-want": () =>
+    import("@/baseline/html/post-open-the-door-to-roomy-living-made-for-whatever-you-want"),
+  "enjoy-a-vacation-that-feels-like-a-touch-of-heaven": () =>
+    import("@/baseline/html/post-enjoy-a-vacation-that-feels-like-a-touch-of-heaven"),
+  "crafting-special-events-that-turn-into-memories-youll-treasure": () =>
+    import("@/baseline/html/post-crafting-special-events-that-turn-into-memories-youll-treasure"),
+  "discover-the-latest-menu-updates-coming-this-march": () =>
+    import("@/baseline/html/post-discover-the-latest-menu-updates-coming-this-march"),
+  "the-april-issue-of-travel-magazine-featured-elbergo-hotel": () =>
+    import("@/baseline/html/post-the-april-issue-of-travel-magazine-featured-elbergo-hotel"),
+};
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
@@ -15,68 +34,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = getBlogPostBySlug(slug);
   if (!post) return { title: "Blog" };
-  return {
-    title: post.title,
-    description: post.excerpt,
-  };
+  return { title: post.title, description: post.excerpt };
 }
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
-  const post = getBlogPostBySlug(slug);
-  if (!post) notFound();
-
-  return (
-    <article>
-      <section className={styles.sectionTight}>
-        <div className="container" style={{ maxWidth: "52rem" }}>
-          <Link className={styles.link} href="/blog">
-            Back to blog
-          </Link>
-          <div className={styles.meta} style={{ marginTop: "1.25rem" }}>
-            {post.category ? <span className={styles.chip}>{post.category}</span> : null}
-            <span className={styles.chip}>{post.date}</span>
-          </div>
-          <h1 style={{ marginTop: "1rem", marginBottom: "0.85rem" }}>{post.title}</h1>
-          {post.author ? (
-            <p style={{ color: "var(--color-deep-mocha-brown)", marginBottom: "1.5rem" }}>
-              By {post.author}
-            </p>
-          ) : null}
-          <div
-            className={styles.media}
-            style={{
-              borderRadius: "var(--radius-md)",
-              overflow: "hidden",
-              marginBottom: "2rem",
-              aspectRatio: "16 / 9",
-            }}
-          >
-            <Image
-              src={post.image}
-              alt={post.title}
-              width={1200}
-              height={675}
-              sizes="(max-width: 900px) 100vw, 52rem"
-              priority
-            />
-          </div>
-          <div className={styles.prose}>
-            <p>{post.excerpt}</p>
-            {post.body.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
-          <div className={styles.ctaRow}>
-            <Link className={styles.btnPrimary} href="/contact">
-              Reserve your stay
-            </Link>
-            <Link className={styles.btnGhost} href="/blog">
-              More stories
-            </Link>
-          </div>
-        </div>
-      </section>
-    </article>
-  );
+  const loader = postModules[slug];
+  if (!loader) notFound();
+  const { html } = await loader();
+  return <BaselineHtml html={html} />;
 }

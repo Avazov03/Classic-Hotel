@@ -1,15 +1,15 @@
-import { Footer } from "./Footer";
-import { Header } from "./Header";
-import { Topbar } from "./Topbar";
-import styles from "./SiteShell.module.css";
+import { BaselineHtml } from "@/components/BaselineHtml";
+import { BaselineInteractions } from "@/components/BaselineInteractions";
+import { html as chromeHtml } from "@/baseline/html/chrome";
+import { html as footerHtml } from "@/baseline/html/footer";
 
 export function SiteShell({ children }: { children: React.ReactNode }) {
   return (
-    <div className={styles.shell}>
-      <Topbar />
-      <Header />
-      <main className={styles.main}>{children}</main>
-      <Footer />
+    <div className="baseline-root">
+      <BaselineInteractions />
+      <BaselineHtml html={chromeHtml} />
+      <main>{children}</main>
+      <BaselineHtml html={footerHtml} />
     </div>
   );
 }

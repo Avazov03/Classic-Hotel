@@ -11,7 +11,7 @@ const instrumentSans = Instrument_Sans({
 
 const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400"],
   variable: "--font-instrument-serif",
   display: "swap",
 });
@@ -31,7 +31,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-wf-domain="classic-hotel">
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/elbergo.shared.css" />
+      </head>
       <body className={`${instrumentSans.variable} ${instrumentSerif.variable}`}>
         <SiteShell>{children}</SiteShell>
       </body>
