@@ -2,47 +2,169 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { homeAbout } from "@/data/home";
-import styles from "./HomeAboutScroll.module.css";
-
-const STAGES = homeAbout.titles.map((title, i) => ({
-  title,
-  image: homeAbout.images[i],
-}));
+import {
+  BLUR1_OP,
+  BLUR2_OP,
+  BLUR3_OP,
+  COPY_BLUR,
+  COPY_OP,
+  COPY_Y,
+  ONE_S,
+  ONE_Y,
+  sample,
+  THREE_Y,
+  TWO_S,
+  TWO_Y,
+} from "./aboutIx2Keyframes";
 
 function clamp(n: number, min = 0, max = 1) {
   return Math.min(max, Math.max(min, n));
 }
 
+function pillTransform(y: number, s: number) {
+  return `translate3d(0, ${y}%, 0) scale3d(${s}, ${s}, 1)`;
+}
+
 /**
- * Original Webflow behavior: sticky "ABOUT THE HOTEL", then 3 pill images
- * rise from bottom to top one-by-one as the user scrolls the 250vh track.
+ * Phase 1 — "ABOUT THE HOTEL" slowly clears (blur → sharp) while the
+ * rounded white panel rises over the sticky hero. Pills stay parked below
+ * until this finishes (matches original sequencing the user described).
+ */
+function titleReveal(aboutTop: number, vh: number) {
+  // Start as panel enters; finish around mid-viewport (user screenshot)
+  const start = vh * 0.88;
+  const end = vh * 0.36;
+  const t = clamp((start - aboutTop) / (start - end || 1));
+  const eased = 1 - (1 - t) * (1 - t) * (1 - t); // slower ease-out
+  return {
+    opacity: eased,
+    y: (1 - eased) * 36,
+    blur: (1 - eased) * 12,
+    done: eased >= 0.98,
+  };
+}
+
+/** While title is still revealing, keep pills mostly below the fold. */
+const PILL_HOLD_Y = { one: 62, two: 130, three: 215 } as const;
+
+/**
+ * React port of Webflow IX2 About scroll — keyframes measured from baseline.
+ * Transforms applied imperatively (like IX2) to avoid React render lag on scroll.
  */
 export function HomeAboutScroll() {
   const trackRef = useRef<HTMLDivElement>(null);
-  const [progress, setProgress] = useState(0);
+  const titleRef = useRef<HTMLDivElement>(null);
+  const oneRef = useRef<HTMLDivElement>(null);
+  const twoRef = useRef<HTMLDivElement>(null);
+  const threeRef = useRef<HTMLDivElement>(null);
+  const blur1Ref = useRef<HTMLDivElement>(null);
+  const blur2Ref = useRef<HTMLDivElement>(null);
+  const blur3Ref = useRef<HTMLDivElement>(null);
+  const copyRef = useRef<HTMLDivElement>(null);
+  const copyInnerRef = useRef<HTMLDivElement>(null);
+  const copyCtaRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) {
-      setProgress(1);
-      return;
+    let frame = 0;
+    /** ScrollY when title finished — pill chapter starts from here. */
+    let pillOriginY: number | null = null;
+
+    function apply(progress: number, aboutTop: number, titleDone: boolean) {
+      const title = titleReveal(aboutTop, window.innerHeight);
+
+      // Pill chapter only after title has fully cleared
+      const oneY = titleDone
+        ? sample(ONE_Y, progress)
+        : PILL_HOLD_Y.one;
+      const oneS = titleDone ? sample(ONE_S, progress) : 1;
+      const twoY = titleDone ? sample(TWO_Y, progress) : PILL_HOLD_Y.two;
+      const twoS = titleDone ? sample(TWO_S, progress) : 1;
+      const threeY = titleDone
+        ? sample(THREE_Y, progress)
+        : PILL_HOLD_Y.three;
+
+      if (oneRef.current) {
+        oneRef.current.style.transform = pillTransform(oneY, oneS);
+      }
+      if (twoRef.current) {
+        twoRef.current.style.transform = pillTransform(twoY, twoS);
+      }
+      if (threeRef.current) {
+        threeRef.current.style.transform = pillTransform(threeY, 1);
+      }
+      if (titleRef.current) {
+        titleRef.current.style.opacity = String(title.opacity);
+        titleRef.current.style.transform = `translate3d(0, ${title.y}px, 0)`;
+        titleRef.current.style.filter = `blur(${title.blur}px)`;
+      }
+      if (blur1Ref.current) {
+        blur1Ref.current.style.opacity = String(
+          titleDone ? sample(BLUR1_OP, progress) : 0.31,
+        );
+      }
+      if (blur2Ref.current) {
+        blur2Ref.current.style.opacity = String(
+          titleDone ? sample(BLUR2_OP, progress) : 1,
+        );
+      }
+      if (blur3Ref.current) {
+        blur3Ref.current.style.opacity = String(
+          titleDone ? sample(BLUR3_OP, progress) : 1,
+        );
+      }
+      if (copyRef.current) {
+        const y = titleDone ? sample(COPY_Y, progress) : 40;
+        const blur = titleDone ? sample(COPY_BLUR, progress) : 4;
+        copyRef.current.style.transform = `translate3d(0, ${y}%, 0)`;
+        copyRef.current.style.filter = `blur(${blur}px)`;
+      }
+      const copyOp = titleDone ? sample(COPY_OP, progress) : 0;
+      if (copyInnerRef.current) {
+        copyInnerRef.current.style.opacity = String(copyOp);
+      }
+      if (copyCtaRef.current) {
+        copyCtaRef.current.style.opacity = String(copyOp);
+      }
     }
 
-    let frame = 0;
-
     function update() {
-      const el = trackRef.current;
-      if (!el) return;
-      const rect = el.getBoundingClientRect();
-      const total = el.offsetHeight - window.innerHeight;
-      if (total <= 0) {
-        setProgress(1);
+      const aboutEl = trackRef.current?.closest(
+        ".rt-about-v1",
+      ) as HTMLElement | null;
+      const aboutTop =
+        aboutEl?.getBoundingClientRect().top ?? window.innerHeight;
+      const title = titleReveal(aboutTop, window.innerHeight);
+
+      if (reduce) {
+        pillOriginY = window.scrollY;
+        apply(1, 0, true);
         return;
       }
-      const scrolled = clamp(-rect.top / total);
-      setProgress(scrolled);
+
+      if (title.done) {
+        if (pillOriginY === null) pillOriginY = window.scrollY;
+      } else {
+        // Scrolling back up — reset pill chapter so sequence replays
+        pillOriginY = null;
+      }
+
+      const el = trackRef.current;
+      if (!el) return;
+      const total = el.offsetHeight - window.innerHeight;
+      if (total <= 0) {
+        apply(1, aboutTop, true);
+        return;
+      }
+
+      const pillProgress =
+        pillOriginY === null
+          ? 0
+          : clamp((window.scrollY - pillOriginY) / total);
+
+      apply(pillProgress, aboutTop, title.done);
     }
 
     function onScroll() {
@@ -60,60 +182,177 @@ export function HomeAboutScroll() {
     };
   }, []);
 
-  // Sequential rises with a short handoff overlap so the next capsule tip peeks (baseline).
-  const ranges = [
-    { start: 0.0, end: 0.26 },
-    { start: 0.24, end: 0.52 },
-    { start: 0.5, end: 0.78 },
-  ];
+  const stages = homeAbout.titles.map((title, i) => ({
+    title,
+    image: homeAbout.images[i],
+  }));
 
-  // 140% keeps idle pills fully below the sticky viewport (110% still peeked).
-  const pillY = ranges.map(({ start, end }) => {
-    const t = clamp((progress - start) / (end - start));
-    const eased = 1 - (1 - t) ** 3;
-    return (1 - eased) * 140;
-  });
-
-  // Body + CTA reveal near the end of the third rise
-  const copyReady = progress > 0.72;
+  // Start with pills held below — title reveals first
+  const initOne = pillTransform(PILL_HOLD_Y.one, 1);
+  const initTwo = pillTransform(PILL_HOLD_Y.two, 1);
+  const initThree = pillTransform(PILL_HOLD_Y.three, 1);
 
   return (
-    <section className={styles.section} aria-label="About the hotel">
-      <div className={styles.track} ref={trackRef}>
-        <div className={styles.sticky}>
-          <h2 className={styles.eyebrow}>{homeAbout.eyebrow}</h2>
-
-          <div className={styles.stack}>
-            {STAGES.map((stage, i) => (
+    <section
+      className="rt-about-v1 rt-position-relative"
+      aria-label="About the hotel"
+      data-react-about="ix2-port"
+    >
+      <div className="w-layout-blockcontainer rt-container w-container">
+        <div className="rt-about-v1-main-wrapper" ref={trackRef}>
+          <div className="rt-about-v1-sticky">
+            <div className="rt-text-center rt-overflow-hidden">
               <div
-                key={stage.title}
-                className={styles.pill}
+                ref={titleRef}
+                className="rt-big-text-one rt-text-beige"
                 style={{
-                  zIndex: i + 1,
-                  transform: `translate3d(0, ${pillY[i]}%, 0)`,
+                  opacity: 0,
+                  filter: "blur(12px)",
+                  transform: "translate3d(0, 36px, 0)",
+                  willChange: "opacity, transform, filter",
                 }}
               >
-                <Image
-                  src={stage.image}
-                  alt={stage.title}
-                  fill
-                  sizes="(max-width: 767px) 78vw, 26rem"
-                  priority={i === 0}
-                />
-                <div className={styles.caption}>{stage.title}</div>
+                {homeAbout.eyebrow}
               </div>
-            ))}
-          </div>
+            </div>
 
-          <div
-            className={`${styles.copy} ${
-              copyReady ? styles.copyVisible : styles.copyHidden
-            }`}
-          >
-            <p className={styles.body}>{homeAbout.body}</p>
-            <Link className={styles.cta} href={homeAbout.ctaHref}>
-              {homeAbout.cta}
-            </Link>
+            <div className="rt-about-v1-image-main-wrapper">
+              <div className="rt-about-v1-image-main rt-landscape-display-none">
+                <div
+                  ref={oneRef}
+                  className="rt-position-relative rt-about-v1-image-one-wrapper"
+                  style={{
+                    transform: initOne,
+                    willChange: "transform",
+                    zIndex: 1,
+                  }}
+                >
+                  <div className="rt-about-v1-image-one-wrapper">
+                    <Image
+                      src={stages[0].image}
+                      alt={stages[0].title}
+                      width={820}
+                      height={1100}
+                      className="rt-radius-200"
+                      sizes="(max-width: 479px) 100vw, 26rem"
+                      priority
+                      style={{ width: "100%", height: "auto", display: "block" }}
+                    />
+                  </div>
+                  <div className="rt-about-v1-image-overlay-box rt-landscape-text-center">
+                    <div className="rt-text-style-h4 rt-text-white">
+                      {stages[0].title}
+                    </div>
+                  </div>
+                  <div
+                    ref={blur1Ref}
+                    className="rt-about-v1-image-blur rt-v1 rt-tab-display-off"
+                    style={{ opacity: 0.31 }}
+                  />
+                </div>
+
+                <div
+                  ref={twoRef}
+                  className="rt-about-v1-image-two-wrapper"
+                  style={{
+                    transform: initTwo,
+                    willChange: "transform",
+                    zIndex: 2,
+                  }}
+                >
+                  <div className="rt-about-v1-image-one-wrapper">
+                    <Image
+                      src={stages[1].image}
+                      alt={stages[1].title}
+                      width={820}
+                      height={1100}
+                      className="rt-radius-200"
+                      sizes="(max-width: 479px) 100vw, 26rem"
+                      style={{ width: "100%", height: "auto", display: "block" }}
+                    />
+                  </div>
+                  <div className="rt-about-v1-image-overlay-box rt-landscape-text-center">
+                    <div className="rt-text-style-h4 rt-text-white">
+                      {stages[1].title}
+                    </div>
+                  </div>
+                  <div
+                    ref={blur2Ref}
+                    className="rt-about-v1-image-blur rt-v2 rt-tab-display-off"
+                    style={{ opacity: 1 }}
+                  />
+                </div>
+
+                <div
+                  ref={threeRef}
+                  className="rt-about-v1-image-three-wrapper"
+                  style={{
+                    transform: initThree,
+                    willChange: "transform",
+                    zIndex: 3,
+                  }}
+                >
+                  <div className="rt-about-v1-image-one-wrapper">
+                    <Image
+                      src={stages[2].image}
+                      alt={stages[2].title}
+                      width={820}
+                      height={1100}
+                      className="rt-radius-200"
+                      sizes="(max-width: 479px) 100vw, 26rem"
+                      style={{ width: "100%", height: "auto", display: "block" }}
+                    />
+                  </div>
+                  <div className="rt-about-v1-image-overlay-box rt-landscape-text-center">
+                    <div className="rt-text-style-h4 rt-text-white">
+                      {stages[2].title}
+                    </div>
+                  </div>
+                  <div
+                    ref={blur3Ref}
+                    className="rt-about-v1-image-blur rt-v3 rt-tab-display-off"
+                    style={{ opacity: 1 }}
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div
+              ref={copyRef}
+              className="w-layout-vflex rt-about-bottom-text"
+              style={{
+                filter: "blur(4px)",
+                transform: "translate3d(0, 40%, 0)",
+                willChange: "filter, transform",
+              }}
+            >
+              <div
+                ref={copyInnerRef}
+                className="rt-overflow-hidden rt-position-relative rt-text-center rt-h2-to-button-gap"
+                style={{ opacity: 0 }}
+              >
+                <h2 className="rt-gap-off rt-about-v1-heading">
+                  {homeAbout.body}
+                </h2>
+              </div>
+              <div ref={copyCtaRef} style={{ opacity: 0 }}>
+                <Link
+                  href={homeAbout.ctaHref}
+                  className="rt-button rt-overflow-hidden w-inline-block"
+                  data-wf--rt-button-v3--variant="rt-v2"
+                >
+                  <div className="rt-position-relative rt-overflow-hidden">
+                    <div className="rt-button-text rt-text-one">
+                      {homeAbout.cta}
+                    </div>
+                    <div className="rt-button-text rt-text-two">
+                      {homeAbout.cta}
+                    </div>
+                  </div>
+                  <div className="rt-button-overlay rt-dark-overlay rt-change-white w-variant-a9279b47-3bd8-3b8e-dcbe-db3ac09346a2" />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>

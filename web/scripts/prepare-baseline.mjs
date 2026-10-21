@@ -29,8 +29,11 @@ const linkMap = [
   [/href="contact-one\.html"/g, 'href="/contact"'],
   [/href="contact-two\.html"/g, 'href="/contact"'],
   [/href="contact-three\.html"/g, 'href="/contact"'],
-  [/href="404\.html"/g, 'href="/not-found-page"'],
-  [/href="401\.html"/g, 'href="/"'],
+  [/href="404\.html"/g, 'href="/not-found"'],
+  [/href="401\.html"/g, 'href="/password-protected"'],
+  [/href="style-guide\.html"/g, 'href="/style-guide"'],
+  [/href="license\.html"/g, 'href="/license"'],
+  [/href="changelog\.html"/g, 'href="/changelog"'],
   [
     /href="post\/([^"]+)\.html"/g,
     'href="/blog/$1"',
@@ -38,34 +41,33 @@ const linkMap = [
 ];
 
 function neutralizeIx2(html) {
-  let out = html.replace(
-    /<div[^>]*class="[^"]*rt-image-overlay-[12][^"]*"[^>]*><\/div>/gi,
-    "",
-  );
-
-  out = out.replace(/\sstyle="([^"]*)"/gi, (_, style) => {
+  /*
+   * Keep IX2 start DNA (overlays + opacity:0). Only strip vertical
+   * counter-train offsets that break layout without IX2.
+   */
+  return html.replace(/\sstyle="([^"]*)"/gi, (_, style) => {
     const parts = style
       .split(";")
       .map((s) => s.trim())
       .filter(Boolean)
       .filter((s) => {
-        const lower = s.toLowerCase().replace(/\s+/g, "");
-        if (lower.startsWith("opacity:0")) return false;
-        if (lower.includes("opacity:0;") || lower.endsWith("opacity:0")) return false;
-        if (/transform:/i.test(s) && /translate3d\(0,\s*-?\d+%/i.test(s)) return false;
-        if (/transform:/i.test(s) && /translate3d\(-?\d+%/i.test(s)) return false;
+        if (
+          /transform:/i.test(s) &&
+          /translate3d\(\s*0\s*,\s*-?\d+%/i.test(s)
+        ) {
+          return false;
+        }
         return true;
       });
     if (!parts.length) return "";
     return ` style="${parts.join("; ")}"`;
   });
-
-  return out;
 }
 
 function clean(html) {
   let out = html
-    .replace(/<script[\s\S]*?<\/script>/gi, "")
+    // Keep Webflow lightbox JSON; strip executable scripts only
+    .replace(/<script(?![^>]*type=["']application\/json["'])[\s\S]*?<\/script>/gi, "")
     .replace(/\.\.\/cdn\.prod\.website-files\.com/g, "https://cdn.prod.website-files.com")
     .replace(/src="\.\.\/([^"]+)"/g, 'src="https://$1"');
 

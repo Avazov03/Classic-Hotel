@@ -55,7 +55,9 @@ async function ensureWebflowScripts() {
   for (const src of WF_SCRIPTS) {
     await loadScript(src);
   }
+  // Do NOT Webflow.destroy() here — it wipes ix2.init({events}) from vendor chunks.
   window.dispatchEvent(new Event("resize"));
+  window.dispatchEvent(new Event("scroll"));
 }
 
 /**
@@ -68,16 +70,21 @@ export function WebflowRuntime() {
     const w = window as Window & { [LOADER_KEY]?: LoaderState };
     const state = (w[LOADER_KEY] ??= {});
 
-    if (!state.promise) {
-      state.promise = ensureWebflowScripts()
-        .then(() => {
-          state.done = true;
-        })
-        .catch((err) => {
-          console.error("[WebflowRuntime]", err);
-          delete w[LOADER_KEY];
-        });
-    }
+    // Defer past React hydration to avoid DOM mismatch overlays
+    const timer = window.setTimeout(() => {
+      if (!state.promise) {
+        state.promise = ensureWebflowScripts()
+          .then(() => {
+            state.done = true;
+          })
+          .catch((err) => {
+            console.error("[WebflowRuntime]", err);
+            delete w[LOADER_KEY];
+          });
+      }
+    }, 50);
+
+    return () => window.clearTimeout(timer);
   }, []);
 
   return null;

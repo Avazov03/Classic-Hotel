@@ -9,8 +9,16 @@ html.rt-menu-open .rt-mega-menu-wrapper {
   display: block !important;
 }
 
-/* Marquee (Webflow IX2 normally drives this) */
-.rt-topbar {
+/*
+ * Marquee: IX2 animates .rt-top-bar-marquee-train.
+ * Only CSS-fallback the train when IX2 has not started (no inline transform yet).
+ * Never animate .rt-topbar itself — that breaks overflow clip into the navbar.
+ */
+.rt-top-bar-wrap {
+  overflow: hidden;
+}
+
+html:not(.w-mod-ix) .rt-top-bar-marquee-train {
   display: flex;
   width: max-content;
   animation: rt-marquee 35s linear infinite;
@@ -21,18 +29,54 @@ html.rt-menu-open .rt-mega-menu-wrapper {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-33.333%);
+    transform: translateX(-50%);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .rt-topbar {
+  html:not(.w-mod-ix) .rt-top-bar-marquee-train {
     animation: none;
   }
 }
 
 .rt-top-main-box {
   z-index: 1000;
+}
+
+/*
+ * Sticky hero only lives inside this stage (hero + About). Once the stage
+ * scrolls away, the beach video leaves — it must NOT stick under the rest
+ * of the homepage (that caused the multi-section pile-up).
+ */
+html.is-home .home-hero-about-stage {
+  position: relative;
+  isolation: isolate;
+}
+
+html.is-home .rt-hero-v1 {
+  position: sticky;
+  top: 0;
+  z-index: 0;
+}
+
+html.is-home .rt-about-v1 {
+  position: relative;
+  z-index: 1;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  background-color: var(--_colors---soft-porcelain-white, #faf7f2);
+}
+
+/* Rest of home paints above any leftover stacking from the stage */
+html.is-home .home-hero-about-stage + * {
+  position: relative;
+  z-index: 2;
+  background-color: var(--_colors---soft-porcelain-white, #faf7f2);
+}
+
+html.is-home main > .home-hero-about-stage ~ section,
+html.is-home .home-hero-about-stage + * section {
+  background-color: var(--_colors---soft-porcelain-white, #faf7f2);
 }
 
 .baseline-root {
@@ -54,26 +98,41 @@ html.is-inner .rt-navbar-v1-button-wrapper .rt-text-white {
   color: var(--_colors---dark-blue, #00253f) !important;
 }
 
-html.is-home .rt-nav-logo-v1 {
-  opacity: 1 !important;
+/*
+ * Home logos: let Webflow IX2 swap white/dark on scroll.
+ * Only force the light (white) logo at the very top before IX2 paints,
+ * and never use !important so IX2 scroll states can win.
+ */
+html.is-home:not(.w-mod-ix) .rt-nav-logo-v1 {
+  opacity: 1;
 }
 
-html.is-home .rt-nav-logo-v2 {
+html.is-home:not(.w-mod-ix) .rt-nav-logo-v2 {
+  opacity: 0;
+}
+
+/* Inner pages: always dark logo on light chrome */
+html.is-inner .rt-nav-logo-v1 {
   opacity: 0 !important;
 }
 
+html.is-inner .rt-nav-logo-v2 {
+  opacity: 1 !important;
+}
+
 /*
- * Image reveal overlays start mid-animation in exported HTML.
- * Without IX2 they permanently cover photos — hide them.
+ * Image wipe overlays: IX2 animates them open.
+ * Only hide when Webflow runtime never marked the page (no IX2).
  */
-.rt-image-overlay-1,
-.rt-image-overlay-2 {
+html:not(.w-mod-ix) .rt-image-overlay-1,
+html:not(.w-mod-ix) .rt-image-overlay-2 {
   display: none !important;
 }
 
 /*
- * Sticky scroll chapters without IX2 create huge empty voids.
- * Keep About sticky intact — IX2 drives rt-about-v1 via webflow.js.
+ * Sticky scroll chapters without full IX2 create huge empty voids / pile-ups.
+ * Keep hero sticky (inside stage) + About (React) + Featured Rooms (IX2).
+ * Neutralize the rest — including experience image sticky (no "-sticky" in name).
  */
 .rt-value,
 .rt-feature-v7,
@@ -82,9 +141,26 @@ html.is-home .rt-nav-logo-v2 {
   height: auto !important;
 }
 
+.rt-experience-main-height,
+.rt-accomodation-main-height,
+.rt-about-v3-main-height,
+.rt-feature-v4-main-height {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
 .rt-value-sticky,
 .rt-feature-v7-sticky,
-[class*="-sticky"].rt-overflow-hidden:not(.rt-about-v1-sticky) {
+.rt-service-v1-sticky,
+.rt-experience-sticky,
+.rt-experience-sticky-height,
+.rt-experience-image-main-wrapper,
+.rt-service-v1 [class*="-sticky"],
+.rt-experience [class*="-sticky"],
+.rt-experience [class*="sticky"],
+.rt-value [class*="-sticky"],
+.rt-gallery [class*="-sticky"],
+.rt-gallery-sticky {
   position: relative !important;
   top: auto !important;
   height: auto !important;
@@ -110,4 +186,64 @@ main [style*="opacity:0"]:not([data-w-id]):not(.rt-about-v1 *):not(
     .rt-about-v1
   ) {
   opacity: 1 !important;
+}
+
+/* Lightweight lightbox (Webflow w-lightbox stand-in) */
+.elbergo-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10050;
+  align-items: center;
+  justify-content: center;
+}
+
+.elbergo-lightbox[data-open="1"] {
+  display: flex;
+}
+
+.elbergo-lightbox__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+}
+
+.elbergo-lightbox__img {
+  position: relative;
+  z-index: 1;
+  max-width: min(92vw, 1100px);
+  max-height: 88vh;
+  object-fit: contain;
+  border-radius: 0.25rem;
+}
+
+.elbergo-lightbox__close,
+.elbergo-lightbox__prev,
+.elbergo-lightbox__next {
+  position: absolute;
+  z-index: 2;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 2.5rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+}
+
+.elbergo-lightbox__close {
+  top: 1rem;
+  right: 1rem;
+}
+
+.elbergo-lightbox__prev {
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.elbergo-lightbox__next {
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
 }

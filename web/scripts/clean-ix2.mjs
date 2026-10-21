@@ -6,26 +6,27 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const dir = path.join(__dirname, "..", "src", "baseline", "html");
 
 function neutralize(html) {
-  return html
-    // Remove entire style attrs that only exist to hide for IX2
-    .replace(/\sstyle="([^"]*)"/gi, (_, style) => {
-      const parts = style
-        .split(";")
-        .map((s) => s.trim())
-        .filter(Boolean)
-        .filter((s) => {
-          const lower = s.toLowerCase();
-          if (lower.startsWith("opacity:") && /opacity:\s*0/.test(lower)) return false;
-          if (lower.includes("transform:") && /translate3d\(0,\s*[1-9]/.test(lower)) return false;
-          if (lower.includes("transform:") && /translate3d\(0px,\s*[1-9]/.test(lower)) return false;
-          if (lower.includes("filter:") && /blur\(/.test(lower)) return false;
-          return true;
-        });
-      if (!parts.length) return "";
-      return ` style="${parts.join("; ")}"`;
-    })
-    // Webflow often sets opacity 0 via attribute without other styles surviving
-    .replace(/\sopacity="0"/gi, "");
+  /*
+   * Do NOT strip opacity:0 or image-overlay transforms — IX2 needs them.
+   * Only strip vertical counter-train offsets (translate3d(0, N%, …)).
+   */
+  return html.replace(/\sstyle="([^"]*)"/gi, (_, style) => {
+    const parts = style
+      .split(";")
+      .map((s) => s.trim())
+      .filter(Boolean)
+      .filter((s) => {
+        if (
+          /transform:/i.test(s) &&
+          /translate3d\(\s*0(?:px)?\s*,\s*-?\d+%/i.test(s)
+        ) {
+          return false;
+        }
+        return true;
+      });
+    if (!parts.length) return "";
+    return ` style="${parts.join("; ")}"`;
+  });
 }
 
 for (const file of fs.readdirSync(dir).filter((f) => f.endsWith(".ts"))) {

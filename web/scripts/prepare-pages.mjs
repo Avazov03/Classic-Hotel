@@ -28,45 +28,45 @@ const linkMap = [
   [/href="(?:\.\.\/)?contact-one\.html"/g, 'href="/contact"'],
   [/href="(?:\.\.\/)?contact-two\.html"/g, 'href="/contact"'],
   [/href="(?:\.\.\/)?contact-three\.html"/g, 'href="/contact"'],
-  [/href="(?:\.\.\/)?404\.html"/g, 'href="/"'],
-  [/href="(?:\.\.\/)?401\.html"/g, 'href="/"'],
+  [/href="(?:\.\.\/)?404\.html"/g, 'href="/not-found"'],
+  [/href="(?:\.\.\/)?401\.html"/g, 'href="/password-protected"'],
   [/href="(?:\.\.\/)?post\/([^"]+)\.html"/g, 'href="/blog/$1"'],
-  [/href="(?:\.\.\/)?style-guide\.html"/g, 'href="/"'],
-  [/href="(?:\.\.\/)?license\.html"/g, 'href="/"'],
-  [/href="(?:\.\.\/)?changelog\.html"/g, 'href="/"'],
+  [/href="(?:\.\.\/)?style-guide\.html"/g, 'href="/style-guide"'],
+  [/href="(?:\.\.\/)?license\.html"/g, 'href="/license"'],
+  [/href="(?:\.\.\/)?changelog\.html"/g, 'href="/changelog"'],
 ];
 
 function neutralizeIx2(html) {
-  // Remove image-reveal masks that permanently cover photos without IX2
-  let out = html.replace(
-    /<div[^>]*class="[^"]*rt-image-overlay-[12][^"]*"[^>]*><\/div>/gi,
-    "",
-  );
-
-  out = out.replace(/\sstyle="([^"]*)"/gi, (_, style) => {
+  /*
+   * Keep IX2 start DNA:
+   * - rt-image-overlay wipe masks + their skew/translate start transforms
+   * - opacity:0 on scroll-in text (WebflowRuntime / IX2 reveals them)
+   * Only strip vertical counter-train offsets that look broken without IX2.
+   */
+  return html.replace(/\sstyle="([^"]*)"/gi, (_, style) => {
     const parts = style
       .split(";")
       .map((s) => s.trim())
       .filter(Boolean)
       .filter((s) => {
-        const lower = s.toLowerCase().replace(/\s+/g, "");
-        if (lower.startsWith("opacity:0")) return false;
-        if (lower.includes("opacity:0;") || lower.endsWith("opacity:0")) return false;
-        // Drop off-screen counter / slide transforms
-        if (/transform:/i.test(s) && /translate3d\(0,\s*-?\d+%/i.test(s)) return false;
-        if (/transform:/i.test(s) && /translate3d\(-?\d+%/i.test(s)) return false;
+        // Counter digit trains: translate3d(0, -N%, 0) — not image overlays
+        if (
+          /transform:/i.test(s) &&
+          /translate3d\(\s*0\s*,\s*-?\d+%/i.test(s)
+        ) {
+          return false;
+        }
         return true;
       });
     if (!parts.length) return "";
     return ` style="${parts.join("; ")}"`;
   });
-
-  return out;
 }
 
 function clean(html) {
   let out = html
-    .replace(/<script[\s\S]*?<\/script>/gi, "")
+    // Keep Webflow lightbox JSON; strip executable scripts only
+    .replace(/<script(?![^>]*type=["']application\/json["'])[\s\S]*?<\/script>/gi, "")
     .replace(/\.\.\/cdn\.prod\.website-files\.com/g, "https://cdn.prod.website-files.com")
     .replace(/src="\.\.\/([^"]+)"/g, (_, p) => {
       if (p.startsWith("http")) return `src="${p}"`;
@@ -78,14 +78,35 @@ function clean(html) {
   return out.trim();
 }
 
+/** Stack-based extractor — naive regex breaks nested room tab <section>s. */
+function extractTopLevelSections(html) {
+  const results = [];
+  const re = /<\/?section\b[^>]*>/gi;
+  const stack = [];
+  let match;
+  while ((match = re.exec(html))) {
+    const tag = match[0];
+    if (/^<\/section/i.test(tag)) {
+      const start = stack.pop();
+      if (start && stack.length === 0) {
+        results.push(html.slice(start.index, match.index + tag.length));
+      }
+    } else {
+      stack.push({ index: match.index });
+    }
+  }
+  return results;
+}
+
 function extractMain(html) {
-  const sections = [...html.matchAll(/<section[\s\S]*?<\/section>/gi)].map((m) => m[0]);
+  const sections = extractTopLevelSections(html);
   const mainSections = sections.filter((s) => {
     const cls = (s.match(/class="([^"]*)"/) || [])[1] || "";
     if (/rt-footer/.test(cls)) return false;
     if (/rt-navbar|rt-top-main|rt-nav-inner|w-nav\b/.test(cls)) return false;
     return true;
   });
+  // Room pages wrap tabs in a bare <section> — keep full nested panes
   return mainSections.join("\n");
 }
 
@@ -99,6 +120,10 @@ const pages = [
   { file: "blog-one.html", out: "blog" },
   { file: "contact-two.html", out: "contact" },
   { file: "404.html", out: "not-found" },
+  { file: "401.html", out: "password-protected" },
+  { file: "style-guide.html", out: "style-guide" },
+  { file: "license.html", out: "license" },
+  { file: "changelog.html", out: "changelog" },
   { file: "room/standard-room.html", out: "room-standard-room" },
   { file: "room/sea-view-room.html", out: "room-sea-view-room" },
   { file: "room/executive-suite.html", out: "room-executive-suite" },
@@ -126,6 +151,10 @@ for (const page of pages) {
   const raw = fs.readFileSync(full, "utf8");
   const body = (raw.match(/<body[^>]*>([\s\S]*)<\/body>/i) || [])[1] || raw;
   let html = clean(extractMain(body));
+  // Utility pages (401) use div wrappers, not <section>
+  if (!html && /rt-utility-page-wrap/.test(body)) {
+    html = clean(body);
+  }
   if (!html && page.out === "not-found") html = notFoundFallback;
   const content = `/* auto-generated — do not edit */\nexport const html = ${JSON.stringify(html)};\n`;
   fs.writeFileSync(path.join(outDir, `${page.out}.ts`), content);

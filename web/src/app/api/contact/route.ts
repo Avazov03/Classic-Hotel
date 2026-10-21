@@ -1,12 +1,14 @@
 import { NextResponse } from "next/server";
 
-type ContactPayload = {
-  name?: string;
-  email?: string;
-  phone?: string;
-  topic?: string;
-  message?: string;
-};
+type ContactPayload = Record<string, string | undefined>;
+
+function pick(body: ContactPayload, keys: string[]) {
+  for (const key of keys) {
+    const v = body[key]?.trim();
+    if (v) return v;
+  }
+  return "";
+}
 
 export async function POST(request: Request) {
   let body: ContactPayload;
@@ -17,9 +19,18 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "Invalid JSON" }, { status: 400 });
   }
 
-  const name = body.name?.trim() ?? "";
-  const email = body.email?.trim() ?? "";
-  const message = body.message?.trim() ?? "";
+  // Support both React ContactForm fields and baseline Webflow names
+  const name = pick(body, ["name", "Contact-V1-Name", "Contact V1 Name"]);
+  const email = pick(body, ["email", "Contact-V1-email", "Contact V1 email"]);
+  const message = pick(body, [
+    "message",
+    "Contact-V1-Message",
+    "Contact V1 Message",
+    "Contact-V1-query",
+    "Contact V1 query",
+  ]);
+  const phone = pick(body, ["phone", "Contact-V1-Phone-No", "Contact V1 Phone No"]);
+  const topic = pick(body, ["topic"]) || "reservation";
 
   if (!name || !email || !message) {
     return NextResponse.json(
@@ -36,8 +47,8 @@ export async function POST(request: Request) {
   console.info("[contact]", {
     name,
     email,
-    phone: body.phone?.trim() || null,
-    topic: body.topic || "reservation",
+    phone: phone || null,
+    topic,
     message,
   });
 
