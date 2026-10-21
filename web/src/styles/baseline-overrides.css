@@ -18,6 +18,13 @@ html.rt-menu-open .rt-mega-menu-wrapper {
   pointer-events: auto !important;
 }
 
+/* Bars/Menyu header ustida qolsin — overlay yopishni bloklamasin */
+html.rt-menu-open .rt-navbar-v1,
+html.rt-menu-open .rt-nav-inner-block {
+  position: relative;
+  z-index: 1002 !important;
+}
+
 /*
  * Marquee: IX2 animates .rt-top-bar-marquee-train.
  * Only CSS-fallback the train when IX2 has not started (no inline transform yet).
