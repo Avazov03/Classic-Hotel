@@ -1,4 +1,4 @@
-/* Keep baseline Webflow look; only add what IX2 used to do. */
+/* Keep baseline Webflow look; neutralize IX2 states that need webflow.js */
 
 html.rt-menu-open {
   overflow: hidden;
@@ -31,12 +31,77 @@ html.rt-menu-open .rt-mega-menu-wrapper {
   }
 }
 
-/* Ensure fixed chrome does not get clipped by our old shell */
 .rt-top-main-box {
   z-index: 1000;
 }
 
-/* Baseline home should not inherit our reinterpreted body padding hacks */
 .baseline-root {
-  background: var(--soft-porcelain-white, #faf7f2);
+  background: var(--_colors---soft-porcelain-white, #faf7f2);
+}
+
+/* Inner pages: fixed home chrome sits over content without IX2 scroll states */
+html.is-inner main {
+  padding-top: 7.5rem;
+}
+
+html.is-inner .rt-navbar-v1-bar-line {
+  background-color: var(--_colors---dark-blue, #00253f);
+}
+
+html.is-inner .rt-navbar-v1-menu-wrapper .rt-button-text,
+html.is-inner .rt-navbar-v1-menu-wrapper .rt-hover-color-change,
+html.is-inner .rt-navbar-v1-button-wrapper .rt-text-white {
+  color: var(--_colors---dark-blue, #00253f) !important;
+}
+
+html.is-home .rt-nav-logo-v1 {
+  opacity: 1 !important;
+}
+
+html.is-home .rt-nav-logo-v2 {
+  opacity: 0 !important;
+}
+
+/*
+ * Image reveal overlays start mid-animation in exported HTML.
+ * Without IX2 they permanently cover photos — hide them.
+ */
+.rt-image-overlay-1,
+.rt-image-overlay-2 {
+  display: none !important;
+}
+
+/* Sticky scroll chapters without IX2 create huge empty black/white voids */
+.rt-value,
+.rt-feature-v7,
+.rt-about-v1,
+.rt-service-v1,
+.rt-experience {
+  height: auto !important;
+}
+
+.rt-value-sticky,
+.rt-feature-v7-sticky,
+.rt-about-v1-sticky,
+[class*="-sticky"].rt-overflow-hidden {
+  position: relative !important;
+  top: auto !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+/* Inner page hero should not stick forever over content */
+.rt-inner-hero {
+  position: relative !important;
+  top: auto !important;
+}
+
+/* Counters: show first visible digit row instead of IX2 off-screen trains */
+.rt-counter-train[style*="translate3d(0, -"] {
+  transform: none !important;
+}
+
+/* Ensure text forced hidden by leftover transforms is readable */
+[style*="opacity:0"] {
+  opacity: 1 !important;
 }

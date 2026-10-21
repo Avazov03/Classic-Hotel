@@ -38,7 +38,12 @@ const linkMap = [
 ];
 
 function neutralizeIx2(html) {
-  return html.replace(/\sstyle="([^"]*)"/gi, (_, style) => {
+  let out = html.replace(
+    /<div[^>]*class="[^"]*rt-image-overlay-[12][^"]*"[^>]*><\/div>/gi,
+    "",
+  );
+
+  out = out.replace(/\sstyle="([^"]*)"/gi, (_, style) => {
     const parts = style
       .split(";")
       .map((s) => s.trim())
@@ -47,11 +52,15 @@ function neutralizeIx2(html) {
         const lower = s.toLowerCase().replace(/\s+/g, "");
         if (lower.startsWith("opacity:0")) return false;
         if (lower.includes("opacity:0;") || lower.endsWith("opacity:0")) return false;
+        if (/transform:/i.test(s) && /translate3d\(0,\s*-?\d+%/i.test(s)) return false;
+        if (/transform:/i.test(s) && /translate3d\(-?\d+%/i.test(s)) return false;
         return true;
       });
     if (!parts.length) return "";
     return ` style="${parts.join("; ")}"`;
   });
+
+  return out;
 }
 
 function clean(html) {

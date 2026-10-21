@@ -37,7 +37,13 @@ const linkMap = [
 ];
 
 function neutralizeIx2(html) {
-  return html.replace(/\sstyle="([^"]*)"/gi, (_, style) => {
+  // Remove image-reveal masks that permanently cover photos without IX2
+  let out = html.replace(
+    /<div[^>]*class="[^"]*rt-image-overlay-[12][^"]*"[^>]*><\/div>/gi,
+    "",
+  );
+
+  out = out.replace(/\sstyle="([^"]*)"/gi, (_, style) => {
     const parts = style
       .split(";")
       .map((s) => s.trim())
@@ -46,19 +52,16 @@ function neutralizeIx2(html) {
         const lower = s.toLowerCase().replace(/\s+/g, "");
         if (lower.startsWith("opacity:0")) return false;
         if (lower.includes("opacity:0;") || lower.endsWith("opacity:0")) return false;
+        // Drop off-screen counter / slide transforms
+        if (/transform:/i.test(s) && /translate3d\(0,\s*-?\d+%/i.test(s)) return false;
+        if (/transform:/i.test(s) && /translate3d\(-?\d+%/i.test(s)) return false;
         return true;
-      })
-      .map((s) => {
-        // Reset IX2 hide transforms that leave content off-screen
-        if (/transform:/i.test(s) && /translate3d\(0,\s*-?\d+%/i.test(s)) {
-          return null;
-        }
-        return s;
-      })
-      .filter(Boolean);
+      });
     if (!parts.length) return "";
     return ` style="${parts.join("; ")}"`;
   });
+
+  return out;
 }
 
 function clean(html) {
@@ -112,6 +115,8 @@ for (const file of posts) {
   });
 }
 
+const notFoundFallback = `<section class="rt-inner-hero"><div class="w-layout-blockcontainer rt-container w-container" style="padding:6rem 0;text-align:center"><h1 class="rt-gap-off">Page not found</h1><p style="margin:1rem 0 1.5rem">The page you are looking for may have moved.</p><a href="/" class="rt-button rt-overflow-hidden rt-change-black w-inline-block"><div class="rt-position-relative rt-overflow-hidden"><div class="rt-button-text rt-text-one">Back home</div></div></a></div></section>`;
+
 for (const page of pages) {
   const full = path.join(mirror, page.file);
   if (!fs.existsSync(full)) {
@@ -120,7 +125,8 @@ for (const page of pages) {
   }
   const raw = fs.readFileSync(full, "utf8");
   const body = (raw.match(/<body[^>]*>([\s\S]*)<\/body>/i) || [])[1] || raw;
-  const html = clean(extractMain(body));
+  let html = clean(extractMain(body));
+  if (!html && page.out === "not-found") html = notFoundFallback;
   const content = `/* auto-generated — do not edit */\nexport const html = ${JSON.stringify(html)};\n`;
   fs.writeFileSync(path.join(outDir, `${page.out}.ts`), content);
   console.log(page.out, html.length);
