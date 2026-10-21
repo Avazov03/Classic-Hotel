@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ContactForm } from "@/components/ContactForm";
 import { PageHero } from "@/components/PageHero";
 import { PageIntroBlock } from "@/components/PageIntro";
 import { pageIntros } from "@/data/pages";
@@ -27,44 +28,7 @@ export default function ContactPage() {
               and special requests.
             </p>
           </div>
-
-          <form className={styles.form} action="#" method="post">
-            <div className={styles.field}>
-              <label htmlFor="name">Full name</label>
-              <input id="name" name="name" type="text" required autoComplete="name" />
-            </div>
-            <div className={styles.field}>
-              <label htmlFor="email">Email</label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                autoComplete="email"
-              />
-            </div>
-            <div className={styles.field}>
-              <label htmlFor="phone">Phone</label>
-              <input id="phone" name="phone" type="tel" autoComplete="tel" />
-            </div>
-            <div className={styles.field}>
-              <label htmlFor="topic">Topic</label>
-              <select id="topic" name="topic" defaultValue="reservation">
-                <option value="reservation">Reservation</option>
-                <option value="event">Event / banquet</option>
-                <option value="dining">Dining</option>
-                <option value="spa">Spa</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div className={styles.field}>
-              <label htmlFor="message">Message</label>
-              <textarea id="message" name="message" required />
-            </div>
-            <button className={styles.btnPrimary} type="submit">
-              Send message
-            </button>
-          </form>
+          <ContactForm />
         </div>
       </section>
     </>
