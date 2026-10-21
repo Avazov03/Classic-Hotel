@@ -1,0 +1,95 @@
+.hero {
+  position: relative;
+  min-height: min(88vh, 52rem);
+  display: grid;
+  align-items: end;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      120deg,
+      color-mix(in srgb, var(--color-dark-blue) 72%, transparent),
+      color-mix(in srgb, var(--color-deep-brownish-gray) 35%, transparent)
+    ),
+    url("https://cdn.prod.website-files.com/6927ddcc377dce6e20188e35/696db7b5f957e045712c8d8b_Home%201.webp")
+      center / cover no-repeat;
+}
+
+.content {
+  padding: 4.5rem 0 5rem;
+  color: var(--color-white);
+  max-width: 40rem;
+  animation: rise 900ms var(--ease-hotel) both;
+}
+
+.eyebrow {
+  font-size: var(--text-sub);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.title {
+  color: var(--color-white);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin-bottom: 1.75rem;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0 1.5rem;
+  background: var(--color-warm-sand-beige);
+  color: var(--color-dark-blue);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition:
+    background var(--dur-fast) var(--ease-hotel),
+    transform var(--dur-fast) var(--ease-hotel);
+}
+
+.cta:hover {
+  background: var(--color-muted-sandstone);
+  transform: translateY(-1px);
+}
+
+.note {
+  padding: 3rem 0 4rem;
+  text-align: center;
+}
+
+.note h2 {
+  margin-bottom: 0.75rem;
+}
+
+.note p {
+  margin: 0 auto;
+  max-width: 36rem;
+  color: var(--color-dim-gray);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .content {
+    animation: none;
+  }
+}

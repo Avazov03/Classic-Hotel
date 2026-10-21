@@ -1,0 +1,50 @@
+/**
+ * Classic Hotel — design DNA tokens
+ * Extracted from baseline Webflow CSS (soft-porcelain, dark-blue, sand, mocha).
+ * Do not invent new brand colors without updating this file.
+ */
+:root {
+  /* Colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-dark-blue: #00253f;
+  --color-deep-brownish-gray: #352d25;
+  --color-deep-mocha-brown: #5c4d40;
+  --color-dim-gray: #4c4c4c;
+  --color-dusty-beige: #a28d7a;
+  --color-muted-sandstone: #c7b8a3;
+  --color-warm-sand-beige: #e8dcc8;
+  --color-soft-porcelain: #faf7f2;
+
+  /* Typography */
+  --font-body: var(--font-instrument-sans), "Instrument Sans", system-ui, sans-serif;
+  --font-heading: var(--font-instrument-serif), "Instrument Serif", Georgia, serif;
+
+  --text-h1: 2.5rem;
+  --text-h2: 1.875rem;
+  --text-h3: 1.625rem;
+  --text-h4: 1.375rem;
+  --text-h5: 1.125rem;
+  --text-h6: 1.0625rem;
+  --text-body: 0.9375rem;
+  --text-sub: 0.875rem;
+
+  --lh-h1: 1.212;
+  --lh-h2: 1.222;
+  --lh-body: 1.625;
+
+  --tracking-h1: -0.05rem;
+  --tracking-body: -0.01875rem;
+
+  /* Layout */
+  --gutter: 0.9375rem;
+  --container: 72.5rem;
+  --radius-sm: 0.625rem;
+  --radius-md: 0.9375rem;
+  --radius-lg: 1.25rem;
+
+  /* Motion */
+  --ease-hotel: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 200ms;
+  --dur-med: 400ms;
+}

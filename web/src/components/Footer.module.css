@@ -1,0 +1,77 @@
+.footer {
+  margin-top: auto;
+  background: var(--color-deep-mocha-brown);
+  color: var(--color-white);
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  padding: 3.5rem 0 0;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.mark {
+  width: 1.2rem;
+  height: 1.2rem;
+  background: var(--color-warm-sand-beige);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.blurb {
+  max-width: 22rem;
+  color: color-mix(in srgb, white 82%, transparent);
+  font-size: var(--text-body);
+  line-height: 1.6;
+}
+
+.colTitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-h5);
+  margin-bottom: 1rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.links a {
+  color: color-mix(in srgb, white 88%, transparent);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.85rem;
+  transition: color var(--dur-fast) var(--ease-hotel);
+}
+
+.links a:hover {
+  color: var(--color-warm-sand-beige);
+}
+
+.bottom {
+  margin-top: 2.5rem;
+  padding: 1.1rem 0;
+  border-top: 1px solid color-mix(in srgb, white 18%, transparent);
+  text-align: center;
+  font-size: var(--text-sub);
+  color: color-mix(in srgb, white 75%, transparent);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1.4fr 1fr 1fr;
+  }
+}
