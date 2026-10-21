@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-const mirror = path.resolve("../elbergo.webflow.io");
+const mirror = path.resolve("../baseline/elbergo.webflow.io");
 
 function walk(dir, acc = []) {
   for (const name of fs.readdirSync(dir)) {

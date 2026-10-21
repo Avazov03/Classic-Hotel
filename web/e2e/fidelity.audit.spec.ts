@@ -1,7 +1,9 @@
 import { test, expect, type Page } from "@playwright/test";
 
 const BASE = process.env.E2E_BASE_URL ?? "http://localhost:3000";
-const ORIGIN = process.env.E2E_ORIGIN_URL ?? "http://localhost:8765/elbergo.webflow.io";
+const ORIGIN =
+  process.env.E2E_ORIGIN_URL ??
+  "http://localhost:8765/baseline/elbergo.webflow.io";
 
 /** Next routes ↔ baseline HTML (home-one is canonical home). */
 const ROUTES: { next: string; baseline: string; name: string }[] = [

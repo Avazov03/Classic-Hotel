@@ -4,7 +4,7 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
-const mirror = path.join(root, "..", "elbergo.webflow.io");
+const mirror = path.join(root, "..", "baseline", "elbergo.webflow.io");
 const outDir = path.join(root, "src", "baseline", "html");
 fs.mkdirSync(outDir, { recursive: true });
 

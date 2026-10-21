@@ -7,7 +7,7 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
-const src = path.join(root, "..", "elbergo.webflow.io", "home-one.html");
+const src = path.join(root, "..", "baseline", "elbergo.webflow.io", "home-one.html");
 const out = path.join(root, "src", "baseline", "html", "home-7.ts");
 
 let html = fs.readFileSync(src, "utf8");

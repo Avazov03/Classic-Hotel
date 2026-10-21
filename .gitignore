@@ -18,7 +18,7 @@ backblue.gif
 fade.gif
 
 # Broken absolute-URL mirror artifacts
-elbergo.webflow.io/_https_/
+baseline/elbergo.webflow.io/_https_/
 
 # Next.js app
 web/node_modules/
