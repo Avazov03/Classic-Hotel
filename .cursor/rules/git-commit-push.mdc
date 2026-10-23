@@ -1,32 +1,30 @@
 ---
-description: Har bir o‘zgarishdan keyin GitHub commit/push so‘rash va tasdiqlash
+description: O‘zgarishdan keyin commit, push va server deploy so‘rash
 alwaysApply: true
 ---
 
-# Git commit & push odatı
+# Git commit, push va deploy
 
 Loyiha GitHub: `https://github.com/Avazov03/Classic-Hotel.git` (branch: `feature/nextjs-migration` yoki joriy branch).
 
+Sayt serveri: `hotel.zonic.fit` → `3.65.92.39` (A). IPv6: `2a05:d014:1091:2d00:768b:8b11:2d63:34ae`. Ichki IP: `172.26.11.220`. SSH: `ubuntu@3.65.92.39`, kalit `.deploy/hotel-zonic.key` (gitignore). Kalitni commit qilma. Serverda hozircha Docker yo‘q.
+
 ## Qoida
 
-1. Foydalanuvchi prompti kod/fayllarni o‘zgartirsa (style, content, config, yangi fayl) — ish tugagach **commit va push qilaymi?** deb so‘ra.
-2. Foydalanuvchi ha deb yozsa (yoki "commit", "push", "ha") — faqat shunda:
-   - `git status` / `git diff` / recent log
-   - mantiqiy commit message (nima uchun)
-   - `git add` → `git commit` → `git push -u origin HEAD` (agar tracking yo‘q bo‘lsa)
-3. Commit **va** push ikkalasi ham muvaffaqiyatli bo‘lgach, chatda aniq tasdiqla:
+1. Foydalanuvchi prompti kod/fayllarni o‘zgartirsa — ish tugagach so‘ra: **Commit, push va serverga deploy qilaymi?**
+2. Ha / "commit" / "push" / "deploy" desagina shu qismni qil. Uchala so‘z bo‘lmasa, faqat aytilganini qil.
+3. Commitdan oldin: `git status`, `git diff`, recent log. Message — nima uchun.
+4. `git add` → `git commit` → `git push -u origin HEAD`.
+5. Deploy alohida tasdiq. `.env`, kalit, parol — commit qilma.
+6. Muvaffaqiyatdan keyin aniq yoz:
 
 ```
 ✅ Commit qilindi
 ✅ GitHub ga push qilindi
+✅ Serverga deploy qilindi
 ```
 
-(Commit hash va branch nomini qo‘shish mumkin.)
-
-4. Faqat commit so‘ralsa — push qilma; faqat push — yangi commit yasama.
-5. Hech qachon avtomatik commit/push qilma — doim so‘rab ol.
-6. `.env`, credentials, secrets — commit qilma.
-7. Katta/ko‘p o‘zgarishlarda bitta aniq message yoki foydalanuvchi xohlasa bir necha mantiqiy commit.
+Qilinmagan qatorni yozma.
 
 ## Til
 

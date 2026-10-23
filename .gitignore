@@ -20,6 +20,9 @@ fade.gif
 # Broken absolute-URL mirror artifacts
 baseline/elbergo.webflow.io/_https_/
 
+# Server SSH (never commit)
+.deploy/
+
 # Next.js app
 web/node_modules/
 web/.next/
