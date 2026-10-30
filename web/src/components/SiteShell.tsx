@@ -1,3 +1,4 @@
+import { AssistantLazy } from "@/components/assistant/AssistantLazy";
 import { BaselineHtml } from "@/components/BaselineHtml";
 import { BaselineInteractions } from "@/components/BaselineInteractions";
 import { InlineHeaderNav } from "@/components/InlineHeaderNav";
@@ -20,6 +21,7 @@ export async function SiteShell({ children }: { children: React.ReactNode }) {
       <LanguageSwitch locale={locale} />
       <main>{children}</main>
       <BaselineHtml html={footerHtml} />
+      <AssistantLazy />
     </div>
   );
 }
