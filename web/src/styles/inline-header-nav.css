@@ -110,10 +110,10 @@
   z-index: 80;
   min-width: 17.5rem;
   padding: 0.75rem 0;
-  background: var(--color-soft-porcelain, #f3f7f5);
+  background: var(--color-soft-porcelain, #faf7f2);
   color: var(--color-deep-brownish-gray, #352d25);
   border-radius: var(--radius-md, 0.9375rem);
-  border: 1px solid rgba(22, 141, 112, 0.12);
+  border: 1px solid rgba(140, 106, 47, 0.12);
   box-shadow:
     0 20px 52px rgba(53, 45, 37, 0.12),
     0 4px 14px rgba(53, 45, 37, 0.05);
@@ -169,8 +169,8 @@
 
 .ca-nav-drop-link:hover,
 .ca-nav-drop-link.is-active {
-  background: rgba(22, 141, 112, 0.1);
-  color: var(--color-brand, #168d70) !important;
+  background: rgba(140, 106, 47, 0.1);
+  color: var(--color-brand, #8c6a2f) !important;
   font-weight: 500;
 }
 
@@ -190,7 +190,7 @@
   font-size: var(--text-h5, 1.125rem);
   font-weight: 400;
   letter-spacing: -0.02em;
-  color: var(--color-brand, #168d70);
+  color: var(--color-brand, #8c6a2f);
 }
 
 .ca-nav-mega-promo {
@@ -201,7 +201,7 @@
   padding: 2rem 1.65rem;
   background: linear-gradient(
     155deg,
-    rgba(22, 141, 112, 0.94) 0%,
+    rgba(140, 106, 47, 0.94) 0%,
     #0f6b55 100%
   );
   color: #fff;
@@ -254,7 +254,7 @@ html.is-home.is-nav-solid .ca-nav-link,
 html.is-inner.is-nav-solid .ca-nav-link,
 html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
   .ca-nav-link {
-  color: var(--color-brand, #168d70);
+  color: var(--color-brand, #8c6a2f);
 }
 
 /* —— Desktop chrome: logo / Bron button —— */
@@ -326,7 +326,7 @@ html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
   html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
     .rt-navbar-v1-button-wrapper
     .rt-button {
-    background-color: var(--color-warm-sand-beige, #d0ebe3) !important;
+    background-color: var(--color-warm-sand-beige, #f3e6c8) !important;
     box-shadow: none;
   }
 }
@@ -472,11 +472,11 @@ html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
 
 .ca-lang-option:hover,
 .ca-lang-option.is-current {
-  background: #e7f5f0;
+  background: #f3e6c8;
 }
 
 .ca-lang-option.is-current {
-  color: #168d70;
+  color: #8c6a2f;
 }
 
 .ca-lang-name {
@@ -500,8 +500,8 @@ html.is-home.is-nav-solid .ca-lang-trigger,
 html.is-inner.is-nav-solid .ca-lang-trigger,
 html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
   .ca-lang-trigger {
-  color: var(--color-brand, #168d70);
-  border-color: rgba(22, 141, 112, 0.28);
+  color: var(--color-brand, #8c6a2f);
+  border-color: rgba(140, 106, 47, 0.28);
   background: rgba(255, 255, 255, 0.82);
 }
 

@@ -5,20 +5,20 @@
 html,
 body,
 :root {
-  --color-brand: #168d70 !important;
+  --color-brand: #8c6a2f !important;
 
-  --_colors---soft-porcelain-white: #f3f7f5 !important;
-  --color-soft-porcelain: #f3f7f5 !important;
+  --_colors---soft-porcelain-white: #faf7f2 !important;
+  --color-soft-porcelain: #faf7f2 !important;
 
-  --_colors---deep-mocha-brown: #168d70 !important;
-  --color-deep-mocha-brown: #168d70 !important;
+  --_colors---deep-mocha-brown: #8c6a2f !important;
+  --color-deep-mocha-brown: #8c6a2f !important;
 
-  --_colors---warm-sand-beige: #d0ebe3 !important;
-  --color-warm-sand-beige: #d0ebe3 !important;
+  --_colors---warm-sand-beige: #f3e6c8 !important;
+  --color-warm-sand-beige: #f3e6c8 !important;
 
-  /* Stats fill chap tomon — qaymoq o‘rniga ochiq yashil */
-  --_colors---muted-sandstone: #9ad0c0 !important;
-  --color-muted-sandstone: #9ad0c0 !important;
+  /* Stats fill — och shampan */
+  --_colors---muted-sandstone: #e4c98a !important;
+  --color-muted-sandstone: #e4c98a !important;
 
   /* About matn alohida override — dusty asl qolishi mumkin */
   --_colors---deep-brownish-gray: #352d25 !important;
@@ -28,23 +28,23 @@ body,
 }
 
 .rt-footer {
-  background-color: #168d70 !important;
+  background-color: #8c6a2f !important;
 }
 
 .rt-top-bar-wrap {
-  background-color: #d0ebe3 !important;
+  background-color: #f3e6c8 !important;
 }
 
 .rt-button {
-  background-color: #d0ebe3 !important;
+  background-color: #f3e6c8 !important;
 }
 
 .rt-button-overlay.rt-dark-overlay {
-  background-color: #168d70 !important;
+  background-color: #8c6a2f !important;
 }
 
 .rt-text-overlay-v3 {
-  background-color: #f3f7f5d9 !important;
+  background-color: #faf7f2d9 !important;
 }
 
 .w-webflow-badge,
@@ -65,18 +65,18 @@ a.w-webflow-badge {
   background-color: rgba(255, 255, 255, 0.5) !important;
 }
 
-/* Biz haqimizda — brand yashil */
+/* Biz haqimizda — to‘q tilla */
 .rt-about-v1 .rt-big-text-one.rt-text-beige {
-  color: #168d70 !important;
+  color: #8c6a2f !important;
 }
 
-/* Stats qaymoq gradient → yashil */
+/* Stats chiziq — shampandan to‘q tillaga */
 .rt-service-v1-fill-box {
-  background-color: #9ad0c0 !important;
+  background-color: #e4c98a !important;
 }
 
 .rt-service-v1-fill-box-two {
-  background-image: linear-gradient(90deg, #a8d9cb 32%, #168d70cc) !important;
+  background-image: linear-gradient(90deg, #e8d7a8 32%, #8c6a2fcc) !important;
 }
 
 /* Footer — elementlar erkinroq */

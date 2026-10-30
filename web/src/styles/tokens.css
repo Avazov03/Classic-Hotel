@@ -7,15 +7,15 @@
   /* Colors */
   --color-white: #ffffff;
   --color-black: #000000;
-  --color-brand: #168d70; /* Classic Apartment logo */
+  --color-brand: #8c6a2f; /* antique gold */
   --color-dark-blue: #00253f;
   --color-deep-brownish-gray: #352d25;
-  --color-deep-mocha-brown: #168d70; /* trial footer; asl #5c4d40 */
+  --color-deep-mocha-brown: #8c6a2f;
   --color-dim-gray: #4c4c4c;
   --color-dusty-beige: #a28d7a;
-  --color-muted-sandstone: #c7b8a3;
-  --color-warm-sand-beige: #d0ebe3; /* trial buttons; asl #e8dcc8 */
-  --color-soft-porcelain: #f3f7f5; /* trial mist; asl #faf7f2 */
+  --color-muted-sandstone: #e4c98a;
+  --color-warm-sand-beige: #f3e6c8;
+  --color-soft-porcelain: #faf7f2;
 
   /* Typography */
   --font-body: var(--font-instrument-sans), "Instrument Sans", system-ui, sans-serif;

@@ -8,17 +8,17 @@
 html,
 body,
 :root {
-  --color-brand: #168d70;
-  --_colors---soft-porcelain-white: #f3f7f5;
-  --color-soft-porcelain: #f3f7f5;
-  --_colors---deep-mocha-brown: #168d70;
-  --color-deep-mocha-brown: #168d70;
-  --_colors---warm-sand-beige: #d0ebe3;
-  --color-warm-sand-beige: #d0ebe3;
+  --color-brand: #8c6a2f;
+  --_colors---soft-porcelain-white: #faf7f2;
+  --color-soft-porcelain: #faf7f2;
+  --_colors---deep-mocha-brown: #8c6a2f;
+  --color-deep-mocha-brown: #8c6a2f;
+  --_colors---warm-sand-beige: #f3e6c8;
+  --color-warm-sand-beige: #f3e6c8;
 }
 
 .rt-text-overlay-v3 {
-  background-color: #f3f7f5d9;
+  background-color: #faf7f2d9;
 }
 
 /* Play chiziq — overflow:hidden ISHLATILMAYDI (tugmani yashiradi) */
@@ -60,19 +60,19 @@ a.w-webflow-badge {
 
 /* Biz haqimizda — brand yashil */
 .rt-about-v1 .rt-big-text-one.rt-text-beige {
-  color: #168d70 !important;
+  color: #8c6a2f !important;
 }
 
-/* Stats qaymoq gradient → brand yashil */
+/* Stats chiziq — shampandan to‘q tillaga */
 .rt-service-v1-fill-box {
-  background-color: #9ad0c0 !important;
+  background-color: #e4c98a !important;
 }
 
 .rt-service-v1-fill-box-two {
   background-image: linear-gradient(
     90deg,
-    #a8d9cb 32%,
-    #168d70cc
+    #e8d7a8 32%,
+    #8c6a2fcc
   ) !important;
 }
 
@@ -180,7 +180,7 @@ html.is-home .rt-about-v1 {
   z-index: 1;
   border-top-left-radius: 60px;
   border-top-right-radius: 60px;
-  background-color: var(--_colors---soft-porcelain-white, #f3f7f5);
+  background-color: var(--_colors---soft-porcelain-white, #faf7f2);
 }
 
 /* “ABOUT THE HOTEL” sticks a hair under the fixed chrome — nudge 6px down */
@@ -211,7 +211,7 @@ html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero)) main {
 /* Ichki sahifa (hero yo‘q): oq fon — logo yashili */
 html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
   .rt-navbar-v1-bar-line {
-  background-color: var(--color-brand, #168d70) !important;
+  background-color: var(--color-brand, #8c6a2f) !important;
 }
 
 html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
@@ -223,7 +223,7 @@ html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
 html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
   .rt-navbar-v1-button-wrapper
   .rt-text-white {
-  color: var(--color-brand, #168d70) !important;
+  color: var(--color-brand, #8c6a2f) !important;
 }
 
 /*
@@ -297,14 +297,14 @@ html.is-home.is-hero-top .rt-navbar-v1 a.rt-text-white {
 
 html.is-home.is-nav-solid .rt-navbar-v1-bar-line,
 html.is-home.is-nav-solid .rt-navbar-v1-menu-bar-wrap .rt-navbar-v1-bar-line {
-  background-color: var(--color-brand, #168d70) !important;
+  background-color: var(--color-brand, #8c6a2f) !important;
 }
 
 html.is-home.is-nav-solid .rt-navbar-v1-menu-wrapper .rt-button-text,
 html.is-home.is-nav-solid .rt-navbar-v1-menu-wrapper .rt-hover-color-change,
 html.is-home.is-nav-solid .rt-navbar-v1-button-wrapper .rt-text-white,
 html.is-home.is-nav-solid .rt-navbar-v1 a.rt-text-white {
-  color: var(--color-brand, #168d70) !important;
+  color: var(--color-brand, #8c6a2f) !important;
 }
 
 /*
@@ -426,14 +426,14 @@ html.is-inner:has(.rt-inner-hero):not(.is-nav-solid)
 
 html.is-inner.is-nav-solid .rt-navbar-v1-bar-line,
 html.is-inner.is-nav-solid .rt-navbar-v1-menu-bar-wrap .rt-navbar-v1-bar-line {
-  background-color: var(--color-brand, #168d70) !important;
+  background-color: var(--color-brand, #8c6a2f) !important;
 }
 
 html.is-inner.is-nav-solid .rt-navbar-v1-menu-wrapper .rt-button-text,
 html.is-inner.is-nav-solid .rt-navbar-v1-menu-wrapper .rt-hover-color-change,
 html.is-inner.is-nav-solid .rt-navbar-v1-button-wrapper .rt-text-white,
 html.is-inner.is-nav-solid .rt-navbar-v1 a.rt-text-white {
-  color: var(--color-brand, #168d70) !important;
+  color: var(--color-brand, #8c6a2f) !important;
 }
 
 /* Inner hero: oyna shaffofligi — blur yo‘q */
@@ -549,7 +549,7 @@ html.is-home .rt-gallery {
   z-index: 2;
   isolation: isolate;
   overflow: clip;
-  background-color: var(--_colors---soft-porcelain-white, #f3f7f5);
+  background-color: var(--_colors---soft-porcelain-white, #faf7f2);
 }
 
 html.is-home .rt-gallery-sticky {
