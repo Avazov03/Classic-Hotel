@@ -23,11 +23,16 @@ function encodeText(value: string): string {
     .replace(/>/g, "&gt;");
 }
 
+function translated(hit: Phrase, locale: Locale): string {
+  if (locale === "uz") return "";
+  return hit[locale];
+}
+
 export function t(value: string, locale: Locale): string {
   if (locale === "uz" || !value) return value;
   const hit = table[normKey(value)];
   if (!hit) return value;
-  return hit[locale];
+  return translated(hit, locale);
 }
 
 function translateChunk(chunk: string, locale: Locale): string {
@@ -41,7 +46,7 @@ function translateChunk(chunk: string, locale: Locale): string {
   if (!hit) return chunk;
   const lead = decoded.match(/^\s*/)?.[0] ?? "";
   const trail = decoded.match(/\s*$/)?.[0] ?? "";
-  return encodeText(lead + hit[locale] + trail);
+  return encodeText(lead + translated(hit, locale) + trail);
 }
 
 function translateTag(tag: string, locale: Locale): string {
@@ -50,7 +55,7 @@ function translateTag(tag: string, locale: Locale): string {
     (full, attr: string, value: string) => {
       const hit = table[normKey(value)];
       if (!hit) return full;
-      return ` ${attr}="${encodeText(hit[locale])}"`;
+      return ` ${attr}="${encodeText(translated(hit, locale))}"`;
     },
   );
 }
