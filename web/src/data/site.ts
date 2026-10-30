@@ -1,11 +1,11 @@
-/** Gur Emir Palace — sayt brendi va kontaktlar (bitta manba). */
-export const brandName = "Guremir Palace";
+/** Mehmonxona — sayt brendi va kontaktlar (bitta manba). */
+export const brandName = "Mehmonxona";
 
 export const owner = {
   name: "Avazov Og‘abek",
   role: "Fullstack dasturchi va dizayner",
   company:
-    "Gur Emir Palace",
+    "Mehmonxona",
 };
 
 export const navLinks = [
@@ -17,22 +17,22 @@ export const navLinks = [
 ] as const;
 
 export const contact = {
-  phoneDisplay: "+998 55 701 10 01",
-  phoneHref: "tel:+998557011001",
-  email: "guremirhotel@gmail.com",
-  emailHref: "mailto:guremirhotel@gmail.com",
+  phoneDisplay: "Qabulxona",
+  phoneHref: "/contact",
+  email: "aloqa@mehmonxona.uz",
+  emailHref: "/contact",
   address:
-    "Shohruh Mirzo ko‘chasi, 126-uy, Samarqand",
-  addressShort: "Shohruh Mirzo ko‘chasi, 126-uy, Samarqand",
+    "Shahar markazidagi mehmonxona",
+  addressShort: "Shahar markazidagi mehmonxona",
 };
 
 export const social = {
-  telegram: "https://guremirpalace.uz/",
-  telegramHandle: "Gur Emir Palace",
-  instagram: "https://guremirpalace.uz/",
-  instagramHandle: "Gur Emir Palace",
-  linkedin: "https://guremirpalace.uz/",
-  facebook: "https://guremirpalace.uz/",
+  telegram: "/contact",
+  telegramHandle: "Mehmonxona",
+  instagram: "/contact",
+  instagramHandle: "Mehmonxona",
+  linkedin: "/contact",
+  facebook: "/contact",
 };
 
 export const logos = {

@@ -119,53 +119,53 @@
     "ru": "уточните",
     "en": "ask"
   },
-  "Gur Emir Palace — Samarqanddagi tinch mehmonxona": {
-    "ru": "Gur Emir Palace — тихий отель в Самарканде",
-    "en": "Gur Emir Palace — a quiet hotel in Samarkand"
+  "Tinch mehmonxona — shahardagi qulay maskan": {
+    "ru": "Тихий отель — городской уют",
+    "en": "A quiet hotel in the city"
   },
-  "Bron kunida 15% chegirma": {
-    "ru": "Скидка 15% в день брони",
-    "en": "15% off on booking day"
+  "Bron kunida maxsus taklif": {
+    "ru": "Предложение дня",
+    "en": "Today's offer"
   },
-  "Bron kunida 15% chegirma: nonushta, Wi-Fi va avtoturargoh": {
-    "ru": "Скидка 15% в день брони: завтрак, Wi-Fi и парковка",
-    "en": "15% off on booking day: breakfast, Wi-Fi and parking"
+  "Bron kunida maxsus taklif: nonushta, Wi-Fi va avtoturargoh": {
+    "ru": "Предложение в день брони: завтрак, Wi-Fi и парковка",
+    "en": "A booking-day offer: breakfast, Wi-Fi and parking"
   },
   "Har kuni bufet nonushta, soat 07:00–10:00": {
     "ru": "Завтрак-буфет каждый день, 07:00–10:00",
     "en": "Daily buffet breakfast, 07:00–10:00"
   },
-  "3 kecha va undan uzoq yashashda 10% chegirma": {
-    "ru": "Скидка 10% при проживании от 3 ночей",
-    "en": "10% off for stays of 3 nights or more"
+  "3 kecha va undan uzoq yashashda maxsus taklif": {
+    "ru": "Спецпредложение при проживании от 3 ночей",
+    "en": "A special offer for stays of 3 nights or more"
   },
-  "Samarqand markazi": {
+  "Shahar markazi": {
     "ru": "Центр города",
     "en": "City centre"
   },
-  "Tarixiy shahar": {
-    "ru": "Старый город",
-    "en": "Old city"
+  "Tinch joy": {
+    "ru": "Тихий угол",
+    "en": "Quiet spot"
   },
-  "Gur Emir yonida": {
-    "ru": "У Гур-Эмира",
-    "en": "Near Gur-e-Amir"
+  "Bog' yonida": {
+    "ru": "У сада",
+    "en": "By the garden"
   },
-  "Bog', teras, restoran va bar — Samarqanddagi tinch mehmonxona": {
-    "ru": "Сад, терраса, ресторан и бар — тихий отель в Самарканде",
-    "en": "Garden, terrace, restaurant and bar — a quiet Samarkand hotel"
+  "Bog', teras, restoran va bar — tinch va qulay mehmonxona": {
+    "ru": "Сад, терраса, ресторан и бар — тихий и удобный отель",
+    "en": "Garden, terrace, restaurant and bar — a quiet, comfortable hotel"
   },
   "Xonalarni ko'rish": {
     "ru": "Смотреть номера",
     "en": "View rooms"
   },
-  "Samarqandda, Shohruh Mirzo ko'chasida: bog', teras, restoran, bar va 24 soat qabulxona": {
-    "ru": "В Самарканде, на улице Шохруха Мирзо: сад, терраса, ресторан, бар и ресепшен 24 часа",
-    "en": "In Samarkand, on Shahrukh Mirzo Street: garden, terrace, restaurant, bar and a 24-hour desk"
+  "Mehmonxona shahar markazida: bog', teras, restoran, bar va 24 soat qabulxona": {
+    "ru": "Отель в центре города: сад, терраса, ресторан, бар и ресепшен 24 часа",
+    "en": "A city-centre hotel: garden, terrace, restaurant, bar and a 24-hour desk"
   },
-  "Samarqand aeroportigacha 7 km": {
-    "ru": "7 км до аэропорта",
-    "en": "7 km to the airport"
+  "Aeroport transferi": {
+    "ru": "Трансфер",
+    "en": "Airport shuttle"
   },
   "24 soat qabulxona": {
     "ru": "Ресепшен 24 часа",
@@ -179,9 +179,9 @@
     "ru": "Шесть типов номеров",
     "en": "Six room types"
   },
-  "4-qavatdagi teras": {
-    "ru": "Терраса 4 этажа",
-    "en": "4th-floor terrace"
+  "Ochiq teras": {
+    "ru": "Терраса",
+    "en": "Terrace"
   },
   "bepul avtoturargoh": {
     "ru": "бесплатная парковка",
@@ -207,9 +207,9 @@
     "ru": "Терраса и ресторан",
     "en": "Terrace and restaurant"
   },
-  "4-qavatdagi terasdan shaharning tarixiy qismi ko'rinadi": {
-    "ru": "С террасы 4 этажа видна историческая часть города",
-    "en": "The 4th-floor terrace looks onto the historic city"
+  "Ochiq terasdan shahar manzarasi ko'rinishi mumkin": {
+    "ru": "С открытой террасы может открываться вид на город",
+    "en": "The open terrace can look over the city"
   },
   "Har kuni bufet nonushta, alakart va halol taomlar. Nonushta 07:00 dan 10:00 gacha.": {
     "ru": "Каждый день завтрак-буфет, à la carte и халяль. Завтрак с 07:00 до 10:00.",
@@ -231,9 +231,9 @@
     "ru": "отель",
     "en": "hotel"
   },
-  "Samarqandda qoling — Gur Emir Palace": {
-    "ru": "Остановитесь в Самарканде — Gur Emir Palace",
-    "en": "Stay in Samarkand — Gur Emir Palace"
+  "Shaharda qoling — tinch mehmonxona": {
+    "ru": "Остановитесь в городе — тихий отель",
+    "en": "Stay in the city — a quiet hotel"
   },
   "Sharhlar": {
     "ru": "Отзывы",
@@ -271,45 +271,33 @@
     "ru": "Standard Single",
     "en": "Standard Single"
   },
-  "15 m²": {
-    "ru": "15 м²",
-    "en": "15 m²"
-  },
-  "25 m²": {
-    "ru": "25 м²",
-    "en": "25 m²"
-  },
-  "26 m²": {
-    "ru": "26 м²",
-    "en": "26 m²"
-  },
   "ikki kishilik": {
     "ru": "на двоих",
     "en": "for two"
   },
-  "25 m². King size karavot, alohida hammom, televizor, elektr choynak va ish stoli.": {
-    "ru": "25 м². Кровать king size, отдельная ванная, телевизор, электрочайник и рабочий стол.",
-    "en": "25 m². King-size bed, private bathroom, TV, kettle and a desk."
+  "King size karavot, alohida hammom, televizor, elektr choynak va ish stoli.": {
+    "ru": ". Кровать king size, отдельная ванная, телевизор, электрочайник и рабочий стол.",
+    "en": ". King-size bed, private bathroom, TV, kettle and a desk."
   },
-  "26 m². Ikki alohida karavot, ish joyi, bepul Wi-Fi va konditsioner.": {
-    "ru": "26 м². Две отдельные кровати, рабочее место, бесплатный Wi-Fi и кондиционер.",
-    "en": "26 m². Two single beds, a workspace, free Wi-Fi and air conditioning."
+  "Ikki alohida karavot, ish joyi, bepul Wi-Fi va konditsioner.": {
+    "ru": ". Две отдельные кровати, рабочее место, бесплатный Wi-Fi и кондиционер.",
+    "en": ". Two single beds, a workspace, free Wi-Fi and air conditioning."
   },
-  "15 m² lik Standard Single: bitta karavot, shkaf, seyf va alohida hammom.": {
-    "ru": "Standard Single, 15 м²: одна кровать, шкаф, сейф и отдельная ванная.",
-    "en": "Standard Single, 15 m²: one bed, a wardrobe, a safe and a private bathroom."
+  "Standard Single: bitta karavot, shkaf, seyf va alohida hammom.": {
+    "ru": "Standard Single, : одна кровать, шкаф, сейф и отдельная ванная.",
+    "en": "Standard Single, : one bed, a wardrobe, a safe and a private bathroom."
   },
-  "15 m² lik bir kishilik xona: shkaf, seyf, alohida hammom, televizor, elektr choynak va ish stoli.": {
-    "ru": "Одноместный номер 15 м²: шкаф, сейф, отдельная ванная, телевизор, электрочайник и стол.",
-    "en": "A 15 m² single room: wardrobe, safe, private bathroom, TV, kettle and a desk."
+  "bir kishilik xona: shkaf, seyf, alohida hammom, televizor, elektr choynak va ish stoli.": {
+    "ru": "Одноместный номер : шкаф, сейф, отдельная ванная, телевизор, электрочайник и стол.",
+    "en": "A single room: wardrobe, safe, private bathroom, TV, kettle and a desk."
   },
   "Bitta katta karavotli ikki kishilik xona. Zamonaviy interyer va yashash uchun zarur qulayliklar.": {
     "ru": "Двухместный номер с одной большой кроватью. Современный интерьер и нужные удобства.",
     "en": "A double room with one large bed. A modern interior and the essentials for a stay."
   },
-  "25 m² lik xona: king size karavot, shkaf, alohida hammom, fen, terlik, sochiqlar, televizor, elektr choynak va ish stoli.": {
-    "ru": "Номер 25 м²: кровать king size, шкаф, отдельная ванная, фен, тапочки, полотенца, телевизор, чайник и стол.",
-    "en": "A 25 m² room: king-size bed, wardrobe, private bathroom, hairdryer, slippers, towels, TV, kettle and a desk."
+  "Keng xona: king size karavot, shkaf, alohida hammom, fen, terlik, sochiqlar, televizor, elektr choynak va ish stoli.": {
+    "ru": "Номер : кровать king size, шкаф, отдельная ванная, фен, тапочки, полотенца, телевизор, чайник и стол.",
+    "en": "A room: king-size bed, wardrobe, private bathroom, hairdryer, slippers, towels, TV, kettle and a desk."
   },
   "Juftliklar va dam oluvchilar": {
     "ru": "Для пар и отдыха",
@@ -319,7 +307,7 @@
     "ru": "King size, ванная, телевизор",
     "en": "King size, bathroom, TV"
   },
-  "Shaharning tarixiy qismi mumkin": {
+  "Shahar manzarasi mumkin": {
     "ru": "Возможен вид на старый город",
     "en": "Historic-city view possible"
   },
@@ -363,29 +351,17 @@
     "ru": "Бесплатный быстрый Wi-Fi в номерах и общих зонах.",
     "en": "Free high-speed Wi-Fi in the rooms and public areas."
   },
-  "Samarqandda, Gur-i Amir yonida": {
-    "ru": "В Самарканде, рядом с Гур-Эмиром",
-    "en": "In Samarkand, beside Gur-e-Amir"
+  "Shahar markazidagi joy": {
+    "ru": "В городе, в центре города",
+    "en": "In the city, beside the city centre"
   },
-  "Shohruh Mirzo ko'chasi, 126-uy, Samarqand": {
-    "ru": "ул. Шохруха Мирзо, 126, Самарканд",
-    "en": "126 Shahrukh Mirzo Street, Samarkand"
+  "Shahar markazidagi mehmonxona": {
+    "ru": "Отель в центре города",
+    "en": "A city-centre hotel"
   },
-  "Shohruh Mirzo ko'chasi, 126-uy. Bog', teras, restoran va bar. 24 soat qabulxona.": {
-    "ru": "ул. Шохруха Мирзо, 126. Сад, терраса, ресторан и бар. Ресепшен 24 часа.",
-    "en": "126 Shahrukh Mirzo Street. Garden, terrace, restaurant and bar. 24-hour reception."
-  },
-  "Gur Emir Palace, Samarqand. Shohruh Mirzo ko'chasi, 126-uy. Bog', teras, restoran va bar.": {
-    "ru": "Gur Emir Palace, Самарканд. ул. Шохруха Мирзо, 126. Сад, терраса, ресторан и бар.",
-    "en": "Gur Emir Palace, Samarkand. 126 Shahrukh Mirzo Street. Garden, terrace, restaurant and bar."
-  },
-  "Samarqand, Shohruh Mirzo ko'chasi": {
-    "ru": "Самарканд, улица Шохруха Мирзо",
-    "en": "Samarkand, Shahrukh Mirzo Street"
-  },
-  "4-qavat terasi va restoran": {
-    "ru": "Терраса 4 этажа и ресторан",
-    "en": "4th-floor terrace and restaurant"
+  "Shahar markazi. Bog', teras, restoran va bar. 24 soat qabulxona.": {
+    "ru": "Центр города. Сад, терраса, ресторан и бар. Ресепшен 24 часа.",
+    "en": "City centre. Garden, terrace, restaurant and bar. 24-hour reception."
   },
   "Restoran, bar va halol taomlar": {
     "ru": "Ресторан, бар и халяльные блюда",
@@ -411,13 +387,13 @@
     "ru": "Сад и двор",
     "en": "Garden and courtyard"
   },
-  "Bog', hovli va 4-qavat terasi. Shaharning tarixiy qismi shu yerdan ko'rinadi.": {
-    "ru": "Сад, двор и терраса 4 этажа. Отсюда видна историческая часть города.",
-    "en": "Garden, courtyard and the 4th-floor terrace. The historic city is visible from here."
+  "Bog', hovli va ochiq teras. Shahar manzarasi shu yerdan ko'rinishi mumkin.": {
+    "ru": "Сад, двор и терраса 4 этажа. Отсюда видна вид на город.",
+    "en": "Garden, courtyard and the open terrace. The historic city is visible from here."
   },
-  "Gur Emir Palace dam olishni bog', teras, restoran va barda taklif etadi. Alohida SPA ro'yxati yo'q.": {
-    "ru": "Gur Emir Palace предлагает сад, террасу, ресторан и бар. Отдельного списка SPA нет.",
-    "en": "Gur Emir Palace offers a garden, terrace, restaurant and bar. There is no separate spa list."
+  "Mehmonxona dam olishni bog', teras, restoran va bar orqali taklif etadi. Tinch hovli va umumiy zonalar.": {
+    "ru": "Отель предлагает сад, террасу, ресторан и бар. Отдельного списка SPA нет.",
+    "en": "The hotel offers a garden, terrace, restaurant and bar. There is no separate spa list."
   },
   "Kir yuvish 08:00–18:00": {
     "ru": "Прачечная 08:00–18:00",
@@ -431,25 +407,17 @@
     "ru": "Прачечная",
     "en": "Laundry"
   },
-  "4-qavat terasi": {
-    "ru": "Терраса 4 этажа",
-    "en": "4th-floor terrace"
-  },
   "Mehmonxona bog'i va hovlisida tinch dam olish.": {
     "ru": "Тихий отдых в саду и дворе отеля.",
     "en": "A quiet rest in the hotel garden and courtyard."
   },
-  "Terasdan shaharning tarixiy qismi ko'rinadi.": {
-    "ru": "С террасы видна историческая часть города.",
-    "en": "The terrace looks onto the historic city."
+  "Terasdan shahar manzarasi ko'rinishi mumkin.": {
+    "ru": "С террасы может открываться вид на город.",
+    "en": "The terrace can look over the city."
   },
-  "Aeroport transferi": {
-    "ru": "Трансфер из аэропорта",
-    "en": "Airport shuttle"
-  },
-  "Samarqand xalqaro aeroporti 7 km. Mehmonxona transfer taklif etadi.": {
-    "ru": "Международный аэропорт Самарканда в 7 км. Отель предлагает трансфер.",
-    "en": "Samarkand International Airport is 7 km away. The hotel offers a shuttle."
+  "Aeroport yaqin. Mehmonxona transferni qabulxona orqali taklif etadi.": {
+    "ru": "Аэропорт рядом. Трансфер можно спросить на ресепшен.",
+    "en": "The airport is nearby. Ask reception about a shuttle."
   },
   "Restoran va teras": {
     "ru": "Ресторан и терраса",
@@ -539,7 +507,7 @@
     "ru": "Семейный и гостевой ужин",
     "en": "Family and guest gathering"
   },
-  "Shaharning tarixiy qismi": {
+  "Shahar manzarasi": {
     "ru": "Историческая часть города",
     "en": "Historic part of the city"
   },
@@ -631,9 +599,9 @@
     "ru": "08. Есть ли Wi-Fi и он бесплатный?",
     "en": "08. Is there Wi-Fi, and is it free?"
   },
-  "Bron uchun +998 55 701 10 01 ga qo'ng'iroq qiling yoki guremirhotel@gmail.com ga yozing.": {
-    "ru": "Для брони позвоните +998 55 701 10 01 или напишите на guremirhotel@gmail.com.",
-    "en": "To book, call +998 55 701 10 01 or email guremirhotel@gmail.com."
+  "Bron uchun qabulxonaga qo'ng'iroq qiling yoki elektron pochta orqali yozing.": {
+    "ru": "Для брони позвоните ресепшен или напишите на aloqa@mehmonxona.uz.",
+    "en": "To book, call reception or email aloqa@mehmonxona.uz."
   },
   "Ha, tanlangan tarif va bekor qilish qoidalariga qarab bronni o'zgartirish yoki bekor qilish mumkin.": {
     "ru": "Да, бронь можно изменить или отменить в зависимости от тарифа и правил отмены.",
@@ -655,9 +623,9 @@
     "ru": "О дополнительном месте напишите на ресепшен.",
     "en": "Ask reception about an extra bed."
   },
-  "Standard Single, Twin, Double, Triple va Deluxe king size. Maydoni 15 m² dan 26 m² gacha.": {
-    "ru": "Standard Single, Twin, Double, Triple и Deluxe king size. Площадь от 15 м² до 26 м².",
-    "en": "Standard Single, Twin, Double, Triple and Deluxe king size. From 15 m² to 26 m²."
+  "Standard Single, Twin, Double va Deluxe. Maydon xona turiga qarab farq qiladi.": {
+    "ru": "Standard Single, Twin, Double, Triple и Deluxe king size. Площадь от до .",
+    "en": "Standard Single, Twin, Double, Triple and Deluxe king size. From to ."
   },
   "Savollaringiz bormi? Bron, qulayliklar, ovqatlanish yoki maxsus so'rovlar bo'yicha jamoamizga murojaat qiling": {
     "ru": "Есть вопросы? Напишите нам о брони, удобствах, питании или особых просьбах",
@@ -791,9 +759,9 @@
     "ru": "Новые позиции меню в марте",
     "en": "Discover the latest menu updates this March"
   },
-  "Samarqandda dam olish: nimalarga e'tibor berish kerak": {
-    "ru": "Отдых в Самарканде: на что обратить внимание",
-    "en": "A stay in Samarkand: what to keep in mind"
+  "Mehmonxonada dam olish: nimalarga e'tibor berish kerak": {
+    "ru": "Отдых в городе: на что обратить внимание",
+    "en": "A stay in the city: what to keep in mind"
   },
   "Blog tafsiloti": {
     "ru": "Запись блога",
@@ -1307,17 +1275,17 @@
     "ru": "06. Есть ли дополнительная кровать или детская кроватка?",
     "en": "06. Are extra beds or cribs provided?"
   },
-  "15 m², seyf, hammom, Wi-Fi": {
-    "ru": "15 м², сейф, ванная, Wi-Fi",
-    "en": "15 m², safe, bathroom, Wi-Fi"
+  "Seyf, hammom, Wi-Fi": {
+    "ru": ", сейф, ванная, Wi-Fi",
+    "en": ", safe, bathroom, Wi-Fi"
   },
-  "25 m², shahar manzarasi mumkin": {
-    "ru": "25 м², вид на город возможен",
-    "en": "25 m², a city view is possible"
+  "Keng xona, manzara mumkin": {
+    "ru": ", вид на город возможен",
+    "en": ", a city view is possible"
   },
-  "26 m², ikki karavot": {
-    "ru": "26 м², две кровати",
-    "en": "26 m², two beds"
+  "Ikki karavot": {
+    "ru": ", две кровати",
+    "en": ", two beds"
   },
   "A'lo xizmat va tengsiz qulaylik uyg'unligi": {
     "ru": "Сильный сервис и спокойный комфорт",
@@ -1451,9 +1419,9 @@
     "ru": "Номер Deluxe",
     "en": "Deluxe room"
   },
-  "Ikki karavot, 26 m², Wi-Fi": {
-    "ru": "Две кровати, 26 м², Wi-Fi",
-    "en": "Two beds, 26 m², Wi-Fi"
+  "Ikki karavot, Wi-Fi": {
+    "ru": "Две кровати, , Wi-Fi",
+    "en": "Two beds, , Wi-Fi"
   },
   "Ikki kishilik xona": {
     "ru": "Двухместный номер",
@@ -1491,9 +1459,9 @@
     "ru": "Кровать king size, фен, тапочки, полотенца, телевизор",
     "en": "King-size bed, hairdryer, slippers, towels, television"
   },
-  "King size, 25 m², hammom": {
-    "ru": "King size, 25 м², ванная",
-    "en": "King size, 25 m², bathroom"
+  "King size, hammom": {
+    "ru": "King size, , ванная",
+    "en": "King size, , bathroom"
   },
   "King size, televizor, Wi-Fi": {
     "ru": "King size, телевизор, Wi-Fi",
@@ -1727,13 +1695,13 @@
     "ru": "Тихий сад",
     "en": "Quiet garden"
   },
-  "Samarqandda, Shohruh Mirzo ko'chasi, 126-uyda: bog', teras, restoran va bar. 24 soat qabulxona, aeroport transferi va har kuni bufet nonushta": {
-    "ru": "В Самарканде, ул. Шохруха Мирзо, 126: сад, терраса, ресторан и бар. Ресепшен 24 часа, трансфер и завтрак-буфет каждый день",
-    "en": "In Samarkand, 126 Shahrukh Mirzo Street: garden, terrace, restaurant and bar. A 24-hour desk, a shuttle and daily buffet breakfast"
+  "Mehmonxona shahar markazida: bog', teras, restoran va bar. 24 soat qabulxona, aeroport transferi va har kuni bufet nonushta": {
+    "ru": "Отель в центре города: сад, терраса, ресторан и бар. Ресепшен 24 часа, трансфер и завтрак-буфет каждый день.",
+    "en": "A city-centre hotel: garden, terrace, restaurant and bar. A 24-hour desk, a shuttle and daily buffet breakfast."
   },
-  "Shohruh Mirzo ko'chasi, 126-uy, Samarqand. Bog', teras, restoran va bar. Narxni qabulxonadan so'rang.": {
-    "ru": "ул. Шохруха Мирзо, 126, Самарканд. Сад, терраса, ресторан и бар. Цену уточняйте на ресепшен.",
-    "en": "126 Shahrukh Mirzo Street, Samarkand. Garden, terrace, restaurant and bar. Ask reception for the price."
+  "Shahar markazidagi mehmonxona. Bog', teras, restoran va bar. Narxni qabulxonadan so'rang.": {
+    "ru": "Отель в центре города. Сад, терраса, ресторан и бар. Цену уточняйте на ресепшен.",
+    "en": "A city-centre hotel. Garden, terrace, restaurant and bar. Ask reception for the price."
   },
   "Kechga qadar mazali taom va gazaklar — tungi ishtaha yoki uzoq kundagi dam olishdan keyin.": {
     "ru": "Блюда и закуски до вечера — после долгого дня или позднего аппетита.",
@@ -1784,16 +1752,16 @@
     "en": "For families: rooms that work with children. Ask reception for the details."
   },
   "Strategiya, ilhom va hissiyotni bog'laydigan tanlangan hikoyalar, mutaxassis fikrlari va amaliy maslahatlar. Har bir maqola foydali, qiziqarli va unutilmas tajriba yaratishga yordam beradi.": {
-    "ru": "Короткие заметки об отдыхе в Самарканде. Это шаблонные тексты, их заменим.",
-    "en": "Short notes about a stay in Samarkand. These are still template texts."
+    "ru": "Короткие заметки об отдыхе в городе. Это шаблонные тексты, их заменим.",
+    "en": "Short notes about a stay in the city. These are still template texts."
   },
   "Jarayon dastlab murakkab tuyulgan edi, ammo jamoa hammasi osonlashtirdi. Har bosqichda xabardor qilishdi, tez javob berishdi va muammolarni oldindan hal qilishdi. Doimo qo'llab-quvvatlanganlikni his qildik.": {
     "ru": "Сначала казалось сложно, но на ресепшен всё упростили. На каждом шаге отвечали быстро.",
     "en": "It looked complicated at first, but reception made it simple and answered quickly at each step."
   },
-  "Gur Emir Palacega xush kelibsiz — qulaylik va nafislik uyg'unligi. Keng zamonaviy xonalar, shaxsiy xizmat va premium qulayliklar. Nafis ovqatlanishdan lounge va dam olish zonalarigacha — har bir detal siz uchun": {
-    "ru": "Добро пожаловать в Gur Emir Palace. Современные номера, ресепшен, ресторан, бар, сад и терраса.",
-    "en": "Welcome to Gur Emir Palace. Modern rooms, a reception desk, a restaurant, a bar, a garden and a terrace."
+  "Mehmonxonaga xush kelibsiz — qulaylik va nafislik uyg'unligi. Keng zamonaviy xonalar, e'tiborli xizmat va tinch dam olish. Nafis ovqatlanishdan lounge va dam olish zonalarigacha — har bir detal mehmon uchun": {
+    "ru": "Добро пожаловать в Отель. Современные номера, ресепшен, ресторан, бар, сад и терраса.",
+    "en": "Welcome to The hotel. Modern rooms, a reception desk, a restaurant, a bar, a garden and a terrace."
   },
   "Deluxe, king sizeimiz — kenglik, uslub va qulaylikni qadrlaydigan mehmonlar uchun. Nafis interyer, premium jihozlar va zamonaviy qulayliklar dam olishingizni yuksaltiradi. Biznes yoki maxsus dam olish uchun ideal tanlov": {
     "ru": "Deluxe king size — для гостей, которым важны простор и комфорт. Кровать king size, ванная и удобства номера.",
@@ -1884,8 +1852,8 @@
     "en": "STORIES AND NOTES THAT MAKE A HOTEL STAY MEMORABLE"
   },
   "Tanlangan hikoyalar va ichki ma'lumotlar orqali chinakam mehmondo'stlikni his eting. Nafis xonalar, ilhomli ovqatlanish, e'tiborli xizmat va mahalliy tajribalar — har bir dam olishni unutilmas qiladi.": {
-    "ru": "Короткие истории о гостеприимстве: номера, кухня, внимание ресепшен и Самарканд.",
-    "en": "Short stories about hospitality: the rooms, the kitchen, the desk and Samarkand."
+    "ru": "Короткие истории о гостеприимстве: номера, кухня, внимание ресепшен и город.",
+    "en": "Short stories about hospitality: the rooms, the kitchen, the desk and the city."
   },
   "HASHAMATLI XONALARDAN MAHALLIY JAVOHIRLARGACHA — BLOGIMIZ HAR BIR DAM OLISHNI ABADIY XOTIRAGA AYLANTIRADI": {
     "ru": "ОТ НОМЕРОВ ДО ГОРОДА — ЗАМЕТКИ, ЧТОБЫ ОТДЫХ ОСТАЛСЯ В ПАМЯТИ",
@@ -1918,5 +1886,13 @@
   "Travel story specialist": {
     "ru": "Автор историй",
     "en": "Travel story specialist"
+  },
+  "Qabulxona": {
+    "ru": "Ресепшен",
+    "en": "Reception"
+  },
+  "Tinch mehmonxona. Bog', teras, restoran va bar. Shahar markazi.": {
+    "ru": "Тихий отель. Сад, терраса, ресторан и бар. Центр города.",
+    "en": "A quiet hotel. Garden, terrace, restaurant and bar. City centre."
   }
 }

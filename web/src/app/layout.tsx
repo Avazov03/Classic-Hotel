@@ -20,14 +20,14 @@ const instrumentSerif = Instrument_Serif({
 });
 
 const DESCRIPTION =
-  "Gur Emir Palace, Samarqand. Shohruh Mirzo ko‘chasi, 126-uy. Bog‘, teras, restoran va bar.";
+  "Tinch mehmonxona. Bog‘, teras, restoran va bar. Shahar markazi.";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   return {
     title: {
-      default: "Guremir Palace",
-      template: "%s | Guremir Palace",
+      default: "Mehmonxona",
+      template: "%s | Mehmonxona",
     },
     description: t(DESCRIPTION, locale),
   };

@@ -2,10 +2,10 @@ const CDN =
   "https://cdn.prod.website-files.com/6927ddcc377dce6e20188e35";
 
 export const homeHero = {
-  title: "Gur Emir Palace — Samarqanddagi tinch mehmonxona",
+  title: "Tinch mehmonxona — shahardagi qulay maskan",
   cta: "Dam olishni bron qiling",
   ctaHref: "/contact",
-  offer: "Bron kunida 15% chegirma",
+  offer: "Bron kunida maxsus taklif",
   poster: `${CDN}/694e6076e77e5b3348ce2188_18705145-hd_1920_1080_30fps%20(1)_poster.0000000.jpg`,
   videoWebm: `${CDN}/694e6076e77e5b3348ce2188_18705145-hd_1920_1080_30fps%20(1)_webm.webm`,
   videoMp4: `${CDN}/694e6076e77e5b3348ce2188_18705145-hd_1920_1080_30fps%20(1)_mp4.mp4`,
@@ -14,11 +14,11 @@ export const homeHero = {
 export const homeAbout = {
   eyebrow: "Biz haqimizda",
   titles: [
-    "Samarqand markazi",
-    "Tarixiy shahar",
-    "Gur Emir yonida",
+    "Shahar markazi",
+    "Tinch joy",
+    "Bog‘ yonida",
   ],
-  body: "Bog‘, teras, restoran va bar — Samarqanddagi tinch mehmonxona",
+  body: "Bog‘, teras, restoran va bar — tinch va qulay mehmonxona",
   cta: "Xonalarni ko‘rish",
   ctaHref: "/rooms",
   images: [
@@ -32,9 +32,9 @@ export const featuredRooms = [
   {
     name: "Deluxe king size",
     blurb:
-      "25 m² lik xona: king size karavot, shkaf, alohida hammom, fen, terlik, sochiqlar, televizor, elektr choynak va ish stoli.",
-    size: "25 m²",
-    view: "Shaharning tarixiy qismi mumkin",
+      "Keng xona: king size karavot, shkaf, alohida hammom, fen, terlik, sochiqlar, televizor, elektr choynak va ish stoli.",
+    size: "so‘rang",
+    view: "Shahar manzarasi mumkin",
     features: "King size, hammom, televizor",
     perfectFor: "Juftliklar va dam oluvchilar",
     image: `${CDN}/69316279603aa77764416443_image%2015-Picsart-AiImageEnhancer%201.webp`,
@@ -52,19 +52,19 @@ export const featuredRooms = [
   {
     name: "Standard Twin",
     blurb:
-      "26 m². Ikki alohida karavot, ish joyi, bepul Wi-Fi va konditsioner.",
-    size: "26 m²",
+      "Ikki alohida karavot, ish joyi, bepul Wi-Fi va konditsioner.",
+    size: "so‘rang",
     view: "Ikki alohida karavot",
-    features: "Ikki karavot, 26 m², Wi-Fi",
+    features: "Ikki karavot, Wi-Fi",
     perfectFor: "Dam oluvchilar va asal oyi juftliklari",
     image: `${CDN}/694a22058acf0ce292e687df_image%20432-Picsart-AiImageEnhancer%201.webp`,
   },
   {
     name: "Standard Single",
     blurb:
-      "15 m² lik bir kishilik xona: shkaf, seyf, alohida hammom, televizor, elektr choynak va ish stoli.",
-    size: "15 m²",
-    view: "15 m²",
+      "bir kishilik xona: shkaf, seyf, alohida hammom, televizor, elektr choynak va ish stoli.",
+    size: "so‘rang",
+    view: "so‘rang",
     features: "Seyf, fen, ish stoli",
     perfectFor: "Juftliklar va sayyohlar",
     image: `${CDN}/694a22051baed5b350dc6d7d_image%20430-Picsart-AiImageEnhancer%201.webp`,
@@ -73,13 +73,13 @@ export const featuredRooms = [
 
 export const homeStats = {
   intro:
-    "Samarqandda, Shohruh Mirzo ko‘chasida: bog‘, teras, restoran, bar va 24 soat qabulxona",
+    "Mehmonxona shahar markazida: bog‘, teras, restoran, bar va 24 soat qabulxona",
   items: [
-    { value: "7 km", label: "Samarqand aeroporti" },
+    { value: "Yaqin", label: "Aeroport transferi" },
     { value: "24 soat", label: "Qabulxona" },
     { value: "07:00", label: "Bufet nonushta boshlanadi" },
     { value: "6", label: "Xona toifasi" },
-    { value: "4", label: "Qavatdagi tarixiy teras" },
+    { value: "4", label: "Ochiq teras" },
     { value: "Bepul", label: "Avtoturargoh va Wi-Fi" },
     { value: "Halol", label: "Alakart taomlar" },
     { value: "10:00", label: "Nonushta tugaydi" },
@@ -94,7 +94,7 @@ export const homeStats = {
 
 export const homeBusiness = {
   title: "Teras va restoran",
-  body: "4-qavatdagi terasdan shaharning tarixiy qismi ko‘rinadi. Restoranda bufet nonushta, alakart va halol taomlar.",
+  body: "Ochiq terasdan shahar manzarasi ko‘rinishi mumkin. Restoranda bufet nonushta, alakart va halol taomlar.",
   cta: "Narxni so‘rash",
   ctaHref: "/banquet",
   images: [
@@ -181,7 +181,7 @@ export const homeTestimonials = [
   },
   {
     name: "Mehmon",
-    role: "Samarqand",
+    role: "shahar",
     quote:
       "Bog‘, teras va 24 soat qabulxona. Nonushta har kuni 07:00 dan 10:00 gacha.",
     image: `${CDN}/6943a0c6112009db1bcc3d53_Mask%20group%20-%202025-12-18T120456.254.webp`,
@@ -189,7 +189,7 @@ export const homeTestimonials = [
 ];
 
 export const homeCta = {
-  title: "Samarqandda qoling — Gur Emir Palace",
+  title: "Shaharda qoling — tinch mehmonxona",
   cta: "Hozir bron qiling",
   ctaHref: "/contact",
   image: `${CDN}/693b8de4d00c720d07d2645c_image%2026-Picsart-AiImageEnhancer%201%20(1).webp`,

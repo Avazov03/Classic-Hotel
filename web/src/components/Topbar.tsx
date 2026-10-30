@@ -1,9 +1,9 @@
 import styles from "./Topbar.module.css";
 
 const OFFERS = [
-  "Bron kunida 15% chegirma: nonushta, Wi-Fi va avtoturargoh",
+  "Bron kunida maxsus taklif: nonushta, Wi-Fi va avtoturargoh",
   "Har kuni bufet nonushta, soat 07:00–10:00",
-  "3 kecha va undan uzoq yashashda 10% chegirma",
+  "3 kecha va undan uzoq yashashda maxsus taklif",
 ];
 
 export function Topbar() {

@@ -27,7 +27,7 @@ export type RoomDetail = {
 };
 
 const sharedOverview =
-  "Gur Emir Palace, Samarqand. Xonada shkaf, seyf, alohida hammom, televizor, elektr choynak va ish stoli. Ba’zi xonalarda shahar manzarasi.";
+  "Mehmonxona. Xonada shkaf, seyf, alohida hammom, televizor, elektr choynak va ish stoli. Ba’zi xonalarda shahar manzarasi.";
 
 const sharedQulayliklar = [
   "Alohida hammom",
@@ -55,9 +55,9 @@ export const roomsListing = [
     slug: "standard-room",
     name: "Standard Single",
     blurb:
-      "15 m² lik Standard Single: bitta karavot, shkaf, seyf va alohida hammom.",
+      "Standard Single: bitta karavot, shkaf, seyf va alohida hammom.",
     highlights: [
-      "15 m²",
+      "so‘rang",
       "Seyf",
       "Alohida hammom",
       "Televizor",
@@ -70,9 +70,9 @@ export const roomsListing = [
     slug: "executive-suite",
     name: "Deluxe, king size",
     blurb:
-      "25 m². King size karavot, alohida hammom, televizor, elektr choynak va ish stoli.",
+      "King size karavot, alohida hammom, televizor, elektr choynak va ish stoli.",
     highlights: [
-      "25 m²",
+      "so‘rang",
       "King size karavot",
       "Fen va sochiqlar",
       "Televizor",
@@ -84,9 +84,9 @@ export const roomsListing = [
   {
     slug: "sea-view-room",
     name: "Standard Twin",
-    blurb: "26 m². Ikki alohida karavot, ish joyi, bepul Wi-Fi va konditsioner.",
+    blurb: "Ikki alohida karavot, ish joyi, bepul Wi-Fi va konditsioner.",
     highlights: [
-      "26 m²",
+      "so‘rang",
       "Ikki alohida karavot",
       "Ish joyi",
       "Bepul Wi-Fi",
