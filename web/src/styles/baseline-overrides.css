@@ -774,13 +774,13 @@ main [style*="opacity:0"]:not([data-w-id]):not(.rt-about-v1 *):not(
 }
 
 /*
- * Asl Elbergo header: logo layout ≈39×178, nav ≈79px (20+39+20).
- * Logo vizual kattaligi — transform; layout qutisi asl 39px (header o‘smaydi).
+ * Asl Elbergo: logo sloti 9.375×2.4375rem, navbar padding 1.25rem.
+ * Rasm absolute — bo‘sh scale qutisi menyuni siqmaydi va qatorni oshirmaydi.
  */
 .rt-nav-logo {
-  width: 11.125rem !important; /* 178px — asl logo eni */
-  max-width: 11.125rem !important;
-  height: 2.4375rem !important; /* 39px — asl logo balandligi */
+  width: 9.375rem !important;
+  max-width: 9.375rem !important;
+  height: 2.4375rem !important;
   max-height: 2.4375rem !important;
   overflow: visible !important;
   flex-shrink: 0;
@@ -790,23 +790,24 @@ main [style*="opacity:0"]:not([data-w-id]):not(.rt-about-v1 *):not(
 .rt-nav-logo img,
 .rt-nav-logo-v1,
 .rt-nav-logo-v2 {
-  width: 100% !important;
-  height: 100% !important;
-  max-height: 2.4375rem !important;
+  position: absolute !important;
+  left: 0;
+  top: 50%;
+  width: auto !important;
+  height: 3rem !important;
+  max-width: 11.5rem !important;
+  max-height: none !important;
   display: block;
   object-fit: contain;
   object-position: left center;
-  /* vizual ~1.7× asl (≈66px) — header layout 39px qoladi */
-  transform: scale(1.7);
-  transform-origin: left center;
+  transform: translateY(-50%);
 }
 
 .rt-footer-logo-gap img {
-  width: 11.125rem;
+  width: 16.5rem;
   height: auto;
-  max-height: 2.4375rem;
-  transform: scale(1.35);
-  transform-origin: left center;
+  max-height: none;
+  transform: none;
 }
 
 @media screen and (max-width: 767px) {
@@ -819,7 +820,8 @@ main [style*="opacity:0"]:not([data-w-id]):not(.rt-about-v1 *):not(
   .rt-nav-logo img,
   .rt-nav-logo-v1,
   .rt-nav-logo-v2 {
-    max-height: 2.25rem !important;
-    transform: scale(1.45);
+    height: 2.35rem !important;
+    max-width: 9rem !important;
+    transform: translateY(-50%);
   }
 }

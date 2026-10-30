@@ -1,5 +1,5 @@
 /** Classic Apartment — sayt brendi va kontaktlar (bitta manba). */
-export const brandName = "Classic Apartment";
+export const brandName = "Guremir Palace";
 
 export const owner = {
   name: "Avazov Og‘abek",
@@ -41,6 +41,8 @@ export const logos = {
   light: "/brand/classic-apartment-wordmark-light.svg",
   /** Oq fon / yashil logo */
   dark: "/brand/classic-apartment-wordmark.svg",
+  /** Footer: GUREMIR / PALACE / HOTEL */
+  lockupLight: "/brand/guremir-palace-lockup-light.svg",
 };
 
 export const footerTagline =

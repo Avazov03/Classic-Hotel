@@ -8,7 +8,7 @@
   transform: translate(-50%, -50%);
   justify-content: center;
   min-width: 0;
-  max-width: min(64rem, calc(100% - 20rem));
+  max-width: min(72rem, calc(100% - 16rem));
   z-index: 6;
   pointer-events: none;
 }
@@ -271,11 +271,6 @@ html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
     grid-column-gap: 2.25rem !important;
     column-gap: 2.25rem !important;
     align-items: center;
-  }
-
-  .rt-navbar-v1 {
-    padding-top: 1.5rem !important;
-    padding-bottom: 1.5rem !important;
   }
 
   .rt-mega-menu-wrapper {

@@ -19,11 +19,11 @@ const instrumentSerif = Instrument_Serif({
 
 export const metadata: Metadata = {
   title: {
-    default: "Classic Apartment",
-    template: "%s | Classic Apartment",
+    default: "Guremir Palace",
+    template: "%s | Guremir Palace",
   },
   description:
-    "Classic Apartment — qulay xonalar, zamonaviy qulayliklar va iliq mehmondo‘stlik. Biznes va dam olish uchun.",
+    "Guremir Palace — qulay xonalar, zamonaviy qulayliklar va iliq mehmondo‘stlik. Biznes va dam olish uchun.",
 };
 
 export default function RootLayout({
