@@ -1,3 +1,6 @@
+import { getLocale } from "@/i18n/get-locale";
+import { translateHtml } from "@/i18n/translate";
+
 type Props = {
   html: string;
   className?: string;
@@ -9,17 +12,18 @@ type Props = {
   passthrough?: boolean;
 };
 
-export function BaselineHtml({
+export async function BaselineHtml({
   html,
   className,
   as: Tag = "div",
   passthrough = false,
 }: Props) {
+  const locale = await getLocale();
   return (
     <Tag
       className={className}
       style={passthrough ? { display: "contents" } : undefined}
-      dangerouslySetInnerHTML={{ __html: html }}
+      dangerouslySetInnerHTML={{ __html: translateHtml(html, locale) }}
     />
   );
 }

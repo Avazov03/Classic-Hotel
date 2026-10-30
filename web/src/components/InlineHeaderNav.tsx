@@ -13,6 +13,8 @@ import {
 import { createPortal } from "react-dom";
 import { blogPosts } from "@/data/blog";
 import { roomsListing } from "@/data/rooms";
+import type { Locale } from "@/i18n/locale";
+import { t } from "@/i18n/translate";
 
 type DropKey = "rooms" | "services" | "blog" | null;
 
@@ -63,7 +65,7 @@ function DropdownPanel({
   );
 }
 
-export function InlineHeaderNav() {
+export function InlineHeaderNav({ locale }: { locale: Locale }) {
   const pathname = usePathname();
   const [mount, setMount] = useState<HTMLElement | null>(null);
   /** Hozir ko‘rinadigan panel (hover yoki pin) */
@@ -166,20 +168,20 @@ export function InlineHeaderNav() {
   const servicesActive = services.some((s) => isActive(s.href));
 
   return createPortal(
-    <nav className="ca-inline-nav" aria-label="Asosiy navigatsiya">
+    <nav className="ca-inline-nav" aria-label={t("Asosiy navigatsiya", locale)}>
       <Link
         href="/"
         className={`ca-nav-link${isActive("/") ? " is-active" : ""}`}
         onClick={resetMenus}
       >
-        Asosiy
+        {t("Asosiy", locale)}
       </Link>
       <Link
         href="/about"
         className={`ca-nav-link${isActive("/about") ? " is-active" : ""}`}
         onClick={resetMenus}
       >
-        Biz haqimizda
+        {t("Biz haqimizda", locale)}
       </Link>
 
       <div
@@ -198,7 +200,7 @@ export function InlineHeaderNav() {
           aria-controls={`${baseId}-rooms`}
           onClick={() => onTriggerClick("rooms")}
         >
-          Xonalar
+          {t("Xonalar", locale)}
           <Chevron />
         </button>
         <DropdownPanel>
@@ -211,7 +213,7 @@ export function InlineHeaderNav() {
               role="menuitem"
               onClick={resetMenus}
             >
-              Barcha xonalar
+              {t("Barcha xonalar", locale)}
             </Link>
             {roomsPreview.map((room) => (
               <Link
@@ -223,7 +225,7 @@ export function InlineHeaderNav() {
                 role="menuitem"
                 onClick={resetMenus}
               >
-                {room.name}
+                {t(room.name, locale)}
               </Link>
             ))}
           </div>
@@ -246,13 +248,13 @@ export function InlineHeaderNav() {
           aria-controls={`${baseId}-services`}
           onClick={() => onTriggerClick("services")}
         >
-          Xizmatlar
+          {t("Xizmatlar", locale)}
           <Chevron />
         </button>
         <DropdownPanel wide>
           <div id={`${baseId}-services`} className="ca-nav-mega">
             <div className="ca-nav-mega-col">
-              <div className="ca-nav-mega-title">Xizmatlar</div>
+              <div className="ca-nav-mega-title">{t("Xizmatlar", locale)}</div>
               <div className="ca-nav-panel-list">
                 {services.map((item) => (
                   <Link
@@ -264,22 +266,25 @@ export function InlineHeaderNav() {
                     role="menuitem"
                     onClick={resetMenus}
                   >
-                    {item.label}
+                    {t(item.label, locale)}
                   </Link>
                 ))}
               </div>
             </div>
             <div className="ca-nav-mega-promo">
-              <p className="ca-nav-mega-promo-kicker">Maxsus</p>
+              <p className="ca-nav-mega-promo-kicker">{t("Maxsus", locale)}</p>
               <p className="ca-nav-mega-promo-text">
-                Dam olish yoki tadbir — bronni bir marta bosishda boshlang.
+                {t(
+                  "Dam olish yoki tadbir — bronni bir marta bosishda boshlang.",
+                  locale,
+                )}
               </p>
               <Link
                 href="/contact"
                 className="ca-nav-mega-cta"
                 onClick={resetMenus}
               >
-                Bron qilish →
+                {t("Bron qilish", locale)} →
               </Link>
             </div>
           </div>
@@ -302,7 +307,7 @@ export function InlineHeaderNav() {
           aria-controls={`${baseId}-blog`}
           onClick={() => onTriggerClick("blog")}
         >
-          Blog
+          {t("Blog", locale)}
           <Chevron />
         </button>
         <DropdownPanel>
@@ -315,7 +320,7 @@ export function InlineHeaderNav() {
               role="menuitem"
               onClick={resetMenus}
             >
-              Barcha maqolalar
+              {t("Barcha maqolalar", locale)}
             </Link>
             {blogPreview.map((post) => (
               <Link
@@ -327,9 +332,9 @@ export function InlineHeaderNav() {
                 role="menuitem"
                 onClick={resetMenus}
               >
-                {post.title.length > 48
-                  ? `${post.title.slice(0, 46)}…`
-                  : post.title}
+                {t(post.title, locale).length > 48
+                  ? `${t(post.title, locale).slice(0, 46)}…`
+                  : t(post.title, locale)}
               </Link>
             ))}
           </div>
@@ -341,7 +346,7 @@ export function InlineHeaderNav() {
         className={`ca-nav-link${isActive("/contact") ? " is-active" : ""}`}
         onClick={resetMenus}
       >
-        Aloqa
+        {t("Aloqa", locale)}
       </Link>
     </nav>,
     mount,

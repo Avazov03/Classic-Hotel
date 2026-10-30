@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Instrument_Sans, Instrument_Serif } from "next/font/google";
 import { SiteShell } from "@/components/SiteShell";
 import { getWfPageBootstrapScript, WF_PAGE_HOME } from "@/data/wfPageId";
+import { getLocale } from "@/i18n/get-locale";
+import { t } from "@/i18n/translate";
 import "./globals.css";
 
 const instrumentSans = Instrument_Sans({
@@ -17,23 +19,29 @@ const instrumentSerif = Instrument_Serif({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: {
-    default: "Guremir Palace",
-    template: "%s | Guremir Palace",
-  },
-  description:
-    "Gur Emir Palace, Samarqand. Shohruh Mirzo ko‘chasi, 126-uy. Bog‘, teras, restoran va bar.",
-};
+const DESCRIPTION =
+  "Gur Emir Palace, Samarqand. Shohruh Mirzo ko‘chasi, 126-uy. Bog‘, teras, restoran va bar.";
 
-export default function RootLayout({
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  return {
+    title: {
+      default: "Guremir Palace",
+      template: "%s | Guremir Palace",
+    },
+    description: t(DESCRIPTION, locale),
+  };
+}
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
   return (
     <html
-      lang="en"
+      lang={locale}
       data-wf-domain="elbergo.webflow.io"
       data-wf-site="6927ddcc377dce6e20188e35"
       data-wf-page={WF_PAGE_HOME}

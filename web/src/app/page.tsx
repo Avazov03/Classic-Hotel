@@ -2,8 +2,10 @@ import { BaselineHtml } from "@/components/BaselineHtml";
 import { HomeAboutScroll } from "@/components/home/HomeAboutScroll";
 import { html as heroHtml } from "@/baseline/html/home-0";
 import { html as restHtml } from "@/baseline/html/home-rest";
+import { getLocale } from "@/i18n/get-locale";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const locale = await getLocale();
   return (
     <>
       {/*
@@ -15,7 +17,7 @@ export default function HomePage() {
       <div className="home-hero-about-stage">
         <BaselineHtml html={heroHtml} passthrough />
         {/* React IX2-port About — not baseline home-1 (avoids double IX2) */}
-        <HomeAboutScroll />
+        <HomeAboutScroll locale={locale} />
       </div>
       <BaselineHtml html={restHtml} />
     </>

@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { homeAbout } from "@/data/home";
+import type { Locale } from "@/i18n/locale";
+import { t } from "@/i18n/translate";
 import {
   BLUR1_OP,
   BLUR2_OP,
@@ -54,7 +56,7 @@ const PILL_HOLD_Y = { one: 62, two: 130, three: 215 } as const;
  * React port of Webflow IX2 About scroll — keyframes measured from baseline.
  * Transforms applied imperatively (like IX2) to avoid React render lag on scroll.
  */
-export function HomeAboutScroll() {
+export function HomeAboutScroll({ locale }: { locale: Locale }) {
   const trackRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);
   const oneRef = useRef<HTMLDivElement>(null);
@@ -184,7 +186,7 @@ export function HomeAboutScroll() {
   }, []);
 
   const stages = homeAbout.titles.map((title, i) => ({
-    title,
+    title: t(title, locale),
     image: homeAbout.images[i],
   }));
 
@@ -196,7 +198,7 @@ export function HomeAboutScroll() {
   return (
     <section
       className="rt-about-v1 rt-position-relative"
-      aria-label="Biz haqimizda"
+      aria-label={t(homeAbout.eyebrow, locale)}
       data-react-about="ix2-port"
     >
       <div className="w-layout-blockcontainer rt-container w-container">
@@ -213,7 +215,7 @@ export function HomeAboutScroll() {
                   willChange: "opacity, transform, filter",
                 }}
               >
-                {homeAbout.eyebrow}
+                {t(homeAbout.eyebrow, locale)}
               </div>
             </div>
 
@@ -333,7 +335,7 @@ export function HomeAboutScroll() {
                 style={{ opacity: 0 }}
               >
                 <h2 className="rt-gap-off rt-about-v1-heading">
-                  {homeAbout.body}
+                  {t(homeAbout.body, locale)}
                 </h2>
               </div>
               <div ref={copyCtaRef} style={{ opacity: 0 }}>
@@ -344,10 +346,10 @@ export function HomeAboutScroll() {
                 >
                   <div className="rt-position-relative rt-overflow-hidden">
                     <div className="rt-button-text rt-text-one">
-                      {homeAbout.cta}
+                      {t(homeAbout.cta, locale)}
                     </div>
                     <div className="rt-button-text rt-text-two">
-                      {homeAbout.cta}
+                      {t(homeAbout.cta, locale)}
                     </div>
                   </div>
                   <div className="rt-button-overlay rt-dark-overlay rt-change-white w-variant-a9279b47-3bd8-3b8e-dcbe-db3ac09346a2" />

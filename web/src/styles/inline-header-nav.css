@@ -268,8 +268,8 @@ html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
   }
 
   .rt-navbar-v1-right-wrapper {
-    grid-column-gap: 2.25rem !important;
-    column-gap: 2.25rem !important;
+    grid-column-gap: 1.15rem !important;
+    column-gap: 1.15rem !important;
     align-items: center;
   }
 
@@ -333,18 +333,192 @@ html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
 
 @media (min-width: 1280px) {
   .ca-inline-nav {
-    gap: 0 3.35rem;
+    gap: 0 2.6rem;
   }
 }
 
 @media (min-width: 1440px) {
   .ca-inline-nav {
-    gap: 0 3.75rem;
+    gap: 0 3.15rem;
+  }
+}
+
+@media (min-width: 1680px) {
+  .ca-inline-nav {
+    gap: 0 3.5rem;
+  }
+}
+
+@media (max-width: 1320px) {
+  .ca-inline-nav {
+    gap: 0 1rem;
+  }
+
+  .ca-inline-nav-host {
+    left: 10.5rem;
+    right: 26.5rem;
+    width: auto;
+    max-width: none;
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 1180px) {
+  .ca-inline-nav {
+    gap: 0 0.65rem;
   }
 }
 
 @media (max-width: 1099px) {
   .ca-inline-nav-host {
     display: none !important;
+  }
+}
+
+/* One language control, immediately before the Bron button. */
+.rt-navbar-v1-right-wrapper > .ca-lang-host {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  flex: 0 0 auto;
+  height: 2.25rem;
+  margin: 0;
+}
+
+.ca-lang {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-family: var(--font-body, "Instrument Sans", system-ui, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1;
+}
+
+.ca-lang-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  height: 2rem;
+  margin: 0;
+  padding: 0 0.55rem 0 0.4rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  letter-spacing: inherit;
+  line-height: 1;
+}
+
+.ca-lang-flag {
+  display: block;
+  width: 1.15rem;
+  height: 0.78rem;
+  border-radius: 2px;
+  overflow: hidden;
+  flex: 0 0 auto;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.16);
+}
+
+.ca-lang-flag svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.ca-lang-chevron {
+  display: block;
+  transition: transform 160ms ease;
+}
+
+.ca-lang-chevron.is-open {
+  transform: rotate(180deg);
+}
+
+.ca-lang-menu {
+  position: fixed;
+  z-index: 80;
+  width: 11.75rem;
+  padding: 0.3rem;
+  border-radius: 0.8rem;
+  background: #fff;
+  color: #1c1c1c;
+  box-shadow: 0 16px 40px rgba(12, 24, 20, 0.16);
+  font-family: var(--font-body, "Instrument Sans", system-ui, sans-serif);
+}
+
+.ca-lang-option {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  width: 100%;
+  margin: 0;
+  padding: 0.5rem 0.55rem;
+  border: 0;
+  border-radius: 0.55rem;
+  background: transparent;
+  color: #1d1d1d;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+.ca-lang-option:hover,
+.ca-lang-option.is-current {
+  background: #e7f5f0;
+}
+
+.ca-lang-option.is-current {
+  color: #168d70;
+}
+
+.ca-lang-name {
+  flex: 1;
+}
+
+.ca-lang-check {
+  flex: 0 0 auto;
+}
+
+html.is-home.is-hero-top .ca-lang-trigger,
+html.is-inner.is-hero-top .ca-lang-trigger,
+html.is-inner:has(.rt-room-details-hero):not(.is-nav-solid) .ca-lang-trigger,
+html.is-inner:has(.rt-inner-hero):not(.is-nav-solid) .ca-lang-trigger {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.42);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+html.is-home.is-nav-solid .ca-lang-trigger,
+html.is-inner.is-nav-solid .ca-lang-trigger,
+html.is-inner:not(:has(.rt-room-details-hero)):not(:has(.rt-inner-hero))
+  .ca-lang-trigger {
+  color: var(--color-brand, #168d70);
+  border-color: rgba(22, 141, 112, 0.28);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+@media (max-width: 991px) {
+  .rt-navbar-v1-right-wrapper {
+    column-gap: 0.9rem !important;
+    grid-column-gap: 0.9rem !important;
+    align-items: center;
+  }
+
+  .ca-lang {
+    font-size: 0.6875rem;
+    letter-spacing: 0.04em;
+  }
+
+  .ca-lang-trigger {
+    height: 1.85rem;
+    padding-right: 0.45rem;
   }
 }

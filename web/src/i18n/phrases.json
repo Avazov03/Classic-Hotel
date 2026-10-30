@@ -1,0 +1,1922 @@
+{
+  "Asosiy": {
+    "ru": "Главная",
+    "en": "Home"
+  },
+  "Asosiy navigatsiya": {
+    "ru": "Основная навигация",
+    "en": "Main navigation"
+  },
+  "Asosiy sahifa": {
+    "ru": "Главная",
+    "en": "Home"
+  },
+  "Bosh sahifa": {
+    "ru": "Главная",
+    "en": "Home"
+  },
+  "Bosh sahifa 1": {
+    "ru": "Главная 1",
+    "en": "Home 1"
+  },
+  "Bosh sahifa 2": {
+    "ru": "Главная 2",
+    "en": "Home 2"
+  },
+  "Bosh sahifa 3": {
+    "ru": "Главная 3",
+    "en": "Home 3"
+  },
+  "Bosh sahifaga": {
+    "ru": "На главную",
+    "en": "Back home"
+  },
+  "Biz haqimizda": {
+    "ru": "О нас",
+    "en": "About"
+  },
+  "Xonalar": {
+    "ru": "Номера",
+    "en": "Rooms"
+  },
+  "Xizmatlar": {
+    "ru": "Услуги",
+    "en": "Services"
+  },
+  "Blog": {
+    "ru": "Блог",
+    "en": "Blog"
+  },
+  "Aloqa": {
+    "ru": "Контакты",
+    "en": "Contact"
+  },
+  "Qulayliklar": {
+    "ru": "Удобства",
+    "en": "Amenities"
+  },
+  "Teras": {
+    "ru": "Терраса",
+    "en": "Terrace"
+  },
+  "Bog'": {
+    "ru": "Сад",
+    "en": "Garden"
+  },
+  "bog'": {
+    "ru": "сад",
+    "en": "garden"
+  },
+  "Restoran": {
+    "ru": "Ресторан",
+    "en": "Restaurant"
+  },
+  "Barcha xonalar": {
+    "ru": "Все номера",
+    "en": "All rooms"
+  },
+  "Barcha maqolalar": {
+    "ru": "Все статьи",
+    "en": "All articles"
+  },
+  "Maxsus": {
+    "ru": "Особое",
+    "en": "Featured"
+  },
+  "Dam olish yoki tadbir — bronni bir marta bosishda boshlang.": {
+    "ru": "Отдых или событие — начните бронь в один шаг.",
+    "en": "A stay or an event — start the booking in one step."
+  },
+  "Bron qilish": {
+    "ru": "Бронь",
+    "en": "Book"
+  },
+  "Menyu": {
+    "ru": "Меню",
+    "en": "Menu"
+  },
+  "Hozir bron qiling": {
+    "ru": "Забронировать",
+    "en": "Book now"
+  },
+  "Dam olishni bron qiling": {
+    "ru": "Забронировать отдых",
+    "en": "Book a stay"
+  },
+  "Narxni so'rash": {
+    "ru": "Узнать цену",
+    "en": "Ask the price"
+  },
+  "Narx so'raladi": {
+    "ru": "Цена по запросу",
+    "en": "Price on request"
+  },
+  "Narxni qabulxonadan so'rang": {
+    "ru": "Цену уточняйте на ресепшен",
+    "en": "Ask reception for the price"
+  },
+  "so'rang": {
+    "ru": "уточните",
+    "en": "ask"
+  },
+  "Gur Emir Palace — Samarqanddagi tinch mehmonxona": {
+    "ru": "Gur Emir Palace — тихий отель в Самарканде",
+    "en": "Gur Emir Palace — a quiet hotel in Samarkand"
+  },
+  "Bron kunida 15% chegirma": {
+    "ru": "Скидка 15% в день брони",
+    "en": "15% off on booking day"
+  },
+  "Bron kunida 15% chegirma: nonushta, Wi-Fi va avtoturargoh": {
+    "ru": "Скидка 15% в день брони: завтрак, Wi-Fi и парковка",
+    "en": "15% off on booking day: breakfast, Wi-Fi and parking"
+  },
+  "Har kuni bufet nonushta, soat 07:00–10:00": {
+    "ru": "Завтрак-буфет каждый день, 07:00–10:00",
+    "en": "Daily buffet breakfast, 07:00–10:00"
+  },
+  "3 kecha va undan uzoq yashashda 10% chegirma": {
+    "ru": "Скидка 10% при проживании от 3 ночей",
+    "en": "10% off for stays of 3 nights or more"
+  },
+  "Samarqand markazi": {
+    "ru": "Центр города",
+    "en": "City centre"
+  },
+  "Tarixiy shahar": {
+    "ru": "Старый город",
+    "en": "Old city"
+  },
+  "Gur Emir yonida": {
+    "ru": "У Гур-Эмира",
+    "en": "Near Gur-e-Amir"
+  },
+  "Bog', teras, restoran va bar — Samarqanddagi tinch mehmonxona": {
+    "ru": "Сад, терраса, ресторан и бар — тихий отель в Самарканде",
+    "en": "Garden, terrace, restaurant and bar — a quiet Samarkand hotel"
+  },
+  "Xonalarni ko'rish": {
+    "ru": "Смотреть номера",
+    "en": "View rooms"
+  },
+  "Samarqandda, Shohruh Mirzo ko'chasida: bog', teras, restoran, bar va 24 soat qabulxona": {
+    "ru": "В Самарканде, на улице Шохруха Мирзо: сад, терраса, ресторан, бар и ресепшен 24 часа",
+    "en": "In Samarkand, on Shahrukh Mirzo Street: garden, terrace, restaurant, bar and a 24-hour desk"
+  },
+  "Samarqand aeroportigacha 7 km": {
+    "ru": "7 км до аэропорта",
+    "en": "7 km to the airport"
+  },
+  "24 soat qabulxona": {
+    "ru": "Ресепшен 24 часа",
+    "en": "24-hour reception"
+  },
+  "Nonushta 07:00–10:00": {
+    "ru": "Завтрак 07:00–10:00",
+    "en": "Breakfast 07:00–10:00"
+  },
+  "Olti xil xona": {
+    "ru": "Шесть типов номеров",
+    "en": "Six room types"
+  },
+  "4-qavatdagi teras": {
+    "ru": "Терраса 4 этажа",
+    "en": "4th-floor terrace"
+  },
+  "bepul avtoturargoh": {
+    "ru": "бесплатная парковка",
+    "en": "free parking"
+  },
+  "Bepul avtoturargoh": {
+    "ru": "Бесплатная парковка",
+    "en": "Free parking"
+  },
+  "halol va alakart taomlar": {
+    "ru": "халяль и блюда à la carte",
+    "en": "halal and à la carte"
+  },
+  "bufet nonushta": {
+    "ru": "завтрак-буфет",
+    "en": "buffet breakfast"
+  },
+  "Bufet nonushta": {
+    "ru": "Завтрак-буфет",
+    "en": "Buffet breakfast"
+  },
+  "Teras va restoran": {
+    "ru": "Терраса и ресторан",
+    "en": "Terrace and restaurant"
+  },
+  "4-qavatdagi terasdan shaharning tarixiy qismi ko'rinadi": {
+    "ru": "С террасы 4 этажа видна историческая часть города",
+    "en": "The 4th-floor terrace looks onto the historic city"
+  },
+  "Har kuni bufet nonushta, alakart va halol taomlar. Nonushta 07:00 dan 10:00 gacha.": {
+    "ru": "Каждый день завтрак-буфет, à la carte и халяль. Завтрак с 07:00 до 10:00.",
+    "en": "Daily buffet breakfast, à la carte and halal food. Breakfast is 07:00–10:00."
+  },
+  "24 soat qabulxona va aeroport transferi": {
+    "ru": "Ресепшен 24 часа и трансфер из аэропорта",
+    "en": "24-hour reception and an airport shuttle"
+  },
+  "nonushta": {
+    "ru": "завтрак",
+    "en": "breakfast"
+  },
+  "teras": {
+    "ru": "терраса",
+    "en": "terrace"
+  },
+  "mehmonxona": {
+    "ru": "отель",
+    "en": "hotel"
+  },
+  "Samarqandda qoling — Gur Emir Palace": {
+    "ru": "Остановитесь в Самарканде — Gur Emir Palace",
+    "en": "Stay in Samarkand — Gur Emir Palace"
+  },
+  "Sharhlar": {
+    "ru": "Отзывы",
+    "en": "Reviews"
+  },
+  "Farqni ularning ko'zi bilan ko'ring. Bu yerda hozircha shablon matn turibdi. Haqiqiy mehmon sharhlari qo'shiladi.": {
+    "ru": "Посмотрите их глазами. Здесь пока текст-шаблон. Настоящие отзывы гостей добавим.",
+    "en": "See it through their eyes. This is still template text. Real guest reviews will be added."
+  },
+  "Deluxe king size": {
+    "ru": "Deluxe king size",
+    "en": "Deluxe king size"
+  },
+  "DELUXE KING SIZE": {
+    "ru": "DELUXE KING SIZE",
+    "en": "DELUXE KING SIZE"
+  },
+  "Standard Double": {
+    "ru": "Standard Double",
+    "en": "Standard Double"
+  },
+  "STANDARD DOUBLE": {
+    "ru": "STANDARD DOUBLE",
+    "en": "STANDARD DOUBLE"
+  },
+  "Standard Twin": {
+    "ru": "Standard Twin",
+    "en": "Standard Twin"
+  },
+  "STANDARD TWIN": {
+    "ru": "STANDARD TWIN",
+    "en": "STANDARD TWIN"
+  },
+  "Standard Single": {
+    "ru": "Standard Single",
+    "en": "Standard Single"
+  },
+  "15 m²": {
+    "ru": "15 м²",
+    "en": "15 m²"
+  },
+  "25 m²": {
+    "ru": "25 м²",
+    "en": "25 m²"
+  },
+  "26 m²": {
+    "ru": "26 м²",
+    "en": "26 m²"
+  },
+  "ikki kishilik": {
+    "ru": "на двоих",
+    "en": "for two"
+  },
+  "25 m². King size karavot, alohida hammom, televizor, elektr choynak va ish stoli.": {
+    "ru": "25 м². Кровать king size, отдельная ванная, телевизор, электрочайник и рабочий стол.",
+    "en": "25 m². King-size bed, private bathroom, TV, kettle and a desk."
+  },
+  "26 m². Ikki alohida karavot, ish joyi, bepul Wi-Fi va konditsioner.": {
+    "ru": "26 м². Две отдельные кровати, рабочее место, бесплатный Wi-Fi и кондиционер.",
+    "en": "26 m². Two single beds, a workspace, free Wi-Fi and air conditioning."
+  },
+  "15 m² lik Standard Single: bitta karavot, shkaf, seyf va alohida hammom.": {
+    "ru": "Standard Single, 15 м²: одна кровать, шкаф, сейф и отдельная ванная.",
+    "en": "Standard Single, 15 m²: one bed, a wardrobe, a safe and a private bathroom."
+  },
+  "15 m² lik bir kishilik xona: shkaf, seyf, alohida hammom, televizor, elektr choynak va ish stoli.": {
+    "ru": "Одноместный номер 15 м²: шкаф, сейф, отдельная ванная, телевизор, электрочайник и стол.",
+    "en": "A 15 m² single room: wardrobe, safe, private bathroom, TV, kettle and a desk."
+  },
+  "Bitta katta karavotli ikki kishilik xona. Zamonaviy interyer va yashash uchun zarur qulayliklar.": {
+    "ru": "Двухместный номер с одной большой кроватью. Современный интерьер и нужные удобства.",
+    "en": "A double room with one large bed. A modern interior and the essentials for a stay."
+  },
+  "25 m² lik xona: king size karavot, shkaf, alohida hammom, fen, terlik, sochiqlar, televizor, elektr choynak va ish stoli.": {
+    "ru": "Номер 25 м²: кровать king size, шкаф, отдельная ванная, фен, тапочки, полотенца, телевизор, чайник и стол.",
+    "en": "A 25 m² room: king-size bed, wardrobe, private bathroom, hairdryer, slippers, towels, TV, kettle and a desk."
+  },
+  "Juftliklar va dam oluvchilar": {
+    "ru": "Для пар и отдыха",
+    "en": "For couples and leisure"
+  },
+  "King size, hammom, televizor": {
+    "ru": "King size, ванная, телевизор",
+    "en": "King size, bathroom, TV"
+  },
+  "Shaharning tarixiy qismi mumkin": {
+    "ru": "Возможен вид на старый город",
+    "en": "Historic-city view possible"
+  },
+  "Size :": {
+    "ru": "Площадь :",
+    "en": "Size :"
+  },
+  "View :": {
+    "ru": "Вид :",
+    "en": "View :"
+  },
+  "Price :": {
+    "ru": "Цена :",
+    "en": "Price :"
+  },
+  "Highlight :": {
+    "ru": "Особенность :",
+    "en": "Highlight :"
+  },
+  "Features :": {
+    "ru": "Удобства :",
+    "en": "Features :"
+  },
+  "Ideal uchun :": {
+    "ru": "Подходит :",
+    "en": "Ideal for :"
+  },
+  "Bizning xonalar": {
+    "ru": "Наши номера",
+    "en": "Our rooms"
+  },
+  "Tanlangan xonalar": {
+    "ru": "Избранные номера",
+    "en": "Selected rooms"
+  },
+  "Batafsil": {
+    "ru": "Подробнее",
+    "en": "Details"
+  },
+  "Barcha xonalar va umumiy joylarda bepul yuqori tezlikdagi Wi-Fi mavjud.": {
+    "ru": "Бесплатный быстрый Wi-Fi в номерах и общих зонах.",
+    "en": "Free high-speed Wi-Fi in the rooms and public areas."
+  },
+  "Samarqandda, Gur-i Amir yonida": {
+    "ru": "В Самарканде, рядом с Гур-Эмиром",
+    "en": "In Samarkand, beside Gur-e-Amir"
+  },
+  "Shohruh Mirzo ko'chasi, 126-uy, Samarqand": {
+    "ru": "ул. Шохруха Мирзо, 126, Самарканд",
+    "en": "126 Shahrukh Mirzo Street, Samarkand"
+  },
+  "Shohruh Mirzo ko'chasi, 126-uy. Bog', teras, restoran va bar. 24 soat qabulxona.": {
+    "ru": "ул. Шохруха Мирзо, 126. Сад, терраса, ресторан и бар. Ресепшен 24 часа.",
+    "en": "126 Shahrukh Mirzo Street. Garden, terrace, restaurant and bar. 24-hour reception."
+  },
+  "Gur Emir Palace, Samarqand. Shohruh Mirzo ko'chasi, 126-uy. Bog', teras, restoran va bar.": {
+    "ru": "Gur Emir Palace, Самарканд. ул. Шохруха Мирзо, 126. Сад, терраса, ресторан и бар.",
+    "en": "Gur Emir Palace, Samarkand. 126 Shahrukh Mirzo Street. Garden, terrace, restaurant and bar."
+  },
+  "Samarqand, Shohruh Mirzo ko'chasi": {
+    "ru": "Самарканд, улица Шохруха Мирзо",
+    "en": "Samarkand, Shahrukh Mirzo Street"
+  },
+  "4-qavat terasi va restoran": {
+    "ru": "Терраса 4 этажа и ресторан",
+    "en": "4th-floor terrace and restaurant"
+  },
+  "Restoran, bar va halol taomlar": {
+    "ru": "Ресторан, бар и халяльные блюда",
+    "en": "Restaurant, bar and halal food"
+  },
+  "Bepul tezkor Wi-Fi": {
+    "ru": "Бесплатный быстрый Wi-Fi",
+    "en": "Free high-speed Wi-Fi"
+  },
+  "Hikoyamizni o'qing": {
+    "ru": "Читать историю",
+    "en": "Read our story"
+  },
+  "Qadriyatlarimiz": {
+    "ru": "Наши ценности",
+    "en": "Our values"
+  },
+  "Bog', teras va tinch hovli": {
+    "ru": "Сад, терраса и тихий двор",
+    "en": "Garden, terrace and a quiet courtyard"
+  },
+  "Bog' va hovli": {
+    "ru": "Сад и двор",
+    "en": "Garden and courtyard"
+  },
+  "Bog', hovli va 4-qavat terasi. Shaharning tarixiy qismi shu yerdan ko'rinadi.": {
+    "ru": "Сад, двор и терраса 4 этажа. Отсюда видна историческая часть города.",
+    "en": "Garden, courtyard and the 4th-floor terrace. The historic city is visible from here."
+  },
+  "Gur Emir Palace dam olishni bog', teras, restoran va barda taklif etadi. Alohida SPA ro'yxati yo'q.": {
+    "ru": "Gur Emir Palace предлагает сад, террасу, ресторан и бар. Отдельного списка SPA нет.",
+    "en": "Gur Emir Palace offers a garden, terrace, restaurant and bar. There is no separate spa list."
+  },
+  "Kir yuvish 08:00–18:00": {
+    "ru": "Прачечная 08:00–18:00",
+    "en": "Laundry 08:00–18:00"
+  },
+  "Kir yuvish xonasi soat 08:00 dan 18:00 gacha ishlaydi.": {
+    "ru": "Прачечная работает с 08:00 до 18:00.",
+    "en": "The laundry room is open from 08:00 to 18:00."
+  },
+  "Kir yuvish": {
+    "ru": "Прачечная",
+    "en": "Laundry"
+  },
+  "4-qavat terasi": {
+    "ru": "Терраса 4 этажа",
+    "en": "4th-floor terrace"
+  },
+  "Mehmonxona bog'i va hovlisida tinch dam olish.": {
+    "ru": "Тихий отдых в саду и дворе отеля.",
+    "en": "A quiet rest in the hotel garden and courtyard."
+  },
+  "Terasdan shaharning tarixiy qismi ko'rinadi.": {
+    "ru": "С террасы видна историческая часть города.",
+    "en": "The terrace looks onto the historic city."
+  },
+  "Aeroport transferi": {
+    "ru": "Трансфер из аэропорта",
+    "en": "Airport shuttle"
+  },
+  "Samarqand xalqaro aeroporti 7 km. Mehmonxona transfer taklif etadi.": {
+    "ru": "Международный аэропорт Самарканда в 7 км. Отель предлагает трансфер.",
+    "en": "Samarkand International Airport is 7 km away. The hotel offers a shuttle."
+  },
+  "Restoran va teras": {
+    "ru": "Ресторан и терраса",
+    "en": "Restaurant and terrace"
+  },
+  "Restoran va bar": {
+    "ru": "Ресторан и бар",
+    "en": "Restaurant and bar"
+  },
+  "Restoran va barda bufet nonushta, alakart va halol taomlar.": {
+    "ru": "В ресторане и баре — завтрак-буфет, à la carte и халяль.",
+    "en": "The restaurant and bar serve buffet breakfast, à la carte and halal food."
+  },
+  "Restoran va barda har kuni bufet nonushta, alakart va halol taomlar. Nonushta 07:00 dan 10:00 gacha.": {
+    "ru": "В ресторане и баре каждый день завтрак-буфет, à la carte и халяль. Завтрак с 07:00 до 10:00.",
+    "en": "The restaurant and bar serve a daily buffet, à la carte and halal food. Breakfast is 07:00–10:00."
+  },
+  "Bufet nonushta, 07:00–10:00": {
+    "ru": "Завтрак-буфет, 07:00–10:00",
+    "en": "Buffet breakfast, 07:00–10:00"
+  },
+  "Bufet nonushta, alakart va halol taomlar. Bar ham bor.": {
+    "ru": "Завтрак-буфет, à la carte и халяль. Есть и бар.",
+    "en": "Buffet breakfast, à la carte and halal food. There is a bar as well."
+  },
+  "Bufet nonushta, alakart va halol taomlar. Nonushta 07:00–10:00.": {
+    "ru": "Завтрак-буфет, à la carte и халяль. Завтрак 07:00–10:00.",
+    "en": "Buffet breakfast, à la carte and halal food. Breakfast is 07:00–10:00."
+  },
+  "Halol taomlar": {
+    "ru": "Халяльные блюда",
+    "en": "Halal food"
+  },
+  "Halol taom": {
+    "ru": "Халяльное блюдо",
+    "en": "Halal dish"
+  },
+  "Halol oshxona": {
+    "ru": "Халяльная кухня",
+    "en": "Halal kitchen"
+  },
+  "Halol go'sht taomlari": {
+    "ru": "Блюда из халяльного мяса",
+    "en": "Halal meat dishes"
+  },
+  "Alakart": {
+    "ru": "À la carte",
+    "en": "À la carte"
+  },
+  "Alakart taom": {
+    "ru": "Блюдо à la carte",
+    "en": "À la carte dish"
+  },
+  "Alakart taomlar": {
+    "ru": "Блюда à la carte",
+    "en": "À la carte dishes"
+  },
+  "Alakart tanlov": {
+    "ru": "Выбор à la carte",
+    "en": "À la carte choice"
+  },
+  "Milliy taomlar": {
+    "ru": "Национальные блюда",
+    "en": "National dishes"
+  },
+  "Milliy va alakart taomlar": {
+    "ru": "Национальные блюда и à la carte",
+    "en": "National dishes and à la carte"
+  },
+  "Bar": {
+    "ru": "Бар",
+    "en": "Bar"
+  },
+  "Xona xizmati": {
+    "ru": "Обслуживание в номер",
+    "en": "Room service"
+  },
+  "Tarixiy manzarali teras": {
+    "ru": "Терраса с видом на старый город",
+    "en": "Terrace with a historic view"
+  },
+  "Oilaviy ziyofat": {
+    "ru": "Семейный ужин",
+    "en": "Family gathering"
+  },
+  "Oilaviy va mehmon ziyofati": {
+    "ru": "Семейный и гостевой ужин",
+    "en": "Family and guest gathering"
+  },
+  "Shaharning tarixiy qismi": {
+    "ru": "Историческая часть города",
+    "en": "Historic part of the city"
+  },
+  "Manzil": {
+    "ru": "Адрес",
+    "en": "Address"
+  },
+  "Manzil:": {
+    "ru": "Адрес:",
+    "en": "Address:"
+  },
+  "Pochta": {
+    "ru": "Почта",
+    "en": "Email"
+  },
+  "Qo'ng'iroq qiling": {
+    "ru": "Позвонить",
+    "en": "Call"
+  },
+  "Yuborish": {
+    "ru": "Отправить",
+    "en": "Send"
+  },
+  "Hozir yuborish": {
+    "ru": "Отправить",
+    "en": "Send now"
+  },
+  "Ism*": {
+    "ru": "Имя*",
+    "en": "First name*"
+  },
+  "Familiya*": {
+    "ru": "Фамилия*",
+    "en": "Last name*"
+  },
+  "Telefon*": {
+    "ru": "Телефон*",
+    "en": "Phone*"
+  },
+  "Email*": {
+    "ru": "Email*",
+    "en": "Email*"
+  },
+  "Savolingiz*": {
+    "ru": "Ваш вопрос*",
+    "en": "Your question*"
+  },
+  "Xabar": {
+    "ru": "Сообщение",
+    "en": "Message"
+  },
+  "So'rov": {
+    "ru": "Запрос",
+    "en": "Enquiry"
+  },
+  "Bog'laning": {
+    "ru": "Связаться",
+    "en": "Get in touch"
+  },
+  "Suhbatni boshlang": {
+    "ru": "Начать разговор",
+    "en": "Start a conversation"
+  },
+  "Dam olish bo'yicha tez-tez so'raladigan savollar": {
+    "ru": "Частые вопросы об отдыхе",
+    "en": "Frequently asked questions"
+  },
+  "01. Bronni qanday qilaman yoki o'zgartiraman?": {
+    "ru": "01. Как забронировать или изменить бронь?",
+    "en": "01. How do I book or change a reservation?"
+  },
+  "03. Bronni bekor qilish yoki o'zgartirish mumkinmi?": {
+    "ru": "03. Можно ли отменить или изменить бронь?",
+    "en": "03. Can a booking be cancelled or changed?"
+  },
+  "04. Kirish va chiqish vaqtlari qanday?": {
+    "ru": "04. Какое время заезда и выезда?",
+    "en": "04. What are the check-in and check-out times?"
+  },
+  "05. Qanday xona turlari mavjud?": {
+    "ru": "05. Какие типы номеров есть?",
+    "en": "05. Which room types are available?"
+  },
+  "07. Kunlik xona tozalash bormi?": {
+    "ru": "07. Есть ли ежедневная уборка?",
+    "en": "07. Is there daily housekeeping?"
+  },
+  "08. Wi-Fi bormi va bepulmi?": {
+    "ru": "08. Есть ли Wi-Fi и он бесплатный?",
+    "en": "08. Is there Wi-Fi, and is it free?"
+  },
+  "Bron uchun +998 55 701 10 01 ga qo'ng'iroq qiling yoki guremirhotel@gmail.com ga yozing.": {
+    "ru": "Для брони позвоните +998 55 701 10 01 или напишите на guremirhotel@gmail.com.",
+    "en": "To book, call +998 55 701 10 01 or email guremirhotel@gmail.com."
+  },
+  "Ha, tanlangan tarif va bekor qilish qoidalariga qarab bronni o'zgartirish yoki bekor qilish mumkin.": {
+    "ru": "Да, бронь можно изменить или отменить в зависимости от тарифа и правил отмены.",
+    "en": "Yes. A booking can be changed or cancelled depending on the rate and the cancellation rules."
+  },
+  "Kirish va chiqish vaqtini qabulxonadan so'rang.": {
+    "ru": "Время заезда и выезда уточняйте на ресепшен.",
+    "en": "Ask reception for the check-in and check-out times."
+  },
+  "To'lov usulini bron paytida qabulxonadan so'rang.": {
+    "ru": "Способ оплаты уточняйте на ресепшен при бронировании.",
+    "en": "Ask reception about payment methods when you book."
+  },
+  "Xona xizmati bor. Tozalash tartibini qabulxonadan so'rang.": {
+    "ru": "Обслуживание в номер есть. Порядок уборки уточняйте на ресепшен.",
+    "en": "Room service is available. Ask reception about housekeeping."
+  },
+  "Qo'shimcha joy bo'yicha qabulxonaga yozing.": {
+    "ru": "О дополнительном месте напишите на ресепшен.",
+    "en": "Ask reception about an extra bed."
+  },
+  "Standard Single, Twin, Double, Triple va Deluxe king size. Maydoni 15 m² dan 26 m² gacha.": {
+    "ru": "Standard Single, Twin, Double, Triple и Deluxe king size. Площадь от 15 м² до 26 м².",
+    "en": "Standard Single, Twin, Double, Triple and Deluxe king size. From 15 m² to 26 m²."
+  },
+  "Savollaringiz bormi? Bron, qulayliklar, ovqatlanish yoki maxsus so'rovlar bo'yicha jamoamizga murojaat qiling": {
+    "ru": "Есть вопросы? Напишите нам о брони, удобствах, питании или особых просьбах",
+    "en": "Questions? Ask us about a booking, amenities, dining or a special request"
+  },
+  "Ushbu bron uchun barcha shart va qoidalarga roziman.": {
+    "ru": "Я согласен с условиями этой брони.",
+    "en": "I agree to the terms of this booking."
+  },
+  "Rahmat! So'rovingiz qabul qilindi!": {
+    "ru": "Спасибо! Запрос принят.",
+    "en": "Thank you. Your request was received."
+  },
+  "Xato! Formani yuborishda muammo yuz berdi.": {
+    "ru": "Ошибка. Не удалось отправить форму.",
+    "en": "Something went wrong while sending the form."
+  },
+  "Xato! Sahifa topilmadi": {
+    "ru": "Ошибка. Страница не найдена",
+    "en": "Page not found"
+  },
+  "Qidirayotgan sahifa mavjud emas yoki ko'chirilgan.": {
+    "ru": "Страница не существует или была перенесена.",
+    "en": "The page is missing or has moved."
+  },
+  "Qabulxona 24 soat ochiq": {
+    "ru": "Ресепшен открыт 24 часа",
+    "en": "Reception is open 24 hours"
+  },
+  "Qabulxona kechayu kunduz ochiq. Xona xizmati ham bor.": {
+    "ru": "Ресепшен работает круглосуточно. Есть и обслуживание в номер.",
+    "en": "The desk is open day and night. Room service is available too."
+  },
+  "24 soat qabulxona. Kelishingiz bilan xona, nonushta va transfer bo'yicha yordam beramiz.": {
+    "ru": "Ресепшен 24 часа. По приезде поможем с номером, завтраком и трансфером.",
+    "en": "24-hour reception. On arrival we help with the room, breakfast and the shuttle."
+  },
+  "24/7 qabulxona yordami": {
+    "ru": "Помощь ресепшен 24/7",
+    "en": "24/7 reception help"
+  },
+  "24/7 qo'ng'iroq": {
+    "ru": "Звонок 24/7",
+    "en": "24/7 phone"
+  },
+  "24/7 xona xizmati": {
+    "ru": "Обслуживание в номер 24/7",
+    "en": "24/7 room service"
+  },
+  "Bepul Wi-Fi": {
+    "ru": "Бесплатный Wi-Fi",
+    "en": "Free Wi-Fi"
+  },
+  "Bepul nonushta": {
+    "ru": "Бесплатный завтрак",
+    "en": "Free breakfast"
+  },
+  "Bepul avtoturargoh va tezkor Wi-Fi": {
+    "ru": "Бесплатная парковка и быстрый Wi-Fi",
+    "en": "Free parking and fast Wi-Fi"
+  },
+  "O'z mashinangiz yoki ijaradagi transport uchun bepul to'xtash joyi.": {
+    "ru": "Бесплатная стоянка для своей или арендованной машины.",
+    "en": "Free parking for your own car or a rental."
+  },
+  "Mehmonlar uchun xavfsiz avtoturargoh": {
+    "ru": "Безопасная парковка для гостей",
+    "en": "Secure parking for guests"
+  },
+  "Xonada seyf": {
+    "ru": "Сейф в номере",
+    "en": "In-room safe"
+  },
+  "Elektr choynak": {
+    "ru": "Электрочайник",
+    "en": "Electric kettle"
+  },
+  "Alohida hammom": {
+    "ru": "Отдельная ванная",
+    "en": "Private bathroom"
+  },
+  "Kun": {
+    "ru": "Дней",
+    "en": "Days"
+  },
+  "Soat": {
+    "ru": "Часов",
+    "en": "Hours"
+  },
+  "Daqiqa": {
+    "ru": "Минут",
+    "en": "Minutes"
+  },
+  "Kunlik nonushta": {
+    "ru": "Завтрак каждый день",
+    "en": "Daily breakfast"
+  },
+  "Kunlik bufet": {
+    "ru": "Ежедневный буфет",
+    "en": "Daily buffet"
+  },
+  "Bepul": {
+    "ru": "Бесплатно",
+    "en": "Free"
+  },
+  "Chinakam mehmondo'stlik orqali unutilmas dam olish": {
+    "ru": "Незабываемый отдых через настоящее гостеприимство",
+    "en": "A memorable stay through genuine hospitality"
+  },
+  "Har bir biznes tadbirini silliq va unutilmas qilish": {
+    "ru": "Сделать каждое деловое событие спокойным и запоминающимся",
+    "en": "Making every business event smooth and memorable"
+  },
+  "Mehmonxonamizning eng yaxshi oshxona ijodiyoti bo'ylab ta'm sayohati": {
+    "ru": "Вкусовое путешествие по лучшим блюдам нашей кухни",
+    "en": "A taste journey through the kitchen's finest dishes"
+  },
+  "Istalgan maqsadga mos keng yashash eshigini oching": {
+    "ru": "Откройте просторную комнату для любого плана",
+    "en": "Open the door to a spacious room for any plan"
+  },
+  "Jannatdek dam olishni his eting": {
+    "ru": "Почувствуйте отдых как глоток покоя",
+    "en": "Enjoy a stay that feels like a pause"
+  },
+  "Qadrlaydigan xotiralarga aylanadigan maxsus tadbirlar": {
+    "ru": "Особые события, которые становятся дорогими воспоминаниями",
+    "en": "Special events that become memories you keep"
+  },
+  "Mart oyidagi eng so'nggi menyu yangilanishlarini kashf eting": {
+    "ru": "Новые позиции меню в марте",
+    "en": "Discover the latest menu updates this March"
+  },
+  "Samarqandda dam olish: nimalarga e'tibor berish kerak": {
+    "ru": "Отдых в Самарканде: на что обратить внимание",
+    "en": "A stay in Samarkand: what to keep in mind"
+  },
+  "Blog tafsiloti": {
+    "ru": "Запись блога",
+    "en": "Blog detail"
+  },
+  "Galereyamiz": {
+    "ru": "Наша галерея",
+    "en": "Our gallery"
+  },
+  "Galereyani ko'rish": {
+    "ru": "Смотреть галерею",
+    "en": "View the gallery"
+  },
+  "Foto galereyamiz orqali mehmonxonamiz nafosati va qulayligini kashf eting": {
+    "ru": "Откройте атмосферу и удобство отеля в фотогалерее",
+    "en": "Discover the hotel's ease and comfort in the photo gallery"
+  },
+  "Eng yaxshi lahzalar va tajribalar orqali vizual sayohat": {
+    "ru": "Визуальное путешествие по лучшим моментам",
+    "en": "A visual journey through the best moments"
+  },
+  "Mehmonxonamizni ko'ring": {
+    "ru": "Посмотреть отель",
+    "en": "See the hotel"
+  },
+  "Bizni kuzating": {
+    "ru": "Следите за нами",
+    "en": "Follow us"
+  },
+  "Barcha huquqlar himoyalangan.": {
+    "ru": "Все права защищены.",
+    "en": "All rights reserved."
+  },
+  "Sahifalar": {
+    "ru": "Страницы",
+    "en": "Pages"
+  },
+  "Yordamchi sahifalar": {
+    "ru": "Служебные страницы",
+    "en": "Helpful pages"
+  },
+  "Imkoniyatlar": {
+    "ru": "Возможности",
+    "en": "What is here"
+  },
+  "Bizning imkoniyatlar": {
+    "ru": "Наши возможности",
+    "en": "What we offer"
+  },
+  "Qulayliklar haqida": {
+    "ru": "Об удобствах",
+    "en": "About the amenities"
+  },
+  "Xona haqida": {
+    "ru": "О номере",
+    "en": "About the room"
+  },
+  "Xona tafsiloti": {
+    "ru": "Детали номера",
+    "en": "Room detail"
+  },
+  "Xona tafsilotlari": {
+    "ru": "Детали номера",
+    "en": "Room details"
+  },
+  "Xona ma'lumotlari": {
+    "ru": "Сведения о номере",
+    "en": "Room information"
+  },
+  "Mehmonxona ma'lumoti :": {
+    "ru": "Об отеле :",
+    "en": "Hotel information :"
+  },
+  "Mehmonxona qulayliklari :": {
+    "ru": "Удобства отеля :",
+    "en": "Hotel amenities :"
+  },
+  "Banket Qulayliklar :": {
+    "ru": "Удобства зала :",
+    "en": "Event amenities :"
+  },
+  "Kirish": {
+    "ru": "Заезд",
+    "en": "Check-in"
+  },
+  "Chiqish": {
+    "ru": "Выезд",
+    "en": "Check-out"
+  },
+  "Kirish vaqti :": {
+    "ru": "Время заезда :",
+    "en": "Check-in :"
+  },
+  "Chiqish vaqti :": {
+    "ru": "Время выезда :",
+    "en": "Check-out :"
+  },
+  "Avtoturargoh :": {
+    "ru": "Парковка :",
+    "en": "Parking :"
+  },
+  "Kompaniya :": {
+    "ru": "Компания :",
+    "en": "Company :"
+  },
+  "Soat :": {
+    "ru": "Время :",
+    "en": "Hours :"
+  },
+  "Reserve :": {
+    "ru": "Бронь :",
+    "en": "Reserve :"
+  },
+  "Additional Services :": {
+    "ru": "Доп. услуги :",
+    "en": "Additional services :"
+  },
+  "Safety :": {
+    "ru": "Безопасность :",
+    "en": "Safety :"
+  },
+  "A valid ID is required :": {
+    "ru": "Нужен документ :",
+    "en": "A valid ID is required :"
+  },
+  "Accommodation required": {
+    "ru": "Нужен номер",
+    "en": "Accommodation required"
+  },
+  "Catering requirement": {
+    "ru": "Питание",
+    "en": "Catering"
+  },
+  "Event type": {
+    "ru": "Тип события",
+    "en": "Event type"
+  },
+  "Event types": {
+    "ru": "Типы событий",
+    "en": "Event types"
+  },
+  "Members count": {
+    "ru": "Число гостей",
+    "en": "Guest count"
+  },
+  "Refreshments :": {
+    "ru": "Напитки :",
+    "en": "Refreshments :"
+  },
+  "Supervision :": {
+    "ru": "Сопровождение :",
+    "en": "Supervision :"
+  },
+  "Why choose us": {
+    "ru": "Почему мы",
+    "en": "Why choose us"
+  },
+  "FAQ": {
+    "ru": "Вопросы",
+    "en": "FAQ"
+  },
+  "Activity": {
+    "ru": "Занятие",
+    "en": "Activity"
+  },
+  "home": {
+    "ru": "главная",
+    "en": "home"
+  },
+  "room": {
+    "ru": "номер",
+    "en": "room"
+  },
+  "spa": {
+    "ru": "сад",
+    "en": "garden"
+  },
+  "restaurant": {
+    "ru": "ресторан",
+    "en": "restaurant"
+  },
+  "Hotel": {
+    "ru": "Отель",
+    "en": "Hotel"
+  },
+  "Inner pages": {
+    "ru": "Внутренние страницы",
+    "en": "Inner pages"
+  },
+  "Blog post": {
+    "ru": "Запись",
+    "en": "Blog post"
+  },
+  "Blog posts": {
+    "ru": "Записи",
+    "en": "Blog posts"
+  },
+  "Popular dishes": {
+    "ru": "Популярные блюда",
+    "en": "Popular dishes"
+  },
+  "Head chef": {
+    "ru": "Шеф-повар",
+    "en": "Head chef"
+  },
+  "Oshpazimiz": {
+    "ru": "Наш повар",
+    "en": "Our chef"
+  },
+  "Oshxona va ovqatlanish": {
+    "ru": "Кухня и питание",
+    "en": "Kitchen and dining"
+  },
+  "Kunduzgi taom": {
+    "ru": "Обед",
+    "en": "Lunch"
+  },
+  "Kechki taom": {
+    "ru": "Ужин",
+    "en": "Dinner"
+  },
+  "Kechki ovqatlanish": {
+    "ru": "Ужин",
+    "en": "Evening dining"
+  },
+  "Cocktail": {
+    "ru": "Коктейль",
+    "en": "Cocktail"
+  },
+  "Continental": {
+    "ru": "Континентальный",
+    "en": "Continental"
+  },
+  "Achchiq-nordon sho'rva": {
+    "ru": "Кисло-острый суп",
+    "en": "Hot and sour soup"
+  },
+  "Caesar Salad": {
+    "ru": "Салат Цезарь",
+    "en": "Caesar Salad"
+  },
+  "Chicken Alfredo": {
+    "ru": "Курица Альфредо",
+    "en": "Chicken Alfredo"
+  },
+  "Chow Mein": {
+    "ru": "Чоу-мейн",
+    "en": "Chow Mein"
+  },
+  "Grilled Chicken Steak": {
+    "ru": "Стейк из курицы на гриле",
+    "en": "Grilled chicken steak"
+  },
+  "Hakka Noodles": {
+    "ru": "Лапша хакка",
+    "en": "Hakka noodles"
+  },
+  "Ramen": {
+    "ru": "Рамен",
+    "en": "Ramen"
+  },
+  "Sashimi": {
+    "ru": "Сашими",
+    "en": "Sashimi"
+  },
+  "Schezwan Fried Rice": {
+    "ru": "Жареный рис по-сычуаньски",
+    "en": "Schezwan fried rice"
+  },
+  "Spaghetti Bolognese": {
+    "ru": "Спагетти болоньезе",
+    "en": "Spaghetti Bolognese"
+  },
+  "Sushi": {
+    "ru": "Суши",
+    "en": "Sushi"
+  },
+  "Tempura": {
+    "ru": "Тэмпура",
+    "en": "Tempura"
+  },
+  "Udon": {
+    "ru": "Удон",
+    "en": "Udon"
+  },
+  "Yakitori": {
+    "ru": "Якитори",
+    "en": "Yakitori"
+  },
+  "BBQ Chicken Platter": {
+    "ru": "Курица-барбекю",
+    "en": "BBQ chicken platter"
+  },
+  "Café & bakery corner": {
+    "ru": "Кафе и выпечка",
+    "en": "Café and bakery corner"
+  },
+  "Chinees": {
+    "ru": "Китайская",
+    "en": "Chinese"
+  },
+  "Japanese": {
+    "ru": "Японская",
+    "en": "Japanese"
+  },
+  "Canada": {
+    "ru": "Канада",
+    "en": "Canada"
+  },
+  "New Zealand": {
+    "ru": "Новая Зеландия",
+    "en": "New Zealand"
+  },
+  "Qatar": {
+    "ru": "Катар",
+    "en": "Qatar"
+  },
+  "United Kingdom": {
+    "ru": "Великобритания",
+    "en": "United Kingdom"
+  },
+  "United States": {
+    "ru": "США",
+    "en": "United States"
+  },
+  "Instagram": {
+    "ru": "Instagram",
+    "en": "Instagram"
+  },
+  "LinkedIn": {
+    "ru": "LinkedIn",
+    "en": "LinkedIn"
+  },
+  "Telegram": {
+    "ru": "Telegram",
+    "en": "Telegram"
+  },
+  "1 bola": {
+    "ru": "1 ребёнок",
+    "en": "1 child"
+  },
+  "2 bola": {
+    "ru": "2 ребёнка",
+    "en": "2 children"
+  },
+  "3 bola": {
+    "ru": "3 ребёнка",
+    "en": "3 children"
+  },
+  "4 bola": {
+    "ru": "4 ребёнка",
+    "en": "4 children"
+  },
+  "1 kattalar": {
+    "ru": "1 взрослый",
+    "en": "1 adult"
+  },
+  "2 kattalar": {
+    "ru": "2 взрослых",
+    "en": "2 adults"
+  },
+  "3 kattalar": {
+    "ru": "3 взрослых",
+    "en": "3 adults"
+  },
+  "4 kattalar": {
+    "ru": "4 взрослых",
+    "en": "4 adults"
+  },
+  "1 hammom": {
+    "ru": "1 ванная",
+    "en": "1 bathroom"
+  },
+  "2 Members": {
+    "ru": "2 гостя",
+    "en": "2 guests"
+  },
+  "4 Members": {
+    "ru": "4 гостя",
+    "en": "4 guests"
+  },
+  "6 Members": {
+    "ru": "6 гостей",
+    "en": "6 guests"
+  },
+  "Ikki mehmon": {
+    "ru": "Двое гостей",
+    "en": "Two guests"
+  },
+  "Juftliklar": {
+    "ru": "Пары",
+    "en": "Couples"
+  },
+  "Yakka sayyohatchilar": {
+    "ru": "Один путешественник",
+    "en": "Solo travellers"
+  },
+  "Baxtli mehmonlar": {
+    "ru": "Довольные гости",
+    "en": "Happy guests"
+  },
+  "Baxtli mijozlarimiz": {
+    "ru": "Наши гости",
+    "en": "Our guests"
+  },
+  "Sharhlar va baholar": {
+    "ru": "Отзывы и оценки",
+    "en": "Reviews and ratings"
+  },
+  "Mehmon uchun eslatma": {
+    "ru": "Памятка гостю",
+    "en": "A note for the guest"
+  },
+  "Nima kutmoqda": {
+    "ru": "Что ждёт",
+    "en": "What awaits"
+  },
+  "Price bir kecha :": {
+    "ru": "Цена за ночь :",
+    "en": "Price per night :"
+  },
+  "Clean & comfortable rooms": {
+    "ru": "Чистые и удобные номера",
+    "en": "Clean and comfortable rooms"
+  },
+  "Cleanness": {
+    "ru": "Чистота",
+    "en": "Cleanliness"
+  },
+  "High-speed Wi-Fi access": {
+    "ru": "Быстрый Wi-Fi",
+    "en": "High-speed Wi-Fi"
+  },
+  "Prime location": {
+    "ru": "Удобное расположение",
+    "en": "A central location"
+  },
+  "Markazda joylashgan — diqqatga sazovor joylar, ovqatlanish va transport yaqin": {
+    "ru": "В центре: рядом достопримечательности, еда и транспорт",
+    "en": "Central: sights, dining and transport are close"
+  },
+  "Successful Events": {
+    "ru": "Прошедшие события",
+    "en": "Past events"
+  },
+  "Wedding Focused": {
+    "ru": "Для торжеств",
+    "en": "For celebrations"
+  },
+  "Corporate & Professional": {
+    "ru": "Деловые встречи",
+    "en": "Corporate and professional"
+  },
+  "Cultural & festive events": {
+    "ru": "Культурные и праздничные события",
+    "en": "Cultural and festive events"
+  },
+  "Customizable stage setup": {
+    "ru": "Сцена под событие",
+    "en": "A stage set for the event"
+  },
+  "Grand ballroom": {
+    "ru": "Большой зал",
+    "en": "Grand hall"
+  },
+  "High-quality sound system": {
+    "ru": "Хороший звук",
+    "en": "A clear sound system"
+  },
+  "Future fest": {
+    "ru": "Будущий праздник",
+    "en": "A coming celebration"
+  },
+  "Spark summit": {
+    "ru": "Деловая встреча",
+    "en": "A business gathering"
+  },
+  "Techno vibe": {
+    "ru": "Вечерняя программа",
+    "en": "An evening programme"
+  },
+  "Health & Wellness": {
+    "ru": "Здоровье",
+    "en": "Wellness"
+  },
+  "Beauty & Skin Care": {
+    "ru": "Уход за кожей",
+    "en": "Skin care"
+  },
+  "Relaxation & Stress Relief": {
+    "ru": "Отдых и снятие напряжения",
+    "en": "Rest and relief"
+  },
+  "Lifestyle blogger & travel writer": {
+    "ru": "Автор о путешествиях",
+    "en": "Travel writer"
+  },
+  "Lifestyle storyteller & travel creator": {
+    "ru": "Автор путевых историй",
+    "en": "Travel storyteller"
+  },
+  "Travel blogger & lifestyle writer": {
+    "ru": "Автор о путешествиях",
+    "en": "Travel writer"
+  },
+  "02. What payment methods are accepted?": {
+    "ru": "02. Какие способы оплаты принимаются?",
+    "en": "02. What payment methods are accepted?"
+  },
+  "06. Are extra beds or cribs provided?": {
+    "ru": "06. Есть ли дополнительная кровать или детская кроватка?",
+    "en": "06. Are extra beds or cribs provided?"
+  },
+  "15 m², seyf, hammom, Wi-Fi": {
+    "ru": "15 м², сейф, ванная, Wi-Fi",
+    "en": "15 m², safe, bathroom, Wi-Fi"
+  },
+  "25 m², shahar manzarasi mumkin": {
+    "ru": "25 м², вид на город возможен",
+    "en": "25 m², a city view is possible"
+  },
+  "26 m², ikki karavot": {
+    "ru": "26 м², две кровати",
+    "en": "26 m², two beds"
+  },
+  "A'lo xizmat va tengsiz qulaylik uyg'unligi": {
+    "ru": "Сильный сервис и спокойный комфорт",
+    "en": "Careful service and easy comfort"
+  },
+  "Ajoyib ta'm va nafislik bilan shakllangan ovqatlanish tajribasi": {
+    "ru": "Вкус и спокойная подача за одним столом",
+    "en": "Dining shaped by flavour and a calm table"
+  },
+  "Aloqa — 1": {
+    "ru": "Контакты — 1",
+    "en": "Contact — 1"
+  },
+  "Aloqa — 2": {
+    "ru": "Контакты — 2",
+    "en": "Contact — 2"
+  },
+  "Aloqa — 3": {
+    "ru": "Контакты — 3",
+    "en": "Contact — 3"
+  },
+  "Aloqa one": {
+    "ru": "Контакты 1",
+    "en": "Contact 1"
+  },
+  "Aloqa two": {
+    "ru": "Контакты 2",
+    "en": "Contact 2"
+  },
+  "Aloqa three": {
+    "ru": "Контакты 3",
+    "en": "Contact 3"
+  },
+  "Banket": {
+    "ru": "Банкет",
+    "en": "Banquet"
+  },
+  "barcha mehmonlar uchun kirishda": {
+    "ru": "при заезде для всех гостей",
+    "en": "at check-in for every guest"
+  },
+  "Biznes yoki bayram — har bir tadbirni jonli, unutilmas va maxsus qilamiz": {
+    "ru": "Дела или праздник — каждое событие делаем живым и своим",
+    "en": "Business or a celebration — each event is made to feel specific"
+  },
+  "Bolalar uchun qulay": {
+    "ru": "Удобно для детей",
+    "en": "Comfortable for children"
+  },
+  "Bog', teras, restoran, bar va 24 soat qabulxona": {
+    "ru": "Сад, терраса, ресторан, бар и ресепшен 24 часа",
+    "en": "Garden, terrace, restaurant, bar and a 24-hour desk"
+  },
+  "Chinakam mehmondo'stlik": {
+    "ru": "Настоящее гостеприимство",
+    "en": "Genuine hospitality"
+  },
+  "Curated Gastronomy": {
+    "ru": "Кухня отеля",
+    "en": "The hotel kitchen"
+  },
+  "Dam olishni boshlang": {
+    "ru": "Начать отдых",
+    "en": "Begin the stay"
+  },
+  "Deluxe xona": {
+    "ru": "Номер Deluxe",
+    "en": "Deluxe room"
+  },
+  "Deluxe, king size": {
+    "ru": "Deluxe, king size",
+    "en": "Deluxe, king size"
+  },
+  "Elite SPA dam olishi": {
+    "ru": "Тихий отдых",
+    "en": "A quiet rest"
+  },
+  "Eng yaxshi dam olishingiz uchun bag'ishlangan jamoa": {
+    "ru": "Команда, которая встречает вас на ресепшен",
+    "en": "A team ready for you at reception"
+  },
+  "Halollik, g'amxo'rlik va fidoyilik — bu yerda yaratilgan har bir tajribaning asosi": {
+    "ru": "Внимание и забота — основа каждого пребывания",
+    "en": "Care and attention are the basis of each stay"
+  },
+  "Hamyonbop hashamat": {
+    "ru": "Спокойный комфорт",
+    "en": "Easy comfort"
+  },
+  "Har bir mehmon tajribasini chinakam unutilmas qilish": {
+    "ru": "Сделать пребывание каждого гостя запоминающимся",
+    "en": "Make each guest's stay memorable"
+  },
+  "Har bir mehmon uchun a'lo qulayliklar": {
+    "ru": "Удобства для каждого гостя",
+    "en": "Comforts for every guest"
+  },
+  "Har bir mehmonni chinakam g'amxo'rlik bilan kutib olamiz": {
+    "ru": "Встречаем каждого гостя с вниманием",
+    "en": "Every guest is welcomed with care"
+  },
+  "Har bir muolajada osoyishta hashamat va sog'lomlik": {
+    "ru": "Сад и терраса для тихого отдыха",
+    "en": "Garden and terrace for a quiet rest"
+  },
+  "Har bir taomda a'lo oshxona tajribasi": {
+    "ru": "Внимание к каждому блюду",
+    "en": "Care in every dish"
+  },
+  "Har yili ishonch bildiradigan iliq, barqaror va unutilmas dam olish": {
+    "ru": "Спокойный и ровный отдых, к которому возвращаются",
+    "en": "A steady, warm stay people return to"
+  },
+  "Hashamatni his eting": {
+    "ru": "Почувствуйте покой",
+    "en": "Feel the calm"
+  },
+  "Holistik shifo SPA": {
+    "ru": "Тихий двор",
+    "en": "Quiet courtyard"
+  },
+  "Holistik shifo SPA — muvozanat, farovonlik va ichki uyg'unlik uchun tabiiy terapiyalar": {
+    "ru": "Сад и терраса для покоя и передышки",
+    "en": "Garden and terrace for rest and a pause"
+  },
+  "Holistik SPA": {
+    "ru": "Тихий сад",
+    "en": "Quiet garden"
+  },
+  "Ijrochi xona": {
+    "ru": "Номер Deluxe",
+    "en": "Deluxe room"
+  },
+  "Ikki karavot, 26 m², Wi-Fi": {
+    "ru": "Две кровати, 26 м², Wi-Fi",
+    "en": "Two beds, 26 m², Wi-Fi"
+  },
+  "Ikki kishilik xona": {
+    "ru": "Двухместный номер",
+    "en": "Double room"
+  },
+  "Iliq mehmondo'stlik": {
+    "ru": "Тёплое гостеприимство",
+    "en": "Warm hospitality"
+  },
+  "Imzo SPA": {
+    "ru": "Сад отеля",
+    "en": "The hotel garden"
+  },
+  "Katta karavot, televizor": {
+    "ru": "Большая кровать, телевизор",
+    "en": "Large bed, television"
+  },
+  "Katta karavot, televizor, konditsioner": {
+    "ru": "Большая кровать, телевизор, кондиционер",
+    "en": "Large bed, television, air conditioning"
+  },
+  "Katta karavot, televizor, Wi-Fi": {
+    "ru": "Большая кровать, телевизор, Wi-Fi",
+    "en": "Large bed, television, Wi-Fi"
+  },
+  "Katta va maxsus bayramlar": {
+    "ru": "Большие и семейные встречи",
+    "en": "Large and family gatherings"
+  },
+  "Kichik mehmonlar o'zini uyda his qiladi — katta tabassum kafolatlangan": {
+    "ru": "Маленьким гостям здесь спокойно",
+    "en": "Younger guests can feel at ease here"
+  },
+  "King size karavot, fen, terlik, sochiqlar, televizor": {
+    "ru": "Кровать king size, фен, тапочки, полотенца, телевизор",
+    "en": "King-size bed, hairdryer, slippers, towels, television"
+  },
+  "King size, 25 m², hammom": {
+    "ru": "King size, 25 м², ванная",
+    "en": "King size, 25 m², bathroom"
+  },
+  "King size, televizor, Wi-Fi": {
+    "ru": "King size, телевизор, Wi-Fi",
+    "en": "King size, television, Wi-Fi"
+  },
+  "Korporativ va biznes tadbirlari": {
+    "ru": "Деловые встречи",
+    "en": "Business meetings"
+  },
+  "Mehmonlarimizning unutilmas dam olish haqidagi fikrlarini o'qing": {
+    "ru": "Читайте, что гости говорят об отдыхе",
+    "en": "Read what guests say about the stay"
+  },
+  "Mehmondo'stlik yillari": {
+    "ru": "Годы гостеприимства",
+    "en": "Years of hospitality"
+  },
+  "Modern Xonalar": {
+    "ru": "Современные номера",
+    "en": "Modern rooms"
+  },
+  "Moslashtiriladigan menyu": {
+    "ru": "Меню под событие",
+    "en": "A menu for the event"
+  },
+  "Nafis maydonlar va o'ylab topilgan qulayliklar — unutilmas to'y xotiralari": {
+    "ru": "Терраса и ресторан для семейной встречи",
+    "en": "Terrace and restaurant for a family gathering"
+  },
+  "Nafis va qulay dam olish uchun tanlangan qulayliklar": {
+    "ru": "Удобства для спокойного отдыха",
+    "en": "Amenities chosen for a calm stay"
+  },
+  "Nafis va zamonaviy": {
+    "ru": "Спокойно и современно",
+    "en": "Calm and modern"
+  },
+  "Nafis yoritish va bezak": {
+    "ru": "Свет и оформление",
+    "en": "Light and setting"
+  },
+  "O'rmon gullari SPA": {
+    "ru": "Сад",
+    "en": "Garden"
+  },
+  "Oshxonamizning yuragini ko'rsatadigan eng mashhur taomlar": {
+    "ru": "Блюда, которые чаще всего заказывают",
+    "en": "The dishes guests ask for most"
+  },
+  "Oson qulaylik va zamonaviy uslub beradigan nafis maydonlarni kashf eting": {
+    "ru": "Номера с простым комфортом и современным видом",
+    "en": "Rooms with straightforward comfort and a modern look"
+  },
+  "Osoyishtalik SPA": {
+    "ru": "Тихий отдых",
+    "en": "A quiet rest"
+  },
+  "ovqatlanish tajribasi": {
+    "ru": "опыт ужина",
+    "en": "the dining"
+  },
+  "Qahva to'plami": {
+    "ru": "Кофе",
+    "en": "Coffee"
+  },
+  "Qo'llab-quvvatlash jamoamiz 24/7 bron, savol va maxsus so'rovlar bo'yicha yordam beradi": {
+    "ru": "Ресепшен 24 часа помогает с бронью, вопросами и просьбами",
+    "en": "The 24-hour desk helps with bookings, questions and requests"
+  },
+  "Qulaylik": {
+    "ru": "Комфорт",
+    "en": "Comfort"
+  },
+  "Qulaylik uchun yaratilgan zamonaviy maydonlar": {
+    "ru": "Современные комнаты для спокойного пребывания",
+    "en": "Modern rooms made for an easy stay"
+  },
+  "Qulaylik va dam olish uchun o'ylab yaratilgan imkoniyatlar": {
+    "ru": "Удобства, продуманные для отдыха",
+    "en": "Amenities planned for the stay"
+  },
+  "Qulaylik va nafislik uchun yaratilgan makonda abadiy xotiralar yarating": {
+    "ru": "Сад, терраса и ресторан для спокойной встречи",
+    "en": "Garden, terrace and restaurant for an easy gathering"
+  },
+  "Qulaylik, uslub va dam olish uchun yaratilgan xonalar — chinakam unutilmas dam olish": {
+    "ru": "Номера для комфорта и отдыха",
+    "en": "Rooms made for comfort and rest"
+  },
+  "Qulaylikni his eting": {
+    "ru": "Почувствуйте комфорт",
+    "en": "Feel the comfort"
+  },
+  "Sifat va qulaylik": {
+    "ru": "Качество и комфорт",
+    "en": "Quality and comfort"
+  },
+  "Silliq va do'stona kelish": {
+    "ru": "Спокойный и ясный заезд",
+    "en": "A clear and easy arrival"
+  },
+  "Siz uchun yaratilgan tinchlantiruvchi muolajalar bilan tanani va ruhni dam oldiring": {
+    "ru": "Сад и терраса, чтобы остановиться и выдохнуть",
+    "en": "Garden and terrace, a place to pause"
+  },
+  "Sof qulaylikda uxlang": {
+    "ru": "Спите в простом комфорте",
+    "en": "Sleep in straightforward comfort"
+  },
+  "Standart xona": {
+    "ru": "Стандартный номер",
+    "en": "Standard room"
+  },
+  "tadbirni rejalashtiring": {
+    "ru": "спланируйте встречу",
+    "en": "plan the gathering"
+  },
+  "Tashqi/teras o'rindiqlari": {
+    "ru": "Места на террасе",
+    "en": "Terrace seating"
+  },
+  "Teri sog'lig'i va tabiiy porlashini oshiradigan yangilovchi terapiyalar": {
+    "ru": "Тихий отдых в саду и на террасе",
+    "en": "A quiet rest in the garden and on the terrace"
+  },
+  "Tez va do'stona kirish!": {
+    "ru": "Быстрый и спокойный заезд",
+    "en": "A quick and easy check-in"
+  },
+  "Tez va sodda kirish": {
+    "ru": "Быстрый и простой заезд",
+    "en": "A quick and simple check-in"
+  },
+  "Tinch boshpana SPA": {
+    "ru": "Тихий двор",
+    "en": "Quiet courtyard"
+  },
+  "Tinch makon SPA": {
+    "ru": "Тихое место",
+    "en": "A quiet place"
+  },
+  "Uslub bilan tortilgan mazali taomlar": {
+    "ru": "Блюда, поданные аккуратно",
+    "en": "Dishes served with care"
+  },
+  "Uslubli qulaylik va premium qulayliklar — hamyonbop narxda": {
+    "ru": "Комфорт номера. Цену уточняйте на ресепшен",
+    "en": "Room comfort. Ask reception for the price"
+  },
+  "Valet xizmati mavjud": {
+    "ru": "Помощь с парковкой",
+    "en": "Help with parking"
+  },
+  "Xizmat haqida": {
+    "ru": "Об услуге",
+    "en": "About the service"
+  },
+  "Xizmat mukammalligi": {
+    "ru": "Внимательный сервис",
+    "en": "Careful service"
+  },
+  "xona sahifasi tafsilotlari": {
+    "ru": "страница номера",
+    "en": "room page"
+  },
+  "Xona tozalash": {
+    "ru": "Уборка номера",
+    "en": "Housekeeping"
+  },
+  "Xona xizmati imkoniyati": {
+    "ru": "Обслуживание в номер",
+    "en": "Room service"
+  },
+  "Yangilanish SPA": {
+    "ru": "Передышка",
+    "en": "A pause"
+  },
+  "Yaxshi jihozlangan mehmon xonalari": {
+    "ru": "Хорошо оснащённые номера",
+    "en": "Well-equipped rooms"
+  },
+  "Yillar tajribasi": {
+    "ru": "Годы опыта",
+    "en": "Years of experience"
+  },
+  "Yuqori qulaylik, iliq xizmat va unutilmas dam olish uchun biz bilan qoling": {
+    "ru": "Остановитесь ради комфорта, внимания и спокойного отдыха",
+    "en": "Stay for the comfort, the care and a calm rest"
+  },
+  "Blog one": {
+    "ru": "Блог 1",
+    "en": "Blog 1"
+  },
+  "Blog One": {
+    "ru": "Блог 1",
+    "en": "Blog 1"
+  },
+  "Blog two": {
+    "ru": "Блог 2",
+    "en": "Blog 2"
+  },
+  "Blog Two": {
+    "ru": "Блог 2",
+    "en": "Blog 2"
+  },
+  "Blog three": {
+    "ru": "Блог 3",
+    "en": "Blog 3"
+  },
+  "Blog Three": {
+    "ru": "Блог 3",
+    "en": "Blog 3"
+  },
+  "all": {
+    "ru": "все",
+    "en": "all"
+  },
+  "Seyf, alohida hammom, televizor, elektr choynak, ish stoli": {
+    "ru": "Сейф, отдельная ванная, телевизор, чайник, стол",
+    "en": "Safe, private bathroom, TV, kettle, desk"
+  },
+  "Seyf, fen, ish stoli": {
+    "ru": "Сейф, фен, рабочий стол",
+    "en": "Safe, hairdryer, desk"
+  },
+  "Shaxsiy xizmat": {
+    "ru": "Личное внимание",
+    "en": "Personal attention"
+  },
+  "Shifo tegishi SPA": {
+    "ru": "Тихий сад",
+    "en": "Quiet garden"
+  },
+  "Samarqandda, Shohruh Mirzo ko'chasi, 126-uyda: bog', teras, restoran va bar. 24 soat qabulxona, aeroport transferi va har kuni bufet nonushta": {
+    "ru": "В Самарканде, ул. Шохруха Мирзо, 126: сад, терраса, ресторан и бар. Ресепшен 24 часа, трансфер и завтрак-буфет каждый день",
+    "en": "In Samarkand, 126 Shahrukh Mirzo Street: garden, terrace, restaurant and bar. A 24-hour desk, a shuttle and daily buffet breakfast"
+  },
+  "Shohruh Mirzo ko'chasi, 126-uy, Samarqand. Bog', teras, restoran va bar. Narxni qabulxonadan so'rang.": {
+    "ru": "ул. Шохруха Мирзо, 126, Самарканд. Сад, терраса, ресторан и бар. Цену уточняйте на ресепшен.",
+    "en": "126 Shahrukh Mirzo Street, Samarkand. Garden, terrace, restaurant and bar. Ask reception for the price."
+  },
+  "Kechga qadar mazali taom va gazaklar — tungi ishtaha yoki uzoq kundagi dam olishdan keyin.": {
+    "ru": "Блюда и закуски до вечера — после долгого дня или позднего аппетита.",
+    "en": "Food and snacks into the evening, after a long day or a late appetite."
+  },
+  "Osoyishtalik SPA — muvozanat, dam olish va ichki tinchlik uchun tinchlantiruvchi muolajalar": {
+    "ru": "Сад и терраса для покоя и передышки",
+    "en": "Garden and terrace for rest and a pause"
+  },
+  "Zamonaviy qulayliklar va professional maydonlar — samarali uchrashuv va korporativ tadbirlar": {
+    "ru": "Ресторан и терраса для встречи и спокойного разговора",
+    "en": "Restaurant and terrace for a meeting and an easy conversation"
+  },
+  "Mehmonlar ishonchli qulaylik, e'tiborli xizmat va chinakam mehmondo'stlik uchun bizni tanlaydi": {
+    "ru": "Гости выбирают нас за комфорт, внимание и спокойный приём",
+    "en": "Guests choose the hotel for comfort, attention and a calm welcome"
+  },
+  "Jamoamiz ehtiyojlaringizni oldindan bilib, silliq va yoqimli dam olish uchun shaxsiy xizmat ko'rsatadi": {
+    "ru": "Ресепшен помогает с номером, завтраком и трансфером",
+    "en": "Reception helps with the room, breakfast and the shuttle"
+  },
+  "Premium ichimliklar, yangi mahsulotlar va nafis taqdimot uyg'unlashgan kokteyllardan bahramand bo'ling": {
+    "ru": "В баре есть напитки к ужину. Состав уточняйте у официанта.",
+    "en": "The bar serves drinks with dinner. Ask the waiter what is on offer."
+  },
+  "SPA muolajalari stressni kamaytiradi, charchagan mushaklarni tinchlantiradi va to'liq dam olishni beradi": {
+    "ru": "Сад и терраса дают передышку после дороги",
+    "en": "The garden and terrace are a pause after the journey"
+  },
+  "Sog'liqqa yo'naltirilgan SPA muolajalari qon aylanishini yaxshilaydi, detoks qiladi va hayotiylikni qo'llab-quvvatlaydi": {
+    "ru": "Тихий двор и терраса для отдыха между прогулками",
+    "en": "A quiet courtyard and terrace between walks in the city"
+  },
+  "Birinchi qo'ng'iroqdan yakungacha hammasi aniq va yaxshi boshqarildi. Savollarga doimo ochiq javob berishdi. Jarayon kutganimizdan ancha oson bo'ldi.": {
+    "ru": "От первого звонка всё было ясно. На вопросы отвечали прямо. Это оказалось проще, чем мы ждали.",
+    "en": "From the first call everything was clear. Questions got a direct answer. It was simpler than we expected."
+  },
+  "Jarayon boshidan oxirigacha silliq va tartibli bo'ldi. Narx bo'yicha aniq yo'l-yo'riq, ishonchli muzokara va shaffof aloqa. Natija kutganimizdan oshdi.": {
+    "ru": "Всё прошло спокойно и по порядку. Цену объяснили ясно, связь была прямой. Результат оказался лучше ожидания.",
+    "en": "It stayed orderly from start to finish. The price was explained clearly. The result was better than expected."
+  },
+  "Zamonaviy xonalar, shaxsiy xizmat va premium qulayliklarga ega mehmonxonamizda qulaylik va nafislikni his eting. Har bir detal unutilmas dam olish uchun o'ylab topilgan.": {
+    "ru": "Современные номера, внимание ресепшен и удобства отеля. Детали собраны для спокойного отдыха.",
+    "en": "Modern rooms, a careful desk and the hotel's amenities, arranged for a calm stay."
+  },
+  "Mehmonxonamiz oilalar uchun: bola-do'stona xonalar, qiziqarli mashg'ulotlar va kichik mehmonlar uchun o'ylab topilgan qulayliklar. Har bir detal tabassum va oilaviy xotiralar uchun": {
+    "ru": "Для семей: номера, в которых удобно с детьми. Подробности уточняйте на ресепшен.",
+    "en": "For families: rooms that work with children. Ask reception for the details."
+  },
+  "Strategiya, ilhom va hissiyotni bog'laydigan tanlangan hikoyalar, mutaxassis fikrlari va amaliy maslahatlar. Har bir maqola foydali, qiziqarli va unutilmas tajriba yaratishga yordam beradi.": {
+    "ru": "Короткие заметки об отдыхе в Самарканде. Это шаблонные тексты, их заменим.",
+    "en": "Short notes about a stay in Samarkand. These are still template texts."
+  },
+  "Jarayon dastlab murakkab tuyulgan edi, ammo jamoa hammasi osonlashtirdi. Har bosqichda xabardor qilishdi, tez javob berishdi va muammolarni oldindan hal qilishdi. Doimo qo'llab-quvvatlanganlikni his qildik.": {
+    "ru": "Сначала казалось сложно, но на ресепшен всё упростили. На каждом шаге отвечали быстро.",
+    "en": "It looked complicated at first, but reception made it simple and answered quickly at each step."
+  },
+  "Gur Emir Palacega xush kelibsiz — qulaylik va nafislik uyg'unligi. Keng zamonaviy xonalar, shaxsiy xizmat va premium qulayliklar. Nafis ovqatlanishdan lounge va dam olish zonalarigacha — har bir detal siz uchun": {
+    "ru": "Добро пожаловать в Gur Emir Palace. Современные номера, ресепшен, ресторан, бар, сад и терраса.",
+    "en": "Welcome to Gur Emir Palace. Modern rooms, a reception desk, a restaurant, a bar, a garden and a terrace."
+  },
+  "Deluxe, king sizeimiz — kenglik, uslub va qulaylikni qadrlaydigan mehmonlar uchun. Nafis interyer, premium jihozlar va zamonaviy qulayliklar dam olishingizni yuksaltiradi. Biznes yoki maxsus dam olish uchun ideal tanlov": {
+    "ru": "Deluxe king size — для гостей, которым важны простор и комфорт. Кровать king size, ванная и удобства номера.",
+    "en": "Deluxe king size is for guests who want space and comfort. A king-size bed, a bathroom and the room's fittings."
+  },
+  "Imzo SPA — chuqur dam olish, nafis qulaylik va uzoq muddatli yangilanish uchun eksklyuziv muolajalar": {
+    "ru": "Сад и терраса для долгого спокойного отдыха. Отдельного SPA нет.",
+    "en": "Garden and terrace for a long, quiet rest. There is no separate spa."
+  },
+  "Bitta katta karavot": {
+    "ru": "Одна большая кровать",
+    "en": "One large bed"
+  },
+  "Ikki alohida karavot": {
+    "ru": "Две отдельные кровати",
+    "en": "Two separate beds"
+  },
+  "Juftliklar va dam olish kunlari": {
+    "ru": "Пары и выходные",
+    "en": "Couples and weekends"
+  },
+  "Dam oluvchilar va asal oyi juftliklari": {
+    "ru": "Гости и пары",
+    "en": "Guests and couples"
+  },
+  "Juftliklar va sayyohlar": {
+    "ru": "Пары и путешественники",
+    "en": "Couples and travellers"
+  },
+  "Uslub qo'llanmasi": {
+    "ru": "Руководство по стилю",
+    "en": "Style guide"
+  },
+  "Ranglar": {
+    "ru": "Цвета",
+    "en": "Colours"
+  },
+  "Yakka sayohatchilar": {
+    "ru": "Один путешественник",
+    "en": "Solo travellers"
+  },
+  "Aloqa us": {
+    "ru": "Связаться",
+    "en": "Contact us"
+  },
+  "Bloglarimizni ko'ring": {
+    "ru": "Читать блог",
+    "en": "Read the blog"
+  },
+  "Date": {
+    "ru": "Дата",
+    "en": "Date"
+  },
+  "21-yanvar, 2026": {
+    "ru": "21 января 2026",
+    "en": "21 January 2026"
+  },
+  "Category": {
+    "ru": "Рубрика",
+    "en": "Category"
+  },
+  "Ovqat menyusi": {
+    "ru": "Меню",
+    "en": "Menu"
+  },
+  "Mehmonxona tadbiri": {
+    "ru": "Событие отеля",
+    "en": "Hotel event"
+  },
+  "Sayohat va mehmonxona": {
+    "ru": "Путешествие и отель",
+    "en": "Travel and the hotel"
+  },
+  "Tasty food": {
+    "ru": "Вкусная еда",
+    "en": "Tasty food"
+  },
+  "Weekend holiday": {
+    "ru": "Выходные",
+    "en": "Weekend"
+  },
+  "United kingdom": {
+    "ru": "Великобритания",
+    "en": "United Kingdom"
+  },
+  "HAR BIR MEHMONXONA DAM OLISHINI UNUTILMAS QILADIGAN HIKOYA VA MA'LUMOTLARNI KASHF ETING": {
+    "ru": "ИСТОРИИ И ЗАМЕТКИ, КОТОРЫЕ ДЕЛАЮТ ОТДЫХ В ОТЕЛЕ ЗАПОМИНАЮЩИМСЯ",
+    "en": "STORIES AND NOTES THAT MAKE A HOTEL STAY MEMORABLE"
+  },
+  "Tanlangan hikoyalar va ichki ma'lumotlar orqali chinakam mehmondo'stlikni his eting. Nafis xonalar, ilhomli ovqatlanish, e'tiborli xizmat va mahalliy tajribalar — har bir dam olishni unutilmas qiladi.": {
+    "ru": "Короткие истории о гостеприимстве: номера, кухня, внимание ресепшен и Самарканд.",
+    "en": "Short stories about hospitality: the rooms, the kitchen, the desk and Samarkand."
+  },
+  "HASHAMATLI XONALARDAN MAHALLIY JAVOHIRLARGACHA — BLOGIMIZ HAR BIR DAM OLISHNI ABADIY XOTIRAGA AYLANTIRADI": {
+    "ru": "ОТ НОМЕРОВ ДО ГОРОДА — ЗАМЕТКИ, ЧТОБЫ ОТДЫХ ОСТАЛСЯ В ПАМЯТИ",
+    "en": "FROM THE ROOMS TO THE CITY — NOTES SO THE STAY STAYS WITH YOU"
+  },
+  "UNUTILMAS TAJRIBALAR UCHUN STRATEGIYA, ILHOM VA HISSIYOTNI BOG'LOVCHI HIKOYA, MASLAHAT VA MA'LUMOTLAR": {
+    "ru": "ИСТОРИИ И СОВЕТЫ, КОТОРЫЕ СВЯЗЫВАЮТ ПЛАН, НАСТРОЕНИЕ И ОТДЫХ",
+    "en": "STORIES AND ADVICE THAT TIE THE PLAN, THE MOOD AND THE STAY"
+  },
+  "MEHMONDO'STLIK YURAGINI OCHADIGAN VA HAR BIR DAM OLISHNI UNUTILMAS QILADIGAN HIKOYA VA MASLAHATLAR": {
+    "ru": "ИСТОРИИ И СОВЕТЫ О ГОСТЕПРИИМСТВЕ И СПОКОЙНОМ ОТДЫХЕ",
+    "en": "STORIES AND ADVICE ABOUT HOSPITALITY AND A CALM STAY"
+  },
+  "Tegishli blog maqolalari": {
+    "ru": "Похожие записи",
+    "en": "Related posts"
+  },
+  "Mehmondo'stlik kontent muharriri": {
+    "ru": "Редактор",
+    "en": "Editor"
+  },
+  "Sayohat tajribasi blogeri": {
+    "ru": "Автор о путешествиях",
+    "en": "Travel writer"
+  },
+  "Mehmonxona tajribasi sharhlovchisi": {
+    "ru": "Автор об отеле",
+    "en": "Hotel writer"
+  },
+  "Travel story specialist": {
+    "ru": "Автор историй",
+    "en": "Travel story specialist"
+  }
+}
