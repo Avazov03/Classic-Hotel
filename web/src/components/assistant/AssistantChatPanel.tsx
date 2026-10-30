@@ -2,10 +2,33 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
+import type { AssistantCard } from "@/lib/assistantCards";
 import { ASSISTANT_NAME, getContextualSuggestions } from "./assistantContext";
 import { useAssistant } from "./AssistantProvider";
 
-type ChatMessage = { role: "user" | "assistant"; content: string };
+type ChatMessage = {
+  role: "user" | "assistant";
+  content: string;
+  cards?: AssistantCard[];
+};
+
+function AssistantCards({ cards }: { cards: AssistantCard[] }) {
+  return (
+    <div className="assistant-chat__cards">
+      {cards.map((card) => (
+        <a key={card.href + card.title} href={card.href} className="assistant-chat__card">
+          <img className="assistant-chat__card-img assistant-chat__card-img--photo" src={card.image} alt={card.title} />
+          <span className="assistant-chat__card-body">
+            <span className="assistant-chat__card-title">{card.title}</span>
+            <span className="assistant-chat__card-meta">{card.meta}</span>
+            {card.facts ? <span className="assistant-chat__card-desc">{card.facts}</span> : null}
+            <span className="assistant-chat__card-open">Sahifani ochish</span>
+          </span>
+        </a>
+      ))}
+    </div>
+  );
+}
 
 function IconNewChat() {
   return (
@@ -106,11 +129,18 @@ export function AssistantChatPanel() {
             pageContext: { path: pathname, locale },
           }),
         });
-        const data = (await res.json()) as { reply?: string; error?: string };
+        const data = (await res.json()) as {
+          reply?: string;
+          error?: string;
+          cards?: AssistantCard[];
+        };
         if (!res.ok || !data.reply) {
           throw new Error(data.error || "Javob olishda xatolik");
         }
-        setMessages([...nextMessages, { role: "assistant", content: data.reply }]);
+        setMessages([
+          ...nextMessages,
+          { role: "assistant", content: data.reply, cards: data.cards ?? [] },
+        ]);
       } catch (err) {
         setError(err instanceof Error ? err.message : "Javob olishda xatolik. Keyinroq urinib ko‘ring.");
         setMessages(messages);
@@ -168,7 +198,14 @@ export function AssistantChatPanel() {
           <div className="assistant-chat__messages">
             {messages.map((m, i) => (
               <div key={`${m.role}-${i}`} className={`assistant-chat__msg assistant-chat__msg--${m.role}`}>
-                {m.role === "assistant" ? <MessageText text={m.content} /> : m.content}
+                {m.role === "assistant" ? (
+                  <>
+                    <MessageText text={m.content} />
+                    {m.cards && m.cards.length > 0 ? <AssistantCards cards={m.cards} /> : null}
+                  </>
+                ) : (
+                  m.content
+                )}
               </div>
             ))}
             {loading && (

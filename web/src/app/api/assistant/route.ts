@@ -1,5 +1,6 @@
 import { GoogleGenerativeAI, type Content } from "@google/generative-ai";
 import { NextResponse } from "next/server";
+import { pickAssistantCards } from "@/lib/assistantCards";
 import { hotelKnowledge, pageFocus } from "@/lib/assistantKnowledge";
 
 const SYSTEM_PROMPT = `Sen mehmonxona saytining rasmiy yordamchisisan. Noming Komakchi AI.
@@ -8,7 +9,8 @@ VAZIFA:
 - Mehmonlarga xonalar, nonushta, restoran, teras, bog‘, qabulxona va bron haqida yordam ber.
 - Faqat berilgan MA'LUMOTDAGI faktlardan foydalan. Narx, telefon, ko‘cha, shahar nomi, dengiz, basseyn, spa muolajasi yoki bandlikni o‘ylab topma.
 - Bilmasang: qisqa ayt va /contact formasiga yo‘naltir.
-- Havolani oddiy matn qilib yoz: /rooms yoki /contact.
+- Havolani oddiy matn qilib yoz: /rooms/standard-room, /rooms/sea-view-room, /rooms/executive-suite, /rooms, /restaurant yoki /contact.
+- Rasm manzilini yozma. Xona, restoran yoki bron haqida so‘ralsa, nomini aniq ayt — rasmli kartochka alohida chiqadi.
 - Markdown ishlatma: ** * # belgilarisiz.
 
 USLUB:
@@ -125,7 +127,8 @@ export async function POST(request: Request) {
       const result = await chat.sendMessage(message);
       const reply = result.response.text().trim();
       if (!reply) throw new Error("bo‘sh javob");
-      return NextResponse.json({ reply });
+      const cards = pickAssistantCards(message, reply, path);
+      return NextResponse.json({ reply, cards });
     } catch (err) {
       const msg = err instanceof Error ? err.message : String(err);
       lastMessage = msg;
