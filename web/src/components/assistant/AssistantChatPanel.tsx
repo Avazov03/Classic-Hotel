@@ -16,13 +16,14 @@ function AssistantCards({ cards }: { cards: AssistantCard[] }) {
   return (
     <div className="assistant-chat__cards">
       {cards.map((card) => (
-        <a key={card.href + card.title} href={card.href} className="assistant-chat__card">
+        <a key={card.href + card.title} href={card.href} className={`assistant-chat__card assistant-chat__card--${card.tone}`}>
           <img className="assistant-chat__card-img assistant-chat__card-img--photo" src={card.image} alt={card.title} />
           <span className="assistant-chat__card-body">
             <span className="assistant-chat__card-title">{card.title}</span>
             <span className="assistant-chat__card-meta">{card.meta}</span>
             {card.facts ? <span className="assistant-chat__card-desc">{card.facts}</span> : null}
-            <span className="assistant-chat__card-open">Sahifani ochish</span>
+            {card.blurb ? <span className="assistant-chat__card-note">{card.blurb}</span> : null}
+            <span className="assistant-chat__card-open">{card.action}</span>
           </span>
         </a>
       ))}

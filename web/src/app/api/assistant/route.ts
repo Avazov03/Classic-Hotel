@@ -1,22 +1,30 @@
 import { GoogleGenerativeAI, type Content } from "@google/generative-ai";
 import { NextResponse } from "next/server";
-import { pickAssistantCards } from "@/lib/assistantCards";
+import { assistantGuide } from "@/lib/assistantCards";
 import { hotelKnowledge, pageFocus } from "@/lib/assistantKnowledge";
 
-const SYSTEM_PROMPT = `Sen mehmonxona saytining rasmiy yordamchisisan. Noming Komakchi AI.
+const SYSTEM_PROMPT = `Sen mehmonxona qabulxonasidagi suhbatdoshisan. Noming "Ko‘makchi AI". "Komakchi" deb yozma: o‘ harfi bor.
 
-VAZIFA:
-- Mehmonlarga xonalar, nonushta, restoran, teras, bog‘, qabulxona va bron haqida yordam ber.
-- Faqat berilgan MA'LUMOTDAGI faktlardan foydalan. Narx, telefon, ko‘cha, shahar nomi, dengiz, basseyn, spa muolajasi yoki bandlikni o‘ylab topma.
-- Bilmasang: qisqa ayt va /contact formasiga yo‘naltir.
-- Havolani oddiy matn qilib yoz: /rooms/standard-room, /rooms/sea-view-room, /rooms/executive-suite, /rooms, /restaurant yoki /contact.
-- Rasm manzilini yozma. Xona, restoran yoki bron haqida so‘ralsa, nomini aniq ayt — rasmli kartochka alohida chiqadi.
-- Markdown ishlatma: ** * # belgilarisiz.
+TIL:
+- O‘zbekcha gap sintaktik jihatdan to‘g‘ri bo‘lsin. Qo‘shimcha so‘zga yopishadi: "xonasini", "qabulxonaga", "Ko‘makchi AIni", "Ko‘makchi AIdan".
+- "AI ni", "AI dan", "AI ga", "xona ni" kabi bo‘sh joy bilan yozma. Bu sintaksis xato.
+- o‘ va g‘ harflarini to‘g‘ri yoz: o‘, g‘.
 
-USLUB:
-- Javobni so‘ralgan tilda ber: uz o‘zbekcha, ru ruscha, en inglizcha.
-- Qisqa, muloyim, 2–6 jumla. Ro‘yxat kerak bo‘lsa 1. 2. 3.
-- Mehmon hozir qaysi sahifada ekanini hisobga ol va shu sahifaga tegishli javobdan boshla.`;
+SUHBAT:
+- Mehmon bilan oddiy, muloyim va jonli gaplash. Savol shu mehmonxonadan kelib chiqsa, o‘sha mavzuda bemalol davom et.
+- Oldingi xabarlarni esla. "Ha", "shu", "yana", "narxi-chi", "bron qilaman" desa, oxirgi mavzuni tushunib javob ber.
+- Har javobda qaytadan salomlashma va o‘zingni tanishtirma. Ismingni faqat mehmon so‘rasa ayt.
+- Rahmat yoki "tushundim" desa, qisqa insoniy javob ber. Kerak bo‘lsa bitta aniqlovchi savol qo‘y.
+- Javob tili mehmonniki: uz o‘zbekcha, ru ruscha, en inglizcha.
+- 2–5 jumla. Ro‘yxat kerak bo‘lsa 1. 2. 3. Markdown ishlatma.
+
+FAKT:
+- Faqat berilgan ma’lumot. Narx, telefon, ko‘cha, shahar nomi, dengiz, basseyn, spa muolajasi va bandlikni o‘ylab topma.
+- Mehmon so‘zni xato yozishi mumkin (hona = xona). Ma’noni tushun, yangi fakt qo‘shma.
+- Joy bron qilish: sayt band qilmaydi va to‘lov olmaydi. /contact formasini ayt. Narx va bo‘sh xonani qabulxona tasdiqlaydi. "Bron qilindi" deb yozma.
+- Bilmasang ochiq ayt va /contact ga yo‘naltir.
+- Havolani oddiy matn qilib yoz. Rasm manzilini yozma. Kartochka alohida chiqadi.
+- Qavs ichidagi ichki yo‘riqni javobga yozma.`;
 
 const MODELS = ["gemini-3.5-flash-lite", "gemini-3.8-flash"];
 
@@ -106,7 +114,7 @@ export async function POST(request: Request) {
       role: "model",
       parts: [
         {
-          text: "Tushundim. Faqat berilgan ma’lumotdan javob beraman, narx va telefonni o‘ylab topmayman, kerak bo‘lsa /contact ga yo‘naltiraman.",
+          text: "Tushundim. Mehmon bilan suhbatni eslab davom ettiraman, o‘zimni qayta tanishtirmayman, faqat berilgan ma’lumotdan gapiraman.",
         },
       ],
     },
@@ -121,13 +129,18 @@ export async function POST(request: Request) {
       const model = genAI.getGenerativeModel({
         model: modelName,
         systemInstruction: SYSTEM_PROMPT,
-        generationConfig: { temperature: 0.4, maxOutputTokens: 800 },
+        generationConfig: { temperature: 0.6, maxOutputTokens: 900 },
       });
       const chat = model.startChat({ history: chatHistory });
-      const result = await chat.sendMessage(message);
+      const earlier = history
+        .filter((turn) => turn.role === "user")
+        .slice(-3)
+        .map((turn) => turn.content)
+        .join("\n");
+      const { cards, hint } = assistantGuide(message, path, earlier);
+      const result = await chat.sendMessage(`${message}\n\n[Ichki yo‘riq, javobga yozma: ${hint}]`);
       const reply = result.response.text().trim();
       if (!reply) throw new Error("bo‘sh javob");
-      const cards = pickAssistantCards(message, reply, path);
       return NextResponse.json({ reply, cards });
     } catch (err) {
       const msg = err instanceof Error ? err.message : String(err);

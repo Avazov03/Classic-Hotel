@@ -134,10 +134,9 @@
   border-radius: 999px;
   background: rgba(140, 106, 47, 0.14);
   color: #6e5426;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  letter-spacing: 0;
 }
 
 .assistant-fab__bubble-label::before {
@@ -684,6 +683,17 @@
 .assistant-chat__card-img--photo {
   width: 112px;
   height: 80px;
+}
+
+.assistant-chat__card--booking {
+  background: #fbf7ef;
+  border-color: #e4d3a8;
+}
+
+.assistant-chat__card-note {
+  font-size: 0.78rem;
+  line-height: 1.35;
+  color: var(--as-text);
 }
 
 .assistant-chat__card-open {

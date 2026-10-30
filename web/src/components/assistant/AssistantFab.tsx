@@ -283,7 +283,7 @@ export function AssistantFab() {
       <button
         type="button"
         className="assistant-fab__btn"
-        aria-label={`${ASSISTANT_NAME}ni ochish yoki sudrab joylashtiring`}
+        aria-label={`${ASSISTANT_NAME} bilan gaplashish yoki joyini surish`}
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={finishDrag}
