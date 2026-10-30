@@ -2,7 +2,7 @@ import { GoogleGenerativeAI, type Content } from "@google/generative-ai";
 import { NextResponse } from "next/server";
 import { hotelKnowledge, pageFocus } from "@/lib/assistantKnowledge";
 
-const SYSTEM_PROMPT = `Sen mehmonxona saytining rasmiy yordamchisisan. Nomining Mehmonxona AI.
+const SYSTEM_PROMPT = `Sen mehmonxona saytining rasmiy yordamchisisan. Noming Komakchi AI.
 
 VAZIFA:
 - Mehmonlarga xonalar, nonushta, restoran, teras, bog‘, qabulxona va bron haqida yordam ber.

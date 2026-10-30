@@ -87,7 +87,6 @@ export function AssistantFab() {
     originY: 0,
     moved: false,
   });
-
   const clearDismissTimer = useCallback(() => {
     if (greetingDismissRef.current) {
       clearTimeout(greetingDismissRef.current);
@@ -110,6 +109,14 @@ export function AssistantFab() {
   useEffect(() => {
     const size = getFabSize();
     setPos(readSavedPos(size) ?? defaultPos(size));
+  }, []);
+
+  useEffect(() => {
+    const onResize = () => {
+      setPos((current) => (current ? clampPos(current.x, current.y, getFabSize()) : current));
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
   }, []);
 
   useEffect(() => {
@@ -180,14 +187,6 @@ export function AssistantFab() {
     };
   }, [greetingVisible]);
 
-  useEffect(() => {
-    const onResize = () => {
-      setPos((current) => (current ? clampPos(current.x, current.y, getFabSize()) : current));
-    };
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
-  }, []);
-
   const savePos = useCallback((next: Pos) => {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
@@ -250,7 +249,7 @@ export function AssistantFab() {
     <div
       className={`assistant-fab${dragging ? " assistant-fab--dragging" : ""}${open ? " assistant-fab--hidden" : ""}${showGreeting ? " assistant-fab--greeting" : ""}`}
       style={{ left: pos.x, top: pos.y }}
-      aria-label={`${ASSISTANT_NAME} yordamchi`}
+      aria-label={ASSISTANT_NAME}
     >
       {showGreeting && (
         <div
@@ -284,7 +283,7 @@ export function AssistantFab() {
       <button
         type="button"
         className="assistant-fab__btn"
-        aria-label={`${ASSISTANT_NAME} yordamchini ochish yoki sudrab joylashtiring`}
+        aria-label={`${ASSISTANT_NAME}ni ochish yoki sudrab joylashtiring`}
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={finishDrag}

@@ -54,6 +54,12 @@ a.w-webflow-badge {
   pointer-events: none !important;
 }
 
+/* Taklif kartasi robotning ustida qoladi, raqamlar yopilmaydi */
+.rt-hero-v1-right-part {
+  position: relative !important;
+  bottom: 7.75rem !important;
+}
+
 .rt-hero-v1-play-button-line {
   position: absolute !important;
   top: 35% !important;

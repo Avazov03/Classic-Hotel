@@ -128,7 +128,7 @@ export function AssistantChatPanel() {
     <div
       className={`assistant-chat${expanded ? " assistant-chat--expanded" : ""}`}
       role="dialog"
-      aria-label={`${ASSISTANT_NAME} yordamchi`}
+      aria-label={ASSISTANT_NAME}
     >
       <header className="assistant-chat__header">
         <h2 className="assistant-chat__title">{ASSISTANT_NAME}</h2>

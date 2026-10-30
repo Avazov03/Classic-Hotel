@@ -2,10 +2,10 @@ export type SuggestionChip = { text: string; align: "left" | "right" };
 
 const GREETED_STORAGE_KEY = "guremir-assistant-greeted";
 
-export const ASSISTANT_NAME = "Mehmonxona AI";
+export const ASSISTANT_NAME = "Komakchi AI";
 
 const BASE_GREETING =
-  "Salom! Men Mehmonxona AI — mehmonxona yordamchisiman. Sizga qanday yordam bera olaman?";
+  "Salom! Men Komakchi AI. Sizga qanday yordam bera olaman?";
 
 const DEFAULT_SUGGESTIONS: SuggestionChip[] = [
   { text: "Mehmonxonada nimalar bor?", align: "left" },
