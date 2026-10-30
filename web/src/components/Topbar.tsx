@@ -1,9 +1,9 @@
 import styles from "./Topbar.module.css";
 
 const OFFERS = [
-  "Yangi yil taklifi: barcha bronlar uchun bepul xona yangilash",
-  "Sayt maxsus taklifi: barcha mehmonlarga bepul nonushta!",
-  "3+ kechalik bronlarda bepul aeroport kutib olish",
+  "Bron kunida 15% chegirma: nonushta, Wi-Fi va avtoturargoh",
+  "Har kuni bufet nonushta, soat 07:00–10:00",
+  "3 kecha va undan uzoq yashashda 10% chegirma",
 ];
 
 export function Topbar() {

@@ -2,10 +2,10 @@ const CDN =
   "https://cdn.prod.website-files.com/6927ddcc377dce6e20188e35";
 
 export const homeHero = {
-  title: "Hashamatli qulaylik va tinchlik uchun mukammal dam olish",
+  title: "Gur Emir Palace — Samarqanddagi tinch mehmonxona",
   cta: "Dam olishni bron qiling",
   ctaHref: "/contact",
-  offer: "Chegirma — cheklangan muddat",
+  offer: "Bron kunida 15% chegirma",
   poster: `${CDN}/694e6076e77e5b3348ce2188_18705145-hd_1920_1080_30fps%20(1)_poster.0000000.jpg`,
   videoWebm: `${CDN}/694e6076e77e5b3348ce2188_18705145-hd_1920_1080_30fps%20(1)_webm.webm`,
   videoMp4: `${CDN}/694e6076e77e5b3348ce2188_18705145-hd_1920_1080_30fps%20(1)_mp4.mp4`,
@@ -14,11 +14,11 @@ export const homeHero = {
 export const homeAbout = {
   eyebrow: "Biz haqimizda",
   titles: [
-    "Dengizga qaragan shahar markazi",
-    "Okean manzarali shahar markazi",
-    "Sohilbo‘yi shahar markazi",
+    "Samarqand markazi",
+    "Tarixiy shahar",
+    "Gur Emir yonida",
   ],
-  body: "Har bir yashashda unutilmas lahzalar yaratish uchun qulaylik, nafislik va a’lo xizmat uyg‘unlashgan mehmondo‘stlikni his eting",
+  body: "Bog‘, teras, restoran va bar — Samarqanddagi tinch mehmonxona",
   cta: "Xonalarni ko‘rish",
   ctaHref: "/rooms",
   images: [
@@ -30,42 +30,42 @@ export const homeAbout = {
 
 export const featuredRooms = [
   {
-    name: "Deluxe dengiz manzarali xona",
+    name: "Deluxe king size",
     blurb:
-      "Zamonaviy interyer, premium qulayliklar va hayratlanarli dengiz manzarasi bilan Deluxe xonamizda tengsiz qulaylikni his eting",
-    size: "350 kv.fut",
-    view: "Panoramik dengiz manzarasi",
-    features: "King karavot, balkon manzarasi, Smart TV",
+      "25 m² lik xona: king size karavot, shkaf, alohida hammom, fen, terlik, sochiqlar, televizor, elektr choynak va ish stoli.",
+    size: "25 m²",
+    view: "Shaharning tarixiy qismi mumkin",
+    features: "King size, hammom, televizor",
     perfectFor: "Juftliklar va dam oluvchilar",
     image: `${CDN}/69316279603aa77764416443_image%2015-Picsart-AiImageEnhancer%201.webp`,
   },
   {
-    name: "Dengiz manzarali King xona",
+    name: "Standard Double",
     blurb:
-      "Nafis interyer, zamonaviy qulayliklar va keng dengiz manzarasiga ega Premium xonada yuqori darajadagi qulaylikdan bahramand bo‘ling",
-    size: "380 kv.fut",
-    view: "Sohilbo‘yi dengiz manzarasi",
-    features: "Queen karavot, shahar manzarasi, Smart TV",
+      "Bitta katta karavotli ikki kishilik xona. Zamonaviy interyer va yashash uchun zarur qulayliklar.",
+    size: "Ikki kishilik",
+    view: "Bitta katta karavot",
+    features: "Katta karavot, televizor",
     perfectFor: "Juftliklar va dam olish kunlari",
     image: `${CDN}/694a220502bfae7bbbd483da_image%2014-Picsart-AiImageEnhancer%201.webp`,
   },
   {
-    name: "Dengiz manzarali juft xona",
+    name: "Standard Twin",
     blurb:
-      "Nafis bezak, yuqori sifatli jihozlar va sohil panoramasiga ega hashamatli xonada dam oling",
-    size: "450 kv.fut",
-    view: "Manzarali sohil panoramasi",
-    features: "King karavot, dengiz manzarasi, Smart TV",
+      "26 m². Ikki alohida karavot, ish joyi, bepul Wi-Fi va konditsioner.",
+    size: "26 m²",
+    view: "Ikki alohida karavot",
+    features: "Ikki karavot, 26 m², Wi-Fi",
     perfectFor: "Dam oluvchilar va asal oyi juftliklari",
     image: `${CDN}/694a22058acf0ce292e687df_image%20432-Picsart-AiImageEnhancer%201.webp`,
   },
   {
-    name: "Dengiz manzarali klub xona",
+    name: "Standard Single",
     blurb:
-      "Uslubli interyer, o‘ylab topilgan qulayliklar va tinchlantiruvchi dengiz manzarasiga ega Ijrochi xonada nafis yashashni his eting",
-    size: "420 kv.fut",
-    view: "Uzilmagan okean ufqi",
-    features: "King karavot, dengiz balconi, Smart TV",
+      "15 m² lik bir kishilik xona: shkaf, seyf, alohida hammom, televizor, elektr choynak va ish stoli.",
+    size: "15 m²",
+    view: "15 m²",
+    features: "Seyf, fen, ish stoli",
     perfectFor: "Juftliklar va sayyohlar",
     image: `${CDN}/694a22051baed5b350dc6d7d_image%20430-Picsart-AiImageEnhancer%201.webp`,
   },
@@ -73,16 +73,16 @@ export const featuredRooms = [
 
 export const homeStats = {
   intro:
-    "O‘nlab yillik ishonchli xizmat va minglab sodiq mehmonlar unutilmas dam olish yaratishga sodiqligimizni ko‘rsatadi",
+    "Samarqandda, Shohruh Mirzo ko‘chasida: bog‘, teras, restoran, bar va 24 soat qabulxona",
   items: [
-    { value: "98%", label: "Mehmon ehtiyojlari oldindan hisobga olingan" },
-    { value: "85%", label: "Qaytib keluvchi mehmonlar ulushi" },
-    { value: "40%", label: "Shaxsiy butler xizmati" },
-    { value: "25", label: "Mehmondo‘stlik va ovqatlanish mukofotlari" },
-    { value: "90+", label: "Dengiz/shahar manzarali xonalar" },
-    { value: "4.9", label: "O‘rtacha yulduz reytingi" },
-    { value: "200", label: "Tanlangan vino kolleksiyasi" },
-    { value: "5+", label: "Mukofotli restoranlar" },
+    { value: "7 km", label: "Samarqand aeroporti" },
+    { value: "24 soat", label: "Qabulxona" },
+    { value: "07:00", label: "Bufet nonushta boshlanadi" },
+    { value: "6", label: "Xona toifasi" },
+    { value: "4", label: "Qavatdagi tarixiy teras" },
+    { value: "Bepul", label: "Avtoturargoh va Wi-Fi" },
+    { value: "Halol", label: "Alakart taomlar" },
+    { value: "10:00", label: "Nonushta tugaydi" },
   ],
   images: [
     `${CDN}/6932619969ad70245135cf5a_image%20391-Picsart-AiImageEnhancer%20(1)%201.webp`,
@@ -93,9 +93,9 @@ export const homeStats = {
 };
 
 export const homeBusiness = {
-  title: "Biznes va tadbir maydonlari",
-  body: "Uchrashuv, konferensiya, seminar va bayramlar uchun moslashuvchan biznes maydonlarimiz zamonaviy qulayliklar va professional muhit bilan jihozlangan",
-  cta: "Tadbir maydonini bron qilish",
+  title: "Teras va restoran",
+  body: "4-qavatdagi terasdan shaharning tarixiy qismi ko‘rinadi. Restoranda bufet nonushta, alakart va halol taomlar.",
+  cta: "Narxni so‘rash",
   ctaHref: "/banquet",
   images: [
     `${CDN}/693266cb0d38c5e5209caa4e_image%2016-Picsart-AiImageEnhancer%201.webp`,
@@ -106,18 +106,15 @@ export const homeBusiness = {
 export const homeDining = {
   eyebrow: "Ovqatlanish tajribasi",
   title:
-    "Har bir taom hikoya aytadigan, har bir ta’m maftun etadigan va har bir lahza unutilmas bo‘lgan oshxona makonini kashf eting",
+    "Har kuni bufet nonushta, alakart va halol taomlar. Nonushta 07:00 dan 10:00 gacha.",
   tags: [
-    "Tashqi/teras o‘rindiqlari",
-    "Moslashtirilgan menyu variantlari",
-    "Kundalik bepul nonushta",
-    "Bir nechta restoran",
-    "Keng vino ro‘yxati",
-    "Shaxsiy ovqatlanish",
-    "Imzoli fine dining",
-    "Mavzuli kokteyl bar/lounge",
-    "Mahalliy mahsulotlar",
-    "Jonli oshxona",
+    "Teras",
+    "Restoran",
+    "Bar",
+    "Bufet nonushta, 07:00–10:00",
+    "Halol taomlar",
+    "Alakart",
+    "Xona xizmati",
   ],
   images: [
     `${CDN}/69327199f5558c90f6e5c83f_Mask%20group%20-%202025-12-05T110746.363%20(1).webp`,
@@ -150,11 +147,11 @@ export const homeExperience = {
 
 export const homeGallery = [
   {
-    label: "basseyn",
+    label: "bog‘",
     src: `${CDN}/69438ddf3b026974c61e1d8e_image%20213-Picsart-AiImageEnhancer%201.webp`,
   },
   {
-    label: "banket",
+    label: "teras",
     src: `${CDN}/69438ddf641c80e912060899_5697%201.webp`,
   },
   {
@@ -183,16 +180,16 @@ export const homeTestimonials = [
     image: `${CDN}/6943a0c6cfc7fa4f759608c3_Mask%20group%20-%202025-12-18T120540.982.webp`,
   },
   {
-    name: "Avazov Og‘abek",
-    role: "Fullstack dasturchi va dizayner",
+    name: "Mehmon",
+    role: "Samarqand",
     quote:
-      "Har bir detalga e’tibor va mehmon uchun qulay tajriba yaratish — Classic Apartment va Huquqiy texnologiyalar va sun’iy intellekt laboratoriyasi MChJ jamoasi uchun muhim qadriyat.",
+      "Bog‘, teras va 24 soat qabulxona. Nonushta har kuni 07:00 dan 10:00 gacha.",
     image: `${CDN}/6943a0c6112009db1bcc3d53_Mask%20group%20-%202025-12-18T120456.254.webp`,
   },
 ];
 
 export const homeCta = {
-  title: "Oddiylikdan chiqing va premium mehmondo‘stlikdan bahramand bo‘ling",
+  title: "Samarqandda qoling — Gur Emir Palace",
   cta: "Hozir bron qiling",
   ctaHref: "/contact",
   image: `${CDN}/693b8de4d00c720d07d2645c_image%2026-Picsart-AiImageEnhancer%201%20(1).webp`,

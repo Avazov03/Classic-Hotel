@@ -13,67 +13,66 @@ export type PageIntro = {
 export const pageIntros = {
   about: {
     eyebrow: "Yillar tajribasi",
-    title: "Mukammal dam olishga xush kelibsiz",
+    title: "Samarqandda, Gur-i Amir yonida",
     subtitle:
       "Sizning qulayligingiz — bizning maqsadimiz; har bir lahza uydek his qilishingiz uchun yaratiladi",
     intro:
-      "Classic Apartment qulaylik, g‘amxo‘rlik va ishonchga asoslangan — chinakam mehmondo‘stlik va mehmon mamnuniyati bilan o‘ylab ishlangan yashashlarni taklif etadi.",
+      "Gur Emir Palace qulaylik, g‘amxo‘rlik va ishonchga asoslangan — chinakam mehmondo‘stlik va mehmon mamnuniyati bilan o‘ylab ishlangan yashashlarni taklif etadi.",
     image: `${CDN}/69452c5ad14c210fde417f7d_6e8b8f07617e02360fd36671319429eb_about-banner-image.webp`,
     metaDescription:
-      "Classic Apartment — qulaylik, g‘amxo‘rlik va chinakam mehmondo‘stlik bilan yaratilgan dam olish.",
+      "Gur Emir Palace — qulaylik, g‘amxo‘rlik va chinakam mehmondo‘stlik bilan yaratilgan dam olish.",
   },
   rooms: {
     title: "Xonalarimiz",
     subtitle: "Sof qulaylikda uxlang",
     intro:
-      "Zamonaviy interyer, yumshoq to‘shak va dam olish uchun zarur qulayliklarga ega Classic Apartment xonalarini kashf eting.",
+      "Zamonaviy interyer, yumshoq to‘shak va dam olish uchun zarur qulayliklarga ega Gur Emir Palace xonalarini kashf eting.",
     image: `${CDN}/694e312f0951a14b785ffd15_e568dbb1f01f309400cbfb4d237ffe6a_room-page-banner-image.webp`,
     metaDescription:
-      "Classic Apartment xonalari — qulaylik va uslub uchun zamonaviy interyerlar.",
+      "Gur Emir Palace xonalari — qulaylik va uslub uchun zamonaviy interyerlar.",
   },
   amenities: {
     eyebrow: "Qulayliklar haqida",
     title: "Har bir mehmon uchun a’lo qulayliklar",
     intro:
-      "Hashamat cho‘qqisida — jahon darajasidagi SPA va ajoyib ovqatlanish. Zamonaviy imkoniyatlar va o‘ylab topilgan xizmatlar bilan tinch dam olish uchun qulayliklar.",
+      "Bog‘, teras, restoran va bar. 24 soat qabulxona, bepul Wi-Fi, bepul avtoturargoh va aeroport transferi.",
     image: `${CDN}/69527b3a5274ffb6de3d0349_image%20447-Picsart-AiImageEnhancer%201%20(1).webp`,
     metaDescription:
-      "Classic Apartment qulayliklari — SPA, ovqatlanish va zamonaviy xizmatlar.",
+      "Gur Emir Palace qulayliklari — bog‘, teras, restoran, bar va transfer.",
   },
   banquet: {
-    title: "Nafis banket maydonlari",
+    title: "Restoran va teras",
     intro:
-      "To‘y, yig‘ilish va tadbirlar uchun nafis maydonlar, zamonaviy imkoniyatlar va e’tiborli xizmat — Classic Apartment banketida.",
+      "Restoran, bar va 4-qavat terasi. Shaharning tarixiy qismi teradan ko‘rinadi. Alohida banket zali e’lon qilinmagan.",
     image: `${CDN}/6954dfb0643940014e8d7c27_image%20453-Picsart-AiImageEnhancer%201%20(1).webp`,
     metaDescription:
-      "Classic Apartment banket maydonlari — to‘y va korporativ tadbirlar uchun.",
+      "Gur Emir Palace — restoran va tarixiy manzarali teras.",
   },
   spa: {
-    title: "Tana, ruh va ongni yangilang",
-    subtitle:
-      "Muvozanat va ichki osoyishtalikni tiklaydigan sog‘lomlashtirish tajribalari",
+    title: "Bog‘, teras va tinch hovli",
+    subtitle: "Alohida SPA ro‘yxati yo‘q",
     intro:
-      "Classic Apartment SPAda tinchlantiruvchi muolajalar, osoyishta muhit va mutaxassis g‘amxo‘rlik bilan dam oling.",
+      "Dam olish bog‘, hovli va 4-qavatdagi terada. Teradan shaharning tarixiy qismi ko‘rinadi.",
     image: `${CDN}/6953b6cbe9d3fb1df0e77f56_5a6f785dfa85045b71d807cfaff4a76a_spa-banner-image.webp`,
     metaDescription:
-      "Classic Apartment SPA — tinchlantiruvchi muolajalar va osuda muhit.",
+      "Gur Emir Palace — bog‘, teras va hovli.",
   },
   restaurant: {
     eyebrow: "Xizmat haqida",
     title: "Uslub bilan taqdim etilgan mazali taomlar",
     intro:
-      "Ajoyib ta’m va nafislik uyg‘unlashgan ovqatlanish. Classic Apartment restoranida yangi mahsulotlar, mazali oshxona va iliq muhit.",
+      "Ajoyib ta’m va nafislik uyg‘unlashgan ovqatlanish. Gur Emir Palace restoranida yangi mahsulotlar, mazali oshxona va iliq muhit.",
     image: `${CDN}/6954e9698b2e3670bc6d4911_image%20490-Picsart-AiImageEnhancer%20(1)%201%20(1).webp`,
     metaDescription:
-      "Classic Apartment restorani — mazali taomlar va iliq atmosfera.",
+      "Gur Emir Palace restorani — mazali taomlar va iliq atmosfera.",
   },
   blog: {
     title: "Bloglarimizni o‘qing",
     intro:
-      "Sayohat maslahatlari, mehmonxona yangiliklari va mehmondo‘stlik hikoyalari — Classic Apartment blogida.",
+      "Sayohat maslahatlari, mehmonxona yangiliklari va mehmondo‘stlik hikoyalari — Gur Emir Palace blogida.",
     image: `${CDN}/695645e0708c845e290a1f9e_image%20508-Picsart-AiImageEnhancer%201%20(1).webp`,
     metaDescription:
-      "Classic Apartment blog — sayohat va mehmondo‘stlik haqida foydali maqolalar.",
+      "Gur Emir Palace blog — sayohat va mehmondo‘stlik haqida foydali maqolalar.",
   },
   contact: {
     eyebrow: "Aloqa",
@@ -83,7 +82,7 @@ export const pageIntros = {
       "Savolingiz bormi? Bron, qulayliklar, ovqatlanish yoki maxsus so‘rovlar bo‘yicha jamoamiz tez yordam beradi.",
     image: `${CDN}/6954b29b8505845a7463cc60_image%20506-Picsart-AiImageEnhancer%201%20(1).webp`,
     metaDescription:
-      "Classic Apartment bilan bog‘laning — bron va xizmatlar bo‘yicha savollaringiz uchun.",
+      "Gur Emir Palace bilan bog‘laning — bron va xizmatlar bo‘yicha savollaringiz uchun.",
   },
 } satisfies Record<string, PageIntro>;
 
@@ -104,16 +103,16 @@ export const aboutFeatures = [
 
 export const amenityItems = [
   {
-    title: "Wellness va SPA",
-    body: "Sayohat yoki shahar kuni oxirida kuchni tiklash uchun tinchlantiruvchi muolajalar va osoyishta joylar.",
+    title: "Bog‘ va hovli",
+    body: "Mehmonxona bog‘i va hovlisida tinch dam olish.",
   },
   {
-    title: "Fitnes studio",
-    body: "Zamonaviy jihozlar va moslashuvchan soatlar — mehmonxonadan chiqmasdan mashq qiling.",
+    title: "Kir yuvish",
+    body: "Kir yuvish xonasi soat 08:00 dan 18:00 gacha ishlaydi.",
   },
   {
-    title: "Basseyn va teras",
-    body: "Ochiq havoda dam olish: basseyn yonidagi o‘rindiqlar va osuda o‘tish.",
+    title: "4-qavat terasi",
+    body: "Terasdan shaharning tarixiy qismi ko‘rinadi.",
   },
   {
     title: "Konsyerj yordami",
@@ -130,38 +129,38 @@ export const amenityItems = [
 ];
 
 export const banquetHighlights = [
-  "To‘y va ziyofatlar",
-  "Korporativ uchrashuvlar",
-  "Shaxsiy bayramlar",
-  "Seminar va retreatlar",
-  "Zamonaviy AV qo‘llab-quvvatlash",
-  "Moslashtirilgan katering menyulari",
+  "Restoran",
+  "Bar",
+  "4-qavat terasi",
+  "Shaharning tarixiy manzarasi",
+  "Bufet nonushta",
+  "Halol va alakart taomlar",
 ];
 
 export const spaTreatments = [
   {
-    title: "Imzoli massaj",
-    body: "Zo‘riqishni kamaytirish va chuqur dam olishga qaratilgan to‘liq tana muolajasi.",
+    title: "Bog‘ va hovli",
+    body: "Mehmonxona bog‘i va hovlisida tinch dam olish.",
   },
   {
-    title: "Yuz rituallari",
-    body: "Sayohatdan keyin yangilanish, namlanish va porlash uchun yuz muolajalari.",
+    title: "4-qavat terasi",
+    body: "Shaharning tarixiy qismi shu teradan ko‘rinadi.",
   },
   {
-    title: "Juftlik wellness",
-    body: "Birgalikda tinchlanish va bog‘lanish uchun yaratilgan SPA lahzalari.",
+    title: "Restoran va bar",
+    body: "Bufet nonushta, alakart va halol taomlar.",
   },
   {
-    title: "Tana terapiyalari",
-    body: "Charchagan mushaklarni jonlantiradigan skrab va o‘ramalar.",
+    title: "Aeroport transferi",
+    body: "Samarqand xalqaro aeroporti 7 km. Transferni qabulxonadan so‘rang.",
   },
 ];
 
 export const restaurantHighlights = [
-  "Mavsumiy menyular",
-  "Yangi mahalliy mahsulotlar",
-  "Imzoli fine dining",
-  "Nonushta kiritilgan variantlar",
-  "Shaxsiy ovqatlanish xonalari",
-  "Kokteyl lounge",
+  "Bufet nonushta, 07:00–10:00",
+  "Alakart taomlar",
+  "Halol oshxona",
+  "Nonushta bilan tarif",
+  "Xona xizmati",
+  "Bar",
 ];

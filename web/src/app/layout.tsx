@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | Guremir Palace",
   },
   description:
-    "Guremir Palace — qulay xonalar, zamonaviy qulayliklar va iliq mehmondo‘stlik. Biznes va dam olish uchun.",
+    "Gur Emir Palace, Samarqand. Shohruh Mirzo ko‘chasi, 126-uy. Bog‘, teras, restoran va bar.",
 };
 
 export default function RootLayout({

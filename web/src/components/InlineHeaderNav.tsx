@@ -20,8 +20,8 @@ const LEAVE_MS = 180;
 
 const services = [
   { href: "/amenities", label: "Qulayliklar" },
-  { href: "/banquet", label: "Banket" },
-  { href: "/spa", label: "SPA" },
+  { href: "/banquet", label: "Teras" },
+  { href: "/spa", label: "Bog‘" },
   { href: "/restaurant", label: "Restoran" },
 ] as const;
 

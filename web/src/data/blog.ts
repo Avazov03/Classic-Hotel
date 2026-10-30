@@ -49,7 +49,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "indulge-in-luxurious-rooms-with-panoramic-sea-views",
-    title: "Panoramik dengiz manzarali hashamatli xonalardan bahramand bo‘ling",
+    title: "26 m². Ikki alohida karavot, ish joyi, bepul Wi-Fi va konditsioner.",
     excerpt:
       "Nafis qulaylik, shaxsiy xizmat va mahalliy joziba haqidagi ilhomli hikoyalar — mehmonlar uzoq eslab qoladigan mazmunli dam olish.",
     image: `${CDN_POST}/695b3bd55fed08c9b8eee002_image%20511%20(2).webp`,
@@ -130,7 +130,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "the-april-issue-of-travel-magazine-featured-elbergo-hotel",
-    title: "Travel Magazine aprel sonida Classic Apartment haqida",
+    title: "Samarqandda dam olish: nimalarga e’tibor berish kerak",
     excerpt:
       "Har bir dam olish ortida qulaylik, g‘amxo‘rlik va detal bor — mehmonxonalar qanday mazmunli tajriba yaratishini kashf eting.",
     image: `${CDN_POST}/695b3c537b6f44e4fa4251e6_image-Picsart-AiImageEnhancer%201%20(2).webp`,

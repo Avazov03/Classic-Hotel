@@ -7,7 +7,7 @@ export function HomeTestimonials() {
     <section className={styles.section} aria-labelledby="testimonials-heading">
       <div className="container">
         <div className={styles.head}>
-          <div className={styles.rating}>(4.9) Sharhlar</div>
+          <div className={styles.rating}> Sharhlar</div>
           <h2 id="testimonials-heading">
             Farqni ularning ko‘zi bilan ko‘ring
           </h2>

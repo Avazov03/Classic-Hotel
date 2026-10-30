@@ -27,72 +27,72 @@ export type RoomDetail = {
 };
 
 const sharedOverview =
-  "Zamonaviy xonalar, shaxsiy xizmat va premium qulayliklarga ega mehmonxonamizda qulaylik va nafislikni his eting. Har bir detal unutilmas dam olish uchun o‘ylab topilgan.";
+  "Gur Emir Palace, Samarqand. Xonada shkaf, seyf, alohida hammom, televizor, elektr choynak va ish stoli. Ba’zi xonalarda shahar manzarasi.";
 
 const sharedQulayliklar = [
-  "24/7 xona xizmati",
-  "Bepul nonushta",
+  "Alohida hammom",
+  "Bufet nonushta",
   "Bepul Wi-Fi",
   "Xonada seyf",
-  "1 hammom",
-  "Minibar",
-  "Qahva to‘plami",
-  "Xona tozalash",
+  "Televizor",
+  "Elektr choynak",
+  "Ish stoli",
+  "Xona xizmati",
 ];
 
 const sharedSpecs = {
-  rating: 4.8,
-  reviewLabel: "100 ta sharh asosida",
-  comfort: 4.7,
-  facilities: 4.9,
-  checkIn: "10:00",
-  checkOut: "12:00",
+  rating: 0,
+  reviewLabel: "Narxni qabulxonadan so‘rang",
+  comfort: 0,
+  facilities: 0,
+  checkIn: "so‘rang",
+  checkOut: "so‘rang",
 } satisfies Omit<RoomSpecs, "pricePerNight">;
 
 /** Cards on the /rooms listing page */
 export const roomsListing = [
   {
     slug: "standard-room",
-    name: "Standart xona",
+    name: "Standard Single",
     blurb:
-      "Standart xonamiz zarur qulayliklar, yumshoq to‘shak va tinch muhitga ega — oddiy, dam olishga qulay va byudjetga mos joy izlovchilar uchun ideal",
+      "15 m² lik Standard Single: bitta karavot, shkaf, seyf va alohida hammom.",
     highlights: [
-      "Bolalar uchun qulay",
-      "Hayvonlar uchun qulay",
-      "Isitiladigan basseyn",
-      "Kundalik nonushta",
-      "Kundalik tozalash",
+      "15 m²",
+      "Seyf",
+      "Alohida hammom",
+      "Televizor",
+      "Ish stoli",
     ],
-    price: "$180",
+    price: "Narx so‘raladi",
     image: `${CDN}/694e597d59f693d74fc55932_image%20434-Picsart-AiImageEnhancer%201.webp`,
   },
   {
     slug: "executive-suite",
-    name: "Ijrochi lyuks",
+    name: "Deluxe, king size",
     blurb:
-      "Keng interyer, premium qulayliklar va hashamatli dam olish uchun nafis muhitga ega Ijrochi lyuksimizda yuqori darajadagi qulaylikni his eting",
+      "25 m². King size karavot, alohida hammom, televizor, elektr choynak va ish stoli.",
     highlights: [
-      "Bolalar uchun qulay",
-      "Hayvonlar uchun qulay",
-      "Aeroport kutib olish va kuzatib qo‘yish",
-      "Kundalik nonushta",
-      "Kundalik tozalash",
+      "25 m²",
+      "King size karavot",
+      "Fen va sochiqlar",
+      "Televizor",
+      "Ish stoli",
     ],
-    price: "$220",
+    price: "Narx so‘raladi",
     image: `${CDN}/694e59b978f8bc2c0529036a_image%20435-Picsart-AiImageEnhancer%201.webp`,
   },
   {
     slug: "sea-view-room",
-    name: "Dengiz manzarali xona",
-    blurb: "Panoramik dengiz manzarali hashamatli xonalardan bahramand bo‘ling",
+    name: "Standard Twin",
+    blurb: "26 m². Ikki alohida karavot, ish joyi, bepul Wi-Fi va konditsioner.",
     highlights: [
-      "Bolalar uchun qulay",
-      "Hayvonlar uchun qulay",
-      "Isitiladigan basseyn",
-      "Kundalik nonushta",
-      "Kundalik tozalash",
+      "26 m²",
+      "Ikki alohida karavot",
+      "Ish joyi",
+      "Bepul Wi-Fi",
+      "Konditsioner",
     ],
-    price: "$300",
+    price: "Narx so‘raladi",
     image: `${CDN}/694e59b966e523eacd429043_image%20436-Picsart-AiImageEnhancer%201.webp`,
   },
 ] as const;
@@ -100,10 +100,10 @@ export const roomsListing = [
 export const roomDetails: RoomDetail[] = [
   {
     slug: "standard-room",
-    name: "Standart xona",
+    name: "Standard Single",
     blurb: roomsListing[0].blurb,
     highlights: [...roomsListing[0].highlights],
-    price: "$180",
+    price: "Narx so‘raladi",
     image: `${CDN_ROOM}/6952639c8cc1cb88dbe36953_image%20430-Picsart-AiImageEnhancer%201%20(3).webp`,
     images: [
       `${CDN_ROOM}/6952639c8cc1cb88dbe36953_image%20430-Picsart-AiImageEnhancer%201%20(3).webp`,
@@ -120,15 +120,15 @@ export const roomDetails: RoomDetail[] = [
       `${CDN}/69561ff7970dc664aef5fcdc_1771%201.webp`,
     ],
     overview: sharedOverview,
-    specs: { ...sharedSpecs, pricePerNight: "$180" },
+    specs: { ...sharedSpecs, pricePerNight: "Narx so‘raladi" },
     amenities: sharedQulayliklar,
   },
   {
     slug: "sea-view-room",
-    name: "Dengiz manzarali xona",
+    name: "Standard Twin",
     blurb: roomsListing[2].blurb,
     highlights: [...roomsListing[2].highlights],
-    price: "$300",
+    price: "Narx so‘raladi",
     image: `${CDN_ROOM}/69526349fe6b037995df5068_image%20433-Picsart-AiImageEnhancer%201%20(1).webp`,
     images: [
       `${CDN_ROOM}/69526349fe6b037995df5068_image%20433-Picsart-AiImageEnhancer%201%20(1).webp`,
@@ -145,15 +145,15 @@ export const roomDetails: RoomDetail[] = [
       `${CDN}/69561ff7648e96670fe6964d_image%20433-Picsart-AiImageEnhancer%201%20(3).webp`,
     ],
     overview: sharedOverview,
-    specs: { ...sharedSpecs, pricePerNight: "$300" },
+    specs: { ...sharedSpecs, pricePerNight: "Narx so‘raladi" },
     amenities: sharedQulayliklar,
   },
   {
     slug: "executive-suite",
-    name: "Ijrochi lyuks",
+    name: "Deluxe, king size",
     blurb: roomsListing[1].blurb,
     highlights: [...roomsListing[1].highlights],
-    price: "$220",
+    price: "Narx so‘raladi",
     image: `${CDN_ROOM}/6952637661ca8c9f992aea81_image%20432-Picsart-AiImageEnhancer%202.webp`,
     images: [
       `${CDN_ROOM}/6952637661ca8c9f992aea81_image%20432-Picsart-AiImageEnhancer%202.webp`,
@@ -170,7 +170,7 @@ export const roomDetails: RoomDetail[] = [
       `${CDN}/69561ff7648e96670fe6964d_image%20433-Picsart-AiImageEnhancer%201%20(3).webp`,
     ],
     overview: sharedOverview,
-    specs: { ...sharedSpecs, pricePerNight: "$220" },
+    specs: { ...sharedSpecs, pricePerNight: "Narx so‘raladi" },
     amenities: sharedQulayliklar,
   },
 ];

@@ -4,7 +4,7 @@ import { html } from "@/baseline/html/spa";
 import { pageIntros } from "@/data/pages";
 
 export const metadata: Metadata = {
-  title: "SPA",
+  title: "Bog‘ va teras",
   description: pageIntros.spa.metaDescription,
 };
 

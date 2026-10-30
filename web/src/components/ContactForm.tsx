@@ -63,7 +63,7 @@ export function ContactForm() {
           <option value="reservation">Bronlash</option>
           <option value="event">Tadbir / banket</option>
           <option value="dining">Ovqatlanish</option>
-          <option value="spa">SPA</option>
+          <option value="spa">Bog‘ va teras</option>
           <option value="other">Boshqa</option>
         </select>
       </div>
